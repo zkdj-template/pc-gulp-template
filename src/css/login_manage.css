@@ -106,7 +106,8 @@ body {
 
 body {
   background-image: url("../images/login_manage_bg.jpg");
-  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
@@ -123,7 +124,8 @@ body {
   padding: 60px 75px 70px;
   margin-top: -270px;
   border-radius: 4px;
-  box-shadow: 0 0 21px rgba(109, 109, 109, 0.81);
+  -webkit-box-shadow: 0 0 21px rgba(109, 109, 109, 0.81);
+          box-shadow: 0 0 21px rgba(109, 109, 109, 0.81);
   background-color: rgba(255, 255, 255, 0.86);
 }
 
@@ -153,8 +155,6 @@ body {
 .login-panel .form-horizontal .icon-input-group input.form-control {
   height: 60px;
   padding-left: 50px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   color: #000000;
   border-color: #949494;

@@ -1,57 +1,62 @@
 /**
- * Created by leo on 2017/3/30.
+ * Created by zhangxin on 2018/6/15.
  */
 var  gulp = require('gulp'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
     browserSync = require('browser-sync').create(),
-    less = require('gulp-less'),
     sass = require('gulp-sass'),
-    gulpif = require('gulp-if'),
     minifyCss = require('gulp-minify-css'),
     minify = require('gulp-minify'),
-    zip = require('gulp-zip'),
-    moment = require("moment"),
-    ftp = require('gulp-ftp'),
-    fileCopy = require('gulp-file-copy'),
-    git = require('gulp-git'),
-    runSequence = require('run-sequence'),
-    argv = require('minimist')(process.argv.slice(2)),
     del = require('del'),
     uglify = require('gulp-uglify'),
     imgmin = require('gulp-imagemin'),
     jshint=require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     rename = require("gulp-rename"),
-    htmlmin = require('gulp-htmlmin');
-//ngAnnotate = require('gulp-ng-annotate');
+    htmlmin = require('gulp-htmlmin'),
+    postcss      = require('gulp-postcss'),
+    sourcemaps   = require('gulp-sourcemaps'),
+    autoprefixer = require('autoprefixer');
+/**
+ * 贮备
+ * @type {[*]}
+ */
+var loadArr = ['minhtml','mincss','minjs','imgmin','copy'],
+    themeName = "theme";
 var path={
     input:{
         html:['src/html/*.html'],
-        manage:['src/manage/*.html'],
+        manager:['src/manage/*.html'],
+        font:['src/css/font/**'],
         js:['src/js/**/*.js'],
-        css:['src/css/*.css'],
-        img:['src/images/**'],
-        data:['src/data/**'],
-        resource:['src/vendor/**/**']
+        css:['src/css','src/css/*.css'],
+        sass:['src/sass/**/*.scss'],
+        image:['src/images/**'],
+        resource:['src/vendor/**/**'],
+        manifest:['src/data/**/**'],
+        login:['src/login/**/**']
     },
     output:{
-        css:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/css',
-        js:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/js',
-        img:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/images' ,
-        html:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/html' ,
-        manage:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/manage',
-        data: '../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/data',
-        resource:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/vendor'
+        font: themeName + '/css/font',
+        html: themeName + '/html',
+        manager: themeName + '/manage',
+        js: themeName + '/js',
+        css: themeName + '/css',
+        img: themeName + '/images',
+        resource: themeName + '/vendor',
+        manifest: themeName + '/data',
+        login: themeName + '/login'
     },
     del:{
-        css:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/css',
-        js:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/js',
-        img:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/images' ,
-        html:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/html' ,
-        manage:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/manage',
-        data: '../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/data',
-        resource:'../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/vendor'
+        font: themeName + '/css/font',
+        html: themeName + '/html',
+        manager: themeName + '/manage',
+        js: themeName + '/js',
+        css: themeName + '/css',
+        img: themeName + '/images',
+        resource: themeName + '/vendor',
+        manifest: themeName + '/data'
     }
 };
 //HTMl 压缩
@@ -66,57 +71,106 @@ gulp.task('minhtml',function(){
         minifyJS: false,//压缩页面JS
         minifyCSS: false//压缩页面CSS
     };
-    gulp.src('src/html/*.html')
+    gulp.src(path.input.html)
         .pipe(htmlmin(options))
         .on('error',function(error){
             console.log(error.message);
         })
-        .pipe(gulp.dest(path.output.html))
+        .pipe(gulp.dest(path.output.html));
 
-});
-// less 编译
-gulp.task('less', function () {
-    return gulp.src('src/css/lessstyle/*.less')
-        .pipe(less())
-        .pipe(gulp.dest('src/css'));
+    gulp.src(path.input.manager)
+        .pipe(htmlmin(options))
+        .on('error',function(error){
+            console.log(error.message);
+        })
+        .pipe(gulp.dest(path.output.manager));
+
 });
 // sass 编译
 gulp.task('sass', function () {
-    return gulp.src('src/css/sassstyle/*.scss')
+    return gulp.src(path.input.sass)
         .pipe(sass({outputStyle: 'expanded'}))
-        .pipe(gulp.dest('src/css'))
+        .pipe(postcss([ autoprefixer({
+            browsers: [
+                "Android 2.3",
+                "Android >= 4",
+                "Chrome >= 20",
+                "Firefox >= 24",
+                "Explorer >= 8",
+                "iOS >= 6",
+                "Opera >= 12",
+                "Safari >= 6"
+            ],
+            cascade: true //  是否美化属性值
+        }) ]))
+        .pipe(gulp.dest(path.input.css[0]))
         .pipe(minifyCss())
-        .pipe(gulp.dest(path.output.css))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(path.input.css[0]))
+});
+// 自动
+gulp.task('autoprefixer', function () {
+    return gulp.src(path.input.css[1])
+        .pipe(postcss([ autoprefixer({
+            browsers: [
+                "Android 2.3",
+                "Android >= 4",
+                "Chrome >= 20",
+                "Firefox >= 24",
+                "Explorer >= 8",
+                "iOS >= 6",
+                "Opera >= 12",
+                "Safari >= 6"
+            ],
+            cascade: true //  是否美化属性值
+        }) ]))
+        .pipe(gulp.dest(path.input.css[0]));
 });
 // css 压缩
 gulp.task('mincss',function(){
-    return  gulp.src(path.input.css)
+    return  gulp.src(path.input.sass)
+        .pipe(sass({outputStyle: 'expanded'}))
+        .pipe(postcss([ autoprefixer({
+            browsers: [
+                "Android 2.3",
+                "Android >= 4",
+                "Chrome >= 20",
+                "Firefox >= 24",
+                "Explorer >= 8",
+                "iOS >= 6",
+                "Opera >= 12",
+                "Safari >= 6"
+            ],
+            cascade: true //  是否美化属性值
+        }) ]))
+        .pipe(gulp.dest(path.input.css[0]))
         .pipe(gulp.dest(path.output.css))
         .pipe(minifyCss())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(path.input.css[0]))
         .pipe(gulp.dest(path.output.css))
 });
 // JS 压缩并混淆加密
 gulp.task('minjs',function(){
-    /*
-     * JShint语法配置
-     * http://www.jianshu.com/p/4cb23f9e19d3
-     * */
     var jshintConfig={
         asi:true,//忽略缺少;
         strict:false,//不使用严格模式
         eqnull:true,
-        eqeqeq: false,
+        eqeqeq: false
     };
 
     gulp.src(path.input.js)
         .pipe(jshint(jshintConfig))
         .pipe(jshint.reporter(stylish))
-        .pipe(uglify())
         .pipe(gulp.dest(path.output.js))
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
         .on('error',function (error) {
             console.log(error.message)
-        });
-        // .pipe(gulp.dest(path.output.js))
+        })
+        .pipe(gulp.dest(path.output.js))
 });
 // JS 语法检查
 function Jshit(){
@@ -130,7 +184,7 @@ gulp.task('jshint', Jshit);
 // 图片压缩
 
 gulp.task('imgmin',function(){
-    return  gulp.src(path.input.img)
+    return  gulp.src(path.input.image)
         .pipe(imgmin([
             imgmin.gifsicle({interlaced: true}),
             imgmin.jpegtran({progressive: true}),
@@ -140,29 +194,22 @@ gulp.task('imgmin',function(){
         .pipe(gulp.dest(path.output.img))
 });
 // 文件copy
-function data_copy(){
-    gulp.src(path.input.data)
-        .pipe(gulp.dest(path.output.data))
-}
-function manage_copy(){
-    gulp.src(path.input.manage)
-        .pipe(gulp.dest(path.output.manage))
-}
-function file_copyResource(){
+function file_copy(){
     gulp.src(path.input.resource)
-        .pipe(gulp.dest(path.output.resource))
+        .pipe(gulp.dest(path.output.resource));
+    gulp.src(path.input.manifest)
+        .pipe(gulp.dest(path.output.manifest));
+    gulp.src(path.input.login)
+        .pipe(gulp.dest(path.output.login));
 }
-gulp.task('data',data_copy);
-gulp.task('manage',manage_copy);
-gulp.task('resource',file_copyResource);
+gulp.task('copy',file_copy);
 // 文件清除，用于每次连续生成DEV的时候，清除原来的
 function del_file(path){
     return  del([path])
 }
 gulp.task('clean',function(){
-    del_file('../../gitLab/pj_111_mees/Code/mees/model-web/src/main/resources/static/');
+    del_file(themeName + '/');
 });
-
 /*
  * 实时刷新  connect+watch
  * 不能自动打开浏览器
@@ -191,11 +238,8 @@ gulp.task('browser-sync', function() {
             directory: true  // 是否打开文件目录
         }
     });
-    gulp.watch("src/**",['minhtml','mincss','sass','minjs','manage','data','imgmin','resource']);
+    gulp.watch("src/**", loadArr);
     gulp.watch("src/**").on('change', browserSync.reload);
 
 });
-// gulp.task('default',['minhtml','sass','manage','data','minjs','mincss','imgmin','resource']);
-gulp.task('default',['minjs']);
-
-
+gulp.task('default',loadArr);
