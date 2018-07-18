@@ -1,0 +1,73 @@
+/**
+ * Created by zhangxin on 2017/12/28.
+ * 
+ */
+@import "zui.scss";
+html,
+body{
+  height: 100%;
+}
+body{
+  background-image: url("../images/login_bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.logo-box{
+  padding: 50px 70px;
+}
+.login-panel{
+  position: fixed;
+  top: 50%;
+  right: 3%;
+  width: 543px;
+  margin: 0 auto;
+  padding: 60px 75px 70px;
+  margin-top: -270px;
+  border-radius: 4px;
+  box-shadow: 0 0 21px rgba(109,109,109,.81);
+  background-color:  #fff;
+  .login-title{
+    margin: 0 0 55px;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  .form-horizontal{
+    margin: 0 auto;
+    .icon-input-group{
+      position: relative;
+      margin-bottom: 28px;
+      .iconfont{
+        position: absolute;
+        left: 20px;
+        top: 12px;
+        font-size: 24px;
+        color: #515151;
+      }
+      input.form-control{
+        height: 60px;
+        padding-left: 50px;
+        -webkit-border-radius:0;
+        -moz-border-radius:0;
+        border-radius:0;
+        color: #000000;
+        border-color: #949494;
+      }
+      label{
+        font-weight: 400;
+      }
+    }
+    .btn-group{
+      text-align: center;
+      width: 100%;
+      .btn{
+        width: 100%;
+        font-size: 16px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #2a93ed;
+        border-color: #2a93ed;
+      }
+    }
+  }
+
+}

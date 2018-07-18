@@ -1,0 +1,419 @@
+/**
+ * Created by zhangxin on 2017/12/26.
+ * 
+ */
+@import "zui.scss";
+@import "common_var";
+/*header部分*/
+@include containerWidth;
+body{
+  position: relative;
+  color: $fontColor;
+  background-color: $wrapperColor;
+  -webkit-text-size-adjust: 100%;
+}
+html,body{
+  @include fullScreen;
+}
+ul,
+li{
+  list-style: none;
+  padding: 0;
+}
+textarea{
+  resize: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+}
+a,
+a:link,
+a:hover,
+a:active,
+a:visited{
+  text-decoration: none;
+  outline: none;
+}
+.navbar-linear-gradient{
+  margin-bottom: 0;
+  @include borderRadius(0);
+  border: none;
+  background-color: $color1;
+  //@include to-right-linear-gradient($startColor:#0d035e,$endColor:#015abe);
+  .navbar-brand{
+    height: 60px;
+    color: $whiteColor;
+    font-size: 20px;
+    font-weight: bold;
+    img{
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+  .navbar-toggle {
+    border-color: #4ba1e1;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color:  #fff;
+  }
+
+  .navbar-nav {
+    margin-right: 0;
+    > li {
+      > a,
+      > span {
+        display: block;
+        padding: 19px 5px;
+        color: $whiteColor;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+        }
+      }
+      >a{
+        >i,
+        >span{
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+    &.nav-menu{
+      >li{
+        >a{
+          padding: 20px;
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: #067ce1;
+          }
+        }
+        &.active{
+          background-color: #067ce1;
+        }
+      }
+    }
+  }
+  .navbar-right>li.active>a {
+    background-color: #067ce1;
+  }
+}
+.page-wrapper{
+  position: relative;
+  height: calc(100% - 61px);
+  @include clearfix;
+  .right-content{
+    @include fullScreen;
+    padding: 20px 20px 0;
+    overflow-y: auto;
+  }
+  .left-nav+.right-content{
+    margin-left: 200px;
+  }
+}
+.footer{
+  position: absolute;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  padding: 10px 0;
+  border:none;
+  color: #999999;
+  text-align: center;
+  &.static{
+    position: static;
+  }
+  p{
+    margin-bottom: 0;
+  }
+}
+.mt8{
+  margin-top: 8px;
+  a{
+    i.iconfont{
+      font-size: 18px;
+      vertical-align: middle;
+    }
+    span{
+      font-size: 13px;
+      vertical-align: middle;
+    }
+    display: block;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    &:hover{
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+}
+/**
+ * 顶部固定搜索
+ */
+.top-fixed-search{
+  @include transition(1s);
+  &.fixed-search{
+    position: fixed;
+    top: 61px;
+    left: 0;
+    right: 0;
+    z-index: 4;
+  }
+  .search-tab,
+  .search-tabContent{
+    display: inline-block;
+  }
+  .search-tab{
+    margin-right: 10px;
+  }
+  .form-inline{
+    display: none;
+    &.active{
+      display: inline-block;
+    }
+  }
+
+  .no-toggle{
+    padding-bottom: 0;
+    .panel-title{
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    +.panel-body{
+      .project-name{
+        display: inline-block;
+        margin: 0 15px 0 0;
+        font-size: 16px;
+        font-weight: 400;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.left-nav+.right-content{
+  .top-fixed-search{
+    left: 200px;
+  }
+}
+/*
+ *  下划线tab标签页
+ */
+.tab-bottom-line .nav-tabs {
+  background-color: #fff;
+  border-left: 1px solid #ebebec;
+  border-right: 1px solid #ebebec;
+  >li{
+    >a{
+      transition: all .5s ease-in-out;
+      color: #808080;
+      &:hover{
+        color: #2a93ed;
+      }
+    }
+    >a,
+    >a:hover,
+    >a:focus{
+      border: none;
+      background-color:  transparent;
+    }
+    &.active{
+      >a{
+        &:hover{
+          font-weight: 400;
+        }
+        &:before{
+          position:absolute;
+          left: 15px;
+          right: 15px;
+          bottom: 1px;
+          display:block;
+          content: ' ';
+          height: 2px;
+          background-color:#3385ff;
+        }
+      }
+      >a,
+      >a:focus,
+      >a:hover{
+        border: none;
+        background-color:  transparent;
+      }
+    }
+  }
+}
+.stop-event{
+  label{
+    font-size: 12px;
+  }
+  >li>a{
+    padding: 0;
+    label{
+      margin-bottom: 0;
+      padding: 3px 20px;
+      display: block;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+}
+/**辅助类**/
+.posr{
+  position: relative;
+}
+.dropdown-menu{
+  font-size: 13px;
+}
+.charts{
+  height: 400px;
+}
+.charts-samall{
+  height: 300px;
+}
+.w140 {
+  width: 140px !important;
+}
+.w220 {
+  width: 220px !important;
+}
+.wp100{
+  width: 100%;
+}
+.h332{
+  height:332px;
+}
+.gray-color{
+  color: #a4abb1;
+}
+.ml70{
+  margin-left: 70px;
+}
+.pt136{
+  padding-top: 136px;
+}
+.h4,h4{
+  font-size: 16px;
+  font-weight: 400;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control{
+  background-color: #fff;
+}
+.form-horizontal{
+  .control-label{
+    font-weight: 400;
+    color: #a4abb1;
+  }
+}
+.text-blue{
+  @include text-color($color1);
+}
+.text-blue1{
+  @include text-color($iconColor);
+}
+.text-orange{
+  @include text-color(#ff784e);
+}
+.text-red{
+  @include text-color(#ff403b);
+}
+.text-green{
+  @include text-color(#08c17b);
+}
+.text-gray{
+  @include text-color(#a4abb1);
+}
+.mb5{
+  margin-bottom: 5px;
+}
+.mb15{
+  margin-bottom: 15px;
+}
+.mb25{
+  margin-bottom: 25px;
+}
+.mr20{
+  margin-right: 20px;
+}
+.input-group-search{
+  position: relative;
+  input{
+    padding-right: 42px;
+  }
+  .btn{
+    position: absolute;
+    top: -0;
+    right: 0;
+  }
+}
+/**
+ * 开关按钮
+ */
+.onOff{
+  white-space: nowrap;
+  >span,
+  >.iconfont{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  >span{
+    color: #3d464d;
+    &.text-blue{
+      color: #3385ff;
+    }
+  }
+  >.iconfont{
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 28px;
+    color: #3385ff;
+    &.icon-kaiguan4{
+      color: #999;
+    }
+  }
+}
+td{
+  .onOff{
+    display: inline-block;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+}
+.bootstrap-select.btn-group .dropdown-toggle.btn-fill-green .filter-option {text-align:  center;}
+.charts-tooltip{
+  position: absolute;
+  display: none;
+  white-space: nowrap;
+  transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1), top 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 3px;
+  color: white;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 10px;
+  left: 139.57px;
+  top: 164px;
+  background-color: #354052;
+}
+@import "left_nav";
+@import "tab";
+@import "table";
+@import "panel";
+@import "button";
+@import "modal";
+@import "media";
+@import "jurisdiction";
+

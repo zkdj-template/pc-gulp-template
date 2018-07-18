@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/**
+ * Created by zhangxin on 2018/5/11.
+ * 手机的样式
+ */
+@media screen and (max-width: 767px) {
+  .navbar-linear-gradient .navbar-nav.nav-menu > li > a,
+  .navbar-linear-gradient .navbar-nav.navbar-right > li > a {
+    padding: 5px 15px;
+  }
+  .navbar-linear-gradient .navbar-nav.nav-menu > li > a:hover, .navbar-linear-gradient .navbar-nav.nav-menu > li > a:focus, .navbar-linear-gradient .navbar-nav.nav-menu > li > a:active,
+  .navbar-linear-gradient .navbar-nav.navbar-right > li > a:hover,
+  .navbar-linear-gradient .navbar-nav.navbar-right > li > a:focus,
+  .navbar-linear-gradient .navbar-nav.navbar-right > li > a:active {
+    background-color: transparent;
+  }
+  .navbar-linear-gradient .navbar-nav.nav-menu > li > a .iconfont,
+  .navbar-linear-gradient .navbar-nav.navbar-right > li > a .iconfont {
+    display: none;
+  }
+  .navbar-linear-gradient .navbar-nav.nav-menu > li.active,
+  .navbar-linear-gradient .navbar-nav.navbar-right > li.active {
+    background-color: transparent;
+  }
+  .navbar-linear-gradient .navbar-toggle {
+    display: none;
+  }
+  .page-wrapper .right-content {
+    padding: 10px;
+  }
+  .top-fixed-search.fixed-search {
+    top: 60px;
+  }
+  .fixed-search + .panel-line-primary {
+    padding-top: 230px !important;
+  }
+  .toggle-btn-box.charts.pt136 {
+    padding: 0;
+    height: auto;
+  }
+  .toggle-btn-box.charts.pt136 .bootstrap-select {
+    margin: 0;
+  }
+  .toggle-btn-box.charts.pt136 .bootstrap-select .btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .toggle-btn-box.charts.pt136 .btn {
+    margin-bottom: 10px;
+  }
+  .toggle-btn-box > .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-bottom: 0;
+  }
+  .panel-line-primary .panel-heading .panel-title.big-text {
+    font-size: 17px;
+  }
+  .search-tab {
+    margin-bottom: 10px;
+  }
+  .search-tab + .search-tabContent .form-inline .bootstrap-select.btn-group,
+  .search-tab + .search-tabContent .form-inline > .btn-default {
+    margin-bottom: 10px;
+  }
+  .search-tab + .search-tabContent .datepicker.w220 {
+    margin-bottom: 10px;
+    width: 50% !important;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .search-tab + .search-tabContent + .pull-right.posr {
+    float: none !important;
+  }
+  .search-tab + .search-tabContent + .pull-right.posr > .dropdown-menu {
+    left: 0;
+    right: auto;
+  }
+  .login-panel {
+    width: auto;
+    left: 3%;
+    padding: 15px;
+    margin-top: -200px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .login-panel .login-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .login-panel .form-horizontal .icon-input-group {
+    margin-bottom: 10px;
+  }
+}

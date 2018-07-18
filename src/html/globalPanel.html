@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>广告效果监测-全局面板</title>
+    <link rel="stylesheet" href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../vendor/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../vendor/icheck/skins/square/_all.css">
+    <link rel="stylesheet" href="../vendor/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav nav-menu">
+            <li class="active">
+                <a href="./globalPanel.html">全局看板</a>
+            </li>
+            <li>
+                <a href="./evaluation.html">广告效果评估</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="buildProject.html">
+                    <i class="iconfont icon-tubiao112"></i>
+                    <span>设置</span>
+                </a>
+            </li>
+            <li>
+                <a href="personInfo.html">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-line-primary top-fixed-search">
+                        <div class="panel-body">
+                            <div class="search-tab">
+                                <a href="javascript:void(0);" class="btn btn-fill-blue btn-blue">按项目</a>
+                                <a href="javascript:void(0);" class="btn btn-fill-blue">按产品</a>
+                            </div>
+                            <div class="search-tabContent">
+                                <form class="form-inline tab-form fade in active">
+                                    <select class="selectpicker" title="选择投放项目">
+                                        <option value=""></option>
+                                    </select>
+                                    <select class="selectpicker" title="选择媒体平台">
+                                        <option value=""></option>
+                                    </select>
+                                    <select class="selectpicker" title="选择主渠道">
+                                        <option value=""></option>
+                                    </select>
+                                    <select class="selectpicker" title="选择分渠道">
+                                        <option value=""></option>
+                                    </select>
+                                    <select class="selectpicker" title="选择子渠道">
+                                        <option value=""></option>
+                                    </select>
+                                    <button type="button" class="btn btn-default">
+                                        <i class="iconfont icon-sousuo1"></i>
+                                    </button>
+                                </form>
+                                <form class="form-inline tab-form fade">
+                                    <select class="selectpicker" title="选择车型">
+                                        <option value=""></option>
+                                    </select>
+                                    <select class="selectpicker" title="选择媒体平台">
+                                        <option value=""></option>
+                                    </select>
+                                    <select class="selectpicker" title="选择主渠道">
+                                        <option value=""></option>
+                                    </select>
+                                    <select class="selectpicker" title="选择分渠道">
+                                        <option value=""></option>
+                                    </select>
+                                    <select class="selectpicker" title="选择子渠道">
+                                        <option value=""></option>
+                                    </select>
+                                    <input class="form-control datepicker w220" type="text" placeholder="请选择时间段">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="iconfont icon-sousuo1"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="pull-right posr">
+                                <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown">导出</button>
+                                <ul class="dropdown-menu open inner stop-event">
+                                    <li class="text-center"><label>选择导出项</label></li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <label>
+                                                <input type="checkbox">
+                                                全国广告投放热度分布
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <label>
+                                                <input type="checkbox">
+                                                数据全景
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <label>
+                                                <input type="checkbox">
+                                                媒体占比分析
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <label>
+                                                <input type="checkbox">
+                                                广告投放效率走势分析
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <label>
+                                                <input type="checkbox">
+                                                广告成本漏斗分析
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <label>
+                                                <input type="checkbox">
+                                                广告投放数据走势分析
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <label>
+                                                <input type="checkbox">
+                                                媒体排行TOP10
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li class="text-center">
+                                        <button type="button" class="btn btn-blue btn-sm">
+                                            确定
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title big-text text-center">全国广告投放热度分布</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="toggle-btn-box charts pt136">
+                                        <select class="selectpicker" data-style="btn-fill-green" title="选择对比">
+                                            <option value="">销量对比</option>
+                                            <option value="">容量对比</option>
+                                        </select>
+                                        <button class="btn btn-default btn-blue" type="button"><i class="iconfont icon-dengpao"></i>曝光量</button>
+                                        <button class="btn btn-default" type="button"><i class="iconfont icon-mouse"></i>点击量</button>
+                                        <button class="btn btn-default" type="button"><i class="iconfont icon-xiansuo"></i>线索量</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="charts" id="map"></div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="panel panel-line-primary">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">全国TOP10</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="charts" id="top"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">数据全景</h3>
+                        </div>
+                        <div class="panel-body table-box">
+                            <table class="table table-bordered table-blue charts">
+                                <thead>
+                                    <tr>
+                                        <th style="border-bottom: none"></th>
+                                        <th>项目</th>
+                                        <th>今日</th>
+                                        <th>昨日</th>
+                                        <th>近七天</th>
+                                        <th>总计</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="6" style="vertical-align: middle; border-top: none" class="text-blue" align="center">媒体监测</td>
+                                        <td>广告方案</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>媒体监测量</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>曝光量</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>监测媒体</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>点击量</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>线索量</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                        <td>500</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">媒体占比分析</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="charts" id="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">广告媒体走势分析</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="charts" id="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">广告投放多漏斗分析</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="charts" id="funnel"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">广告投放多主题分析</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="charts" id="lineArea"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">媒体排行TOP10
+                                <select name="" class="pull-right selectpicker">
+                                    <option value="">线索量</option>
+                                    <option value="">点击量</option>
+                                    <option value="">曝光量</option>
+                                </select>
+                            </h3>
+                        </div>
+                        <div class="panel-body table-box">
+                            <table class="table table-blue table-hover charts">
+                                <thead>
+                                    <tr>
+                                        <th>媒体名称</th>
+                                        <th>线索量</th>
+                                        <th>点击量</th>
+                                        <th>曝光量</th>
+                                        <th>点击率</th>
+                                        <th>转化率</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>太平洋汽车</td>
+                                        <td>29</td>
+                                        <td>2900</td>
+                                        <td>20</td>
+                                        <td>2%</td>
+                                        <td>20%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+        </footer>
+    </div>
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/icheck/icheck.min.js"></script>
+<script src="../vendor/echarts/echarts.min.js"></script>
+<script src="../vendor/echarts/provinces/china.js"></script>
+<script src="../vendor/echarts/customed_GM.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/globalPanel/globalPanel.js"></script>
+</body>
+</html>

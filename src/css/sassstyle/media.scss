@@ -1,0 +1,103 @@
+/**
+ * Created by zhangxin on 2018/5/11.
+ * 手机的样式
+ */
+@media screen and (max-width:767px){
+  .navbar-linear-gradient {
+    .navbar-nav.nav-menu,
+    .navbar-nav.navbar-right{
+      >li{
+        >a{
+          padding: 5px 15px;
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: transparent;
+          }
+          .iconfont{
+            display: none;
+          }
+        }
+        &.active{
+          background-color: transparent;
+        }
+      }
+    }
+    .navbar-toggle{
+      display: none;
+    }
+  }
+  .page-wrapper{
+    .right-content{
+      padding: 10px;
+    }
+  }
+  .top-fixed-search.fixed-search{
+    top: 60px;
+  }
+  .fixed-search+.panel-line-primary{
+    padding-top: 230px !important;
+  }
+  .toggle-btn-box.charts.pt136 {
+    padding: 0;
+    height:  auto;
+    .bootstrap-select{
+      margin: 0;
+      .btn{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    .btn{
+      margin-bottom: 10px;
+    }
+  }
+
+  .toggle-btn-box > .btn {
+    display:  inline-block;
+    padding: 10px 30px;
+    margin-bottom: 0;
+  }
+  .panel-line-primary .panel-heading .panel-title.big-text{
+    font-size: 17px;
+  }
+  .search-tab{
+    margin-bottom: 10px;
+    +.search-tabContent{
+      .form-inline {
+        .bootstrap-select.btn-group,
+        >.btn-default{
+          margin-bottom: 10px;
+        }
+      }
+      .datepicker.w220{
+        margin-bottom: 10px;
+        width: 50% !important;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      +.pull-right.posr{
+        float: none !important;
+        >.dropdown-menu{
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+  .login-panel{
+    width: auto;
+    left: 3%;
+    padding: 15px;
+    margin-top: -200px;
+    background-color: rgba(255,255,255,.8);
+    .login-title {
+      margin-bottom: 20px;
+      font-size: 20px;
+      text-align:  center;
+    }
+    .form-horizontal .icon-input-group {
+      margin-bottom:  10px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+/**
+ * Created by zhangxin on 2017/12/26.
+ * 
+ */
+@import "common_var";
+.panel-title{
+  .btn-right-title{
+    line-height: 34px;
+  }
+}
+.panel-line-primary{
+  @include borderRadius(0);
+  border: 1px solid #ebebec;
+  .panel-heading{
+    border-bottom: none;
+    .panel-title{
+      font-size: 16px;
+      font-weight: 400;
+      &.fs18{
+        font-size: 18px;
+      }
+      &.big-text{
+        font-size: 34px;
+      }
+      .btn-right-title{
+        position: relative;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        &:after{
+          /*content: ' ';
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 1px;
+          bottom: -11px;
+          background-color: #3385ff;*/
+          content: ' ';
+          position: absolute;
+          margin-top: -8px;
+          left: 0;
+          width: 4px;
+          height: 16px;
+          top: 50%;
+          background-color: #3385ff;
+        }
+      }
+    }
+  }
+  .panel-body{
+    border-top: none !important;
+  }
+}

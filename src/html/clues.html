@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>广告效果评估-线索质量评估</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link href="../vendor/icheck/skins/square/_all.css" rel="stylesheet" />
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav nav-menu">
+            <li>
+                <a href="./globalPanel.html">全局看板</a>
+            </li>
+            <li class="active">
+                <a href="./evaluation.html">广告效果评估</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="buildProject.html">
+                    <i class="iconfont icon-tubiao112"></i>
+                    <span>设置</span>
+                </a>
+            </li>
+            <li>
+                <a href="personInfo.html">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <ul class="nav">
+            <li>
+                <a href="evaluation.html">
+                    <i class="iconfont icon-guanggaoxianxing"></i>
+                    广告效果监测
+                </a>
+            </li>
+            <li class="active">
+                <a href="clues.html">
+                    <i class="iconfont icon-xiansuo2"></i>
+                    线索质量评估
+                </a>
+            </li>
+            <li>
+                <a href="strategy.html">
+                    <i class="iconfont icon-shumogongjuiconshichangfenxi-"></i>
+                    广告投放策略
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="panel panel-line-primary top-fixed-search">
+                <div class="panel-heading no-toggle">
+                    <h3 class="panel-title clearfix">
+                        <span class="btn-right-title fs18">线索质量评估</span>
+                        <div class="pull-right">
+                            <a href="./clues.html" class="btn btn-fill-blue btn-blue">按项目</a>
+                            <a href="./clues_product.html" class="btn btn-fill-blue">按产品</a>
+                        </div>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="search-tabContent">
+                        <h3 class="project-name">五菱推广项目 </h3>
+                        <button type="button" class="btn btn-fill-blue" data-toggle="modal" data-target="#myModal">
+                            <i class="iconfont icon-zengjia"></i>
+                            切换项目
+                        </button>
+                    </div>
+                    <div class="pull-right posr">
+                        <form class="form-inline tab-form fade in active mr20">
+                            <select class="selectpicker" title="选择媒体平台">
+                                <option value=""></option>
+                            </select>
+                            <select class="selectpicker" title="选择主渠道">
+                                <option value=""></option>
+                            </select>
+                            <select class="selectpicker" title="选择分渠道">
+                                <option value=""></option>
+                            </select>
+                            <select class="selectpicker" title="选择子渠道">
+                                <option value=""></option>
+                            </select>
+                            <button type="button" class="btn btn-default">
+                                <i class="iconfont icon-sousuo1"></i>
+                            </button>
+                        </form>
+                        <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown">导出</button>
+                        <ul class="dropdown-menu open inner stop-event">
+                            <li class="text-center"><label>选择导出项</label></li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        项目线索质量评估
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        产品线索质量评估
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        线索状态及占比
+                                    </label>
+                                </a>
+                            </li>
+                            <li class="text-center">
+                                <button type="button" class="btn btn-blue btn-sm">
+                                    确定
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-line-primary" style="margin-bottom: 0;">
+                        <div class="panel-heading">
+                            <div class="panel-title">线索质量评估</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-right: 0">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-body">
+                            <div class="charts" id="bar"></div>
+                        </div>
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">各线索状态数量</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-left: 0;padding-right: 0">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-body">
+                            <div class="charts" id="pie"></div>
+                        </div>
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">线索状态占比</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-left: 0;">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-body">
+                            <div class="charts" id="pie2"></div>
+                        </div>
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">成交周期占比</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+        </footer>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">选择项目</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-box">
+                    <div class="form-horizontal btn-box">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">投放项目：</label>
+                            <div class="col-md-9">
+                                <a href="javascript:void(0);" class="btn btn-link active">全部</a>
+                                <a href="javascript:void(0);" class="btn btn-link">本月新增</a>
+                                <a href="javascript:void(0);" class="btn btn-link">启用</a>
+                                <a href="javascript:void(0);" class="btn btn-link">已到期</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">车型：</label>
+                            <div class="col-md-2">
+                                <select name="" class="form-control selectpicker" title="请选择车型">
+                                    <option value="">五菱宏光s</option>
+                                    <option value="">宝骏E100</option>
+                                    <option value="">宝骏310</option>
+                                    <option value="">宝骏730</option>
+                                    <option value="">宝骏560</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">代理商：</label>
+                            <div class="col-md-9">
+                                <a href="javascript:void(0);" class="btn btn-link active">全部</a>
+                                <a href="javascript:void(0);" class="btn btn-link">华扬联众</a>
+                                <a href="javascript:void(0);" class="btn btn-link">省广蓝门</a>
+                                <a href="javascript:void(0);" class="btn btn-link">上海博派</a>
+                                <a href="javascript:void(0);" class="btn btn-link">上思广告</a>
+                                <a href="javascript:void(0);" class="btn btn-link">新意互动</a>
+                                <a href="javascript:void(0);" class="btn btn-link">时空视点</a>
+                                <a href="javascript:void(0);" class="btn btn-link">迪思公关</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">时间：</label>
+                            <div class="col-md-9">
+                                <a href="javascript:void(0);" class="btn btn-link active">全部</a>
+                                <a href="javascript:void(0);" class="btn btn-link">今天</a>
+                                <a href="javascript:void(0);" class="btn btn-link">昨天</a>
+                                <a href="javascript:void(0);" class="btn btn-link">近七天</a>
+                                <a href="javascript:void(0);" class="btn btn-link select-time">自定义时间</a>
+                                <input type="text" class="form-control w220 datepicker" placeholder="请选择时间"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <table id="table4" class="table table-bordered table-blue table-hover"></table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/i18n/defaults-zh_CN.min.js"></script>
+<script src="../vendor/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_city.data.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_picker.js"></script>
+<script src="../vendor/icheck/icheck.min.js"></script>
+<script src="../vendor/echarts/echarts.min.js"></script>
+<script src="../vendor/echarts/customed_GM.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/clues/clues.js"></script>
+</body>
+</html>

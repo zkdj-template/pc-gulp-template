@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>广告效果评估-广告效果监测</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../vendor/bootstrap-table/bootstrap-table.min.css">
+    <link href="../vendor/icheck/skins/square/_all.css" rel="stylesheet" />
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav nav-menu">
+            <li>
+                <a href="./globalPanel.html">全局看板</a>
+            </li>
+            <li class="active">
+                <a href="./evaluation.html">广告效果评估</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="buildProject.html">
+                    <i class="iconfont icon-tubiao112"></i>
+                    <span>设置</span>
+                </a>
+            </li>
+            <li>
+                <a href="personInfo.html">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <ul class="nav">
+            <li>
+                <a href="evaluation.html">
+                    <i class="iconfont icon-guanggaoxianxing"></i>
+                    广告效果监测
+                </a>
+            </li>
+            <li>
+                <a href="clues.html">
+                    <i class="iconfont icon-xiansuo2"></i>
+                    线索质量评估
+                </a>
+            </li>
+            <li class="active">
+                <a href="strategy.html">
+                    <i class="iconfont icon-shumogongjuiconshichangfenxi-"></i>
+                    广告投放策略
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="panel panel-line-primary top-fixed-search">
+                <div class="panel-heading no-toggle">
+                    <h3 class="panel-title clearfix">
+                        <span class="btn-right-title fs18">广告投放策略</span>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="posr">
+                        <form class="form-inline tab-form fade in active mr20">
+                            <div class="form-group mr20">
+                                <label>选择车型：</label>
+                                <select class="selectpicker" title="请选择车型">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>推广费用区间：</label>
+                                <input class="form-control w140" type="text">
+                                <span>-</span>
+                                <input class="form-control w140" type="text">
+                            </div>
+                            <button class="btn btn-blue" type="button" data-toggle="modal" data-target="#myModal">设置推荐系数</button>
+                            <button class="btn btn-blue" type="button">查询</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--全国、地级市热度分布图 start-->
+            <div class="panel panel-line-primary">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="toggle-btn-box charts pt136">
+                                <select class="selectpicker" data-style="btn-fill-green" title="选择对比">
+                                    <option value="">销量对比</option>
+                                    <option value="">容量对比</option>
+                                </select>
+                                <button class="btn btn-default btn-blue" type="button"><i class="iconfont icon-dengpao"></i>曝光量</button>
+                                <button class="btn btn-default" type="button"><i class="iconfont icon-mouse"></i>点击量</button>
+                                <button class="btn btn-default" type="button"><i class="iconfont icon-xiansuo"></i>线索量</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="charts" id="map"></div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="charts" id="cityMap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--全国、地级市热度分布图 end-->
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">投放策略分析</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="charts" id="graph"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">建议媒体排行</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-box charts">
+                                <table class="table table-blue table-hover" id="table"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">媒体产出排行</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="charts" id="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">广告位产出排行</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="charts" id="bar2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">渠道效果走势分析</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-box">
+                                <div class="charts" id="bar3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+        </footer>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">系数设置</h4>
+            </div>
+            <div class="modal-body">
+                <form id="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">曝光系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入曝光量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">点击量系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入点击量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">线索量系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入线索量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">潜客量系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入潜客量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">成交量系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入成交量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="tishi">
+                                <i class="iconfont icon-jingshi"></i>
+                                <span>温馨提示：每项系数<=1,各项系数相加之和<=1</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-blue" id="save">&nbsp;&nbsp;保&nbsp;&nbsp;&nbsp;存&nbsp;&nbsp;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/i18n/defaults-zh_CN.min.js"></script>
+<script src="../vendor/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_city.data.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_picker.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/icheck/icheck.min.js"></script>
+<script src="../vendor/echarts/echarts.min.js"></script>
+<script src="../vendor/echarts/provinces/china.js"></script>
+<script src="../vendor/echarts/provinces/guangdong.js"></script>
+<script src="../vendor/echarts/provinces/anhui.js"></script>
+<script src="../vendor/echarts/provinces/fujian.js"></script>
+<script src="../vendor/echarts/provinces/gansu.js"></script>
+<script src="../vendor/echarts/provinces/guangxi.js"></script>
+<script src="../vendor/echarts/provinces/guizhou.js"></script>
+<script src="../vendor/echarts/provinces/hainan.js"></script>
+<script src="../vendor/echarts/provinces/hebei.js"></script>
+<script src="../vendor/echarts/provinces/heilongjiang.js"></script>
+<script src="../vendor/echarts/provinces/henan.js"></script>
+<script src="../vendor/echarts/provinces/hubei.js"></script>
+<script src="../vendor/echarts/provinces/hunan.js"></script>
+<script src="../vendor/echarts/provinces/jiangsu.js"></script>
+<script src="../vendor/echarts/provinces/jiangxi.js"></script>
+<script src="../vendor/echarts/provinces/jilin.js"></script>
+<script src="../vendor/echarts/provinces/liaoning.js"></script>
+<script src="../vendor/echarts/provinces/neimenggu.js"></script>
+<script src="../vendor/echarts/provinces/ningxia.js"></script>
+<script src="../vendor/echarts/provinces/qinghai.js"></script>
+<script src="../vendor/echarts/provinces/shandong.js"></script>
+<script src="../vendor/echarts/provinces/shanxi.js"></script>
+<script src="../vendor/echarts/provinces/shanxi1.js"></script>
+<script src="../vendor/echarts/provinces/sichuan.js"></script>
+<script src="../vendor/echarts/provinces/taiwan.js"></script>
+<script src="../vendor/echarts/provinces/xinjiang.js"></script>
+<script src="../vendor/echarts/provinces/xizang.js"></script>
+<script src="../vendor/echarts/provinces/yunnan.js"></script>
+<script src="../vendor/echarts/provinces/zhejiang.js"></script>
+<script src="../vendor/echarts/city/chongqing.js"></script>
+<script src="../vendor/echarts/city/shanghai.js"></script>
+<script src="../vendor/echarts/city/beijing.js"></script>
+<script src="../vendor/echarts/city/tianjin.js"></script>
+<script src="../vendor/echarts/city/aomen.js"></script>
+<script src="../vendor/echarts/city/xianggang.js"></script>
+<script src="../vendor/echarts/customed_GM.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/strategy/strategy.js"></script>
+</body>
+</html>

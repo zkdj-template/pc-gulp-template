@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>投放项目管理</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" >
+    <link href="../vendor/bootstrap-table/bootstrap-table.min.css" rel="stylesheet"/>
+    <link href="../vendor/jquery.loading/css/loading.min.css" rel="stylesheet">
+    <link href="../vendor/notification/css/notification.css" rel="stylesheet">
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <span>
+                    管理员
+                </span>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <ul class="nav">
+            <li>
+                <a href="index.html">
+                    <!--<i class="iconfont icon-guanggaoxianxing"></i>-->
+                    帐号管理
+                </a>
+            </li>
+            <li>
+                <a href="quanxianguanli.html">
+                    用户权限管理
+                </a>
+            </li>
+            <li>
+                <a href="meitiguanli.html">
+                    媒体库管理
+                </a>
+            </li>
+            <li>
+                <a href="meitipaiqiguanli.html">
+                    媒体排期管理
+                </a>
+            </li>
+            <li class="active">
+                <a href="xiangmuguanli.html">
+                    投放项目管理
+                </a>
+            </li>
+            <li>
+                <a href="biaoqianguanli.html">
+                    标签管理
+                </a>
+            </li>
+            <li>
+                <a href="systemManage.html">
+                    系统管理
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title clearfix">
+                                <span class="btn-right-title">投放项目管理</span>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-box">
+                                <div class="form-horizontal btn-box">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">投放项目：</label>
+                                        <div class="col-md-10">
+                                            <a href="javascript:void(0);" class="btn btn-link active">全部</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">本月新增</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">启用</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">已到期</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">车型：</label>
+                                        <div class="col-md-2">
+                                            <select name="" class="form-control selectpicker" title="请选择车型">
+                                                <option value="">五菱宏光s</option>
+                                                <option value="">宝骏E100</option>
+                                                <option value="">宝骏310</option>
+                                                <option value="">宝骏730</option>
+                                                <option value="">宝骏560</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">代理商：</label>
+                                        <div class="col-md-10">
+                                            <a href="javascript:void(0);" class="btn btn-link active">全部</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">华扬联众</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">省广蓝门</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">上海博派</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">上思广告</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">新意互动</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">时空视点</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">迪思公关</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">时间：</label>
+                                        <div class="col-md-10">
+                                            <a href="javascript:void(0);" class="btn btn-link active">全部</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">今天</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">昨天</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">近七天</a>
+                                            <a href="javascript:void(0);" class="btn btn-link select-time">自定义时间</a>
+                                            <input type="text" class="form-control w220 datepicker" placeholder="请选择时间"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <table id="table" class="table table-hover table-thead-blue"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+            <p class="text-center">慧数汽车提供技术支持</p>
+        </footer>
+    </div>
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/bootstrap-table/bootstrap-table.js"></script>
+<script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<!--loding 插件-->
+<script src="../vendor/jquery.loading/js/loading.min.js"></script>
+<!--提示插件-->
+<script src="../vendor/notification/js/notification.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/manager_copy/xiangmuguanli.js"></script>
+</body>
+</html>

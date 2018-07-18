@@ -1,0 +1,54 @@
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+@import "common_var";
+.tab-box{
+  background-color: $whiteColor;
+  .nav-tabs{
+    border: 1px solid #ebebec;
+    >li {
+      >a{
+        color: $fontColor;
+        border:1px solid #ebebec;
+        border-top: none;
+        @include borderRadius(0);
+        margin-right: 0;
+      }
+      >a,
+      >a:focus,
+      >a:hover {
+        margin-right: 0;
+        background-color: transparent;
+      }
+      &.active{
+        margin-bottom: 0;
+        border-top: none;
+        border-bottom: none;
+        font-weight: bold;
+        >a,
+        >a:focus,
+        >a:hover{
+          color: $iconColor;
+          border-top: none;
+          border-bottom: none;
+          border-left:none;
+          @include borderRadius(0);
+        }
+      }
+      &:first-child{
+        >a{
+          border-left: 0;
+        }
+      }
+      +li{
+        >a{
+          border-left: 0;
+        }
+      }
+    }
+  }
+}
+.tab-content-box{
+  padding-top: 15px;
+}

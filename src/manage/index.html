@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>账号管理</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" >
+    <link href="../vendor/bootstrap-table/bootstrap-table.min.css" rel="stylesheet"/>
+    <link href="../vendor/jquery.loading/css/loading.min.css" rel="stylesheet">
+    <link href="../vendor/notification/css/notification.css" rel="stylesheet">
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <span>
+                    管理员
+                </span>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <ul class="nav">
+            <li class="active">
+                <a href="index.html">
+                    <!--<i class="iconfont icon-guanggaoxianxing"></i>-->
+                    帐号管理
+                </a>
+            </li>
+            <li>
+                <a href="quanxianguanli.html">
+                    用户权限管理
+                </a>
+            </li>
+            <li>
+                <a href="meitiguanli.html">
+                    媒体库管理
+                </a>
+            </li>
+            <li>
+                <a href="meitipaiqiguanli.html">
+                    媒体排期管理
+                </a>
+            </li>
+            <li>
+                <a href="xiangmuguanli.html">
+                    投放项目管理
+                </a>
+            </li>
+            <li>
+                <a href="biaoqianguanli.html">
+                    标签管理
+                </a>
+            </li>
+            <li>
+                <a href="systemManage.html">
+                    系统管理
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title clearfix">
+                                <span class="btn-right-title">帐号管理</span>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-box">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label>用户角色：</label>
+                                        <select name="" class="form-control selectpicker w140">
+                                            <option value="">请选择用户角色</option>
+                                            <option value="">内部用户</option>
+                                            <option value="">代理商</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>日期范围：</label>
+                                        <input type="text" class="form-control datepicker w220" placeholder="请选择日期范围">
+                                    </div>
+                                    <div class="form-group pull-right">
+                                        <label class="sr-only">搜索</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="请输入账号或姓名关键字">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <button type="button" class="btn btn-blue">
+                                            <i class="iconfont icon-plus"></i>
+                                            增加
+                                        </button>
+                                    </div>
+                                </div>
+                                <br />
+                                <table id="table" class="table table-hover table-thead-blue">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+            <p class="text-center">慧数汽车提供技术支持</p>
+        </footer>
+    </div>
+</div>
+<div class="modal fade" id="warningMsgModal" tabindex="-1" role="dialog" aria-labelledby="warningMsgModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="warningMsgModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                <p class="tishi">
+                    <i class="iconfont icon-jingshi"></i>
+                    温馨提示：确认是否要删除该用户？
+                </p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-blue">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/bootstrap-table/bootstrap-table.js"></script>
+<script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<!--loding 插件-->
+<script src="../vendor/jquery.loading/js/loading.min.js"></script>
+<!--提示插件-->
+<script src="../vendor/notification/js/notification.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/manager_copy/index.js"></script>
+</body>
+</html>

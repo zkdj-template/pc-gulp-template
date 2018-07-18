@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../vendor/icheck/skins/square/blue.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="logo-box">
+    <img width="183" height="44" src="../images/login_logo.png" alt="" class="logo">
+</div>
+<div class="login-panel">
+    <h1 class="login-title">SGMW大数据营销管理系统</h1>
+    <form class="form-horizontal">
+        <div class="icon-input-group">
+            <i class="iconfont icon-yonghu"></i>
+            <input class="form-control" type="text" placeholder="请输入账号" />
+        </div>
+        <div class="icon-input-group">
+            <i class="iconfont icon-mima"></i>
+            <input class="form-control" type="password" placeholder="请输入密码" />
+        </div>
+        <div class="icon-input-group text-right">
+            <label>
+                <input type="checkbox" name="remember">
+                记住密码
+            </label>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">登录</button>
+        </div>
+    </form>
+</div>
+<!-- 顶部导航  end-->
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/icheck/icheck.min.js"></script>
+<script src="../js/plugin.js"></script>
+<script>
+    $(function () {
+        $('input[type=checkbox]').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            increaseArea: '20%'
+        });
+    });
+</script>
+</body>
+</html>

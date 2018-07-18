@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>广告效果评估-广告效果监测-按产品</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../vendor/bootstrap-table/bootstrap-table.min.css">
+    <link href="../vendor/icheck/skins/square/_all.css" rel="stylesheet" />
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav nav-menu">
+            <li>
+                <a href="./globalPanel.html">全局看板</a>
+            </li>
+            <li class="active">
+                <a href="./evaluation.html">广告效果评估</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="buildProject.html">
+                    <i class="iconfont icon-tubiao112"></i>
+                    <span>设置</span>
+                </a>
+            </li>
+            <li>
+                <a href="personInfo.html">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <ul class="nav">
+            <li class="active">
+                <a href="evaluation.html">
+                    <i class="iconfont icon-guanggaoxianxing"></i>
+                    广告效果监测
+                </a>
+            </li>
+            <li>
+                <a href="clues.html">
+                    <i class="iconfont icon-xiansuo2"></i>
+                    线索质量评估
+                </a>
+            </li>
+            <li>
+                <a href="strategy.html">
+                    <i class="iconfont icon-shumogongjuiconshichangfenxi-"></i>
+                    广告投放策略
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="panel panel-line-primary top-fixed-search">
+                <div class="panel-heading no-toggle">
+                    <h3 class="panel-title clearfix">
+                        <span class="btn-right-title fs18">广告效果监测</span>
+                        <div class="pull-right">
+                            <a href="./evaluation.html" class="btn btn-fill-blue">按项目</a>
+                            <a href="./evaluation_product.html" class="btn btn-fill-blue btn-blue">按产品</a>
+                        </div>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="search-tabContent">
+                        <h3 class="project-name">宝骏560</h3>
+                    </div>
+                    <div class="pull-right posr">
+                        <form class="form-inline tab-form fade in active mr20">
+                            <select class="selectpicker" title="选择车型">
+                                <option value=""></option>
+                            </select>
+                            <select class="selectpicker" title="选择媒体平台">
+                                <option value=""></option>
+                            </select>
+                            <select class="selectpicker" title="选择主渠道">
+                                <option value=""></option>
+                            </select>
+                            <select class="selectpicker" title="选择分渠道">
+                                <option value=""></option>
+                            </select>
+                            <select class="selectpicker" title="选择子渠道">
+                                <option value=""></option>
+                            </select>
+                            <select class="selectpicker">
+                                <option value="">排水前</option>
+                                <option value="">排水后</option>
+                            </select>
+                            <input class="form-control datepicker w220" type="text" placeholder="请选择时间段">
+                            <button type="button" class="btn btn-default">
+                                <i class="iconfont icon-sousuo1"></i>
+                            </button>
+                        </form>
+                        <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown">导出</button>
+                        <ul class="dropdown-menu open inner stop-event">
+                            <li class="text-center"><label>选择导出项</label></li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        车型投放数据概况
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        产品投放全局分析
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        全国热度分布
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        媒体全景漏斗
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        媒体排行TOP10
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        广告投放效率走势分析
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        广告投放数据走势分析
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        排行分析
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        落地页监测数据
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        访问路径分析
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        终端设备分布
+                                    </label>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        浏览器占比
+                                    </label>
+                                </a>
+                            </li>
+                            <li class="text-center">
+                                <button type="button" class="btn btn-blue btn-sm">
+                                    确定
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-bottom-line">
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="active">
+                        <a href="#tab1" data-toggle="tab">项目热度分布</a>
+                    </li>
+                    <li><a href="#tab2" data-toggle="tab">排行分析</a></li>
+                    <li><a href="#tab3" data-toggle="tab">落地页分析</a></li>
+                    <li><a href="#tab4" data-toggle="tab">终端设备分析</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <!--项目热度分布 start-->
+                    <div class="tab-pane fade in active" id="tab1">
+                        <div class="panel panel-line-primary" style="border-top:0;">
+                            <div class="panel-body">
+                                <h4>车型投放数据概况</h4>
+                                <div class="table-box">
+                                    <table class="table table-bordered table-blue table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center">关联项目</th>
+                                            <th class="text-center">曝光量</th>
+                                            <th class="text-center">点击量</th>
+                                            <th class="text-center">线索量</th>
+                                            <th class="text-center">潜客贡献量</th>
+                                            <th class="text-center">成交贡献量</th>
+                                            <th class="text-center">销量</th>
+                                            <th class="text-center">线索成交转化率</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">20</a>
+                                            </td>
+                                            <td class="text-center">5000000</td>
+                                            <td class="text-center">5000000</td>
+                                            <td class="text-center">5000000</td>
+                                            <td class="text-center">5000</td>
+                                            <td class="text-center">5000</td>
+                                            <td class="text-center">500</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--产品投放全局分布-->
+                        <div class="panel panel-line-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">产品投放全局分布</h3>
+                            </div>
+                            <div class="panel-body">
+                                <select class="selectpicker">
+                                    <option value="">曝光量</option>
+                                </select>
+                                <div class="charts" id="lineArea"></div>
+                            </div>
+                        </div>
+                        <!--全国、地级市热度分布图 start-->
+                        <div class="panel panel-line-primary">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="toggle-btn-box charts pt136">
+                                            <select class="selectpicker" data-style="btn-fill-green" title="选择对比">
+                                                <option value="">销量对比</option>
+                                                <option value="">容量对比</option>
+                                            </select>
+                                            <button class="btn btn-default btn-blue" type="button"><i class="iconfont icon-dengpao"></i>曝光量</button>
+                                            <button class="btn btn-default" type="button"><i class="iconfont icon-mouse"></i>点击量</button>
+                                            <button class="btn btn-default" type="button"><i class="iconfont icon-xiansuo"></i>线索量</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="charts" id="map"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="charts" id="cityMap"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--全国、地级市热度分布图 end-->
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">媒体全景漏斗</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="quyu-picker" data-toggle="regionCityPicker">
+                                            <select name="region" class="selectpicker" title="请选择地区">
+                                            </select>
+                                            <select name="provinces" class="selectpicker" title="请选择省份">
+                                            </select>
+                                            <select name="city" class="selectpicker" title="请选择城市">
+                                            </select>
+                                        </div>
+                                        <div class="charts" id="funnel"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">媒体排行TOP10</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <select class="selectpicker">
+                                            <option value="">曝光量</option>
+                                            <option value="">点击量</option>
+                                            <option value="">线索量</option>
+                                        </select>
+                                        <div class="charts" id="top"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            广告投放效率走势分析
+                                            <div class="quyu-picker pull-right" data-toggle="regionCityPicker">
+                                                <select name="region" class="selectpicker" title="请选择地区">
+                                                </select>
+                                                <select name="provinces" class="selectpicker" title="请选择省份">
+                                                </select>
+                                                <select name="city" class="selectpicker" title="请选择城市">
+                                                </select>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="charts" id="line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title clearfix">
+                                            广告投放数据走势分析
+                                            <div class="quyu-picker pull-right" data-toggle="regionCityPicker">
+                                                <select name="region" class="selectpicker" title="请选择地区">
+                                                </select>
+                                                <select name="provinces" class="selectpicker" title="请选择省份">
+                                                </select>
+                                                <select name="city" class="selectpicker" title="请选择城市">
+                                                </select>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="charts" id="line2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">费用成本走势</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="charts" id="line3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--项目热度分布 end-->
+                    <!--排行分析 start-->
+                    <div class="tab-pane fade" id="tab2">
+                        <div class="panel panel-line-primary" style="border-top:0;">
+                            <div class="panel-body">
+                                <h4 id="myTab2">
+                                    排行分析
+                                    <a href="#tablePane" class="btn btn-fill-blue btn-blue" data-toggle="tab">按广告位</a>
+                                    <a href="#tablePane2" class="btn btn-fill-blue" data-toggle="tab">按媒体</a>
+                                </h4>
+                                <div id="myTab2Content" class="table-box tab-content">
+                                    <div class="tab-pane fade in active" id="tablePane">
+                                        <table class="table table-bordered table-blue table-hover" id="table"></table>
+                                    </div>
+                                    <div class="tab-pane fade" id="tablePane2">
+                                        <table class="table table-bordered table-blue table-hover" id="table2"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--排行分析 end-->
+                    <!--落地页分析 start-->
+                    <div class="tab-pane fade" id="tab3">
+                        <div class="panel panel-line-primary">
+                            <div class="panel-body">
+                                <h4>落地页监测数据</h4>
+                                <div class="table-box">
+                                    <table class="table table-bordered table-blue table-hover" id="table3"></table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-line-primary" style="border-top:0;">
+                            <div class="panel-body">
+                                <h4>落地页监测数据</h4>
+                                <div class="charts" id="graph"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--落地页分析 end-->
+                    <!--终端设备分析 start-->
+                    <div class="tab-pane fade" id="tab4">
+                        <div class="row">
+                            <div class="col-md-6" style="padding-right: 0">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">终端设备分布</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="charts" id="pie"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="padding-left: 0">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">浏览器占比分析</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="charts" id="pie2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--终端设备分析 end-->
+                </div>
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+        </footer>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">关联项目</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-box">
+                    <table id="table4" class="table table-bordered table-blue table-hover"></table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/i18n/defaults-zh_CN.min.js"></script>
+<script src="../vendor/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_city.data.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_picker.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/icheck/icheck.min.js"></script>
+<script src="../vendor/echarts/echarts.min.js"></script>
+<script src="../vendor/echarts/provinces/china.js"></script>
+<script src="../vendor/echarts/provinces/guangdong.js"></script>
+<script src="../vendor/echarts/provinces/anhui.js"></script>
+<script src="../vendor/echarts/provinces/fujian.js"></script>
+<script src="../vendor/echarts/provinces/gansu.js"></script>
+<script src="../vendor/echarts/provinces/guangxi.js"></script>
+<script src="../vendor/echarts/provinces/guizhou.js"></script>
+<script src="../vendor/echarts/provinces/hainan.js"></script>
+<script src="../vendor/echarts/provinces/hebei.js"></script>
+<script src="../vendor/echarts/provinces/heilongjiang.js"></script>
+<script src="../vendor/echarts/provinces/henan.js"></script>
+<script src="../vendor/echarts/provinces/hubei.js"></script>
+<script src="../vendor/echarts/provinces/hunan.js"></script>
+<script src="../vendor/echarts/provinces/jiangsu.js"></script>
+<script src="../vendor/echarts/provinces/jiangxi.js"></script>
+<script src="../vendor/echarts/provinces/jilin.js"></script>
+<script src="../vendor/echarts/provinces/liaoning.js"></script>
+<script src="../vendor/echarts/provinces/neimenggu.js"></script>
+<script src="../vendor/echarts/provinces/ningxia.js"></script>
+<script src="../vendor/echarts/provinces/qinghai.js"></script>
+<script src="../vendor/echarts/provinces/shandong.js"></script>
+<script src="../vendor/echarts/provinces/shanxi.js"></script>
+<script src="../vendor/echarts/provinces/shanxi1.js"></script>
+<script src="../vendor/echarts/provinces/sichuan.js"></script>
+<script src="../vendor/echarts/provinces/taiwan.js"></script>
+<script src="../vendor/echarts/provinces/xinjiang.js"></script>
+<script src="../vendor/echarts/provinces/xizang.js"></script>
+<script src="../vendor/echarts/provinces/yunnan.js"></script>
+<script src="../vendor/echarts/provinces/zhejiang.js"></script>
+<script src="../vendor/echarts/city/chongqing.js"></script>
+<script src="../vendor/echarts/city/shanghai.js"></script>
+<script src="../vendor/echarts/city/beijing.js"></script>
+<script src="../vendor/echarts/city/tianjin.js"></script>
+<script src="../vendor/echarts/city/aomen.js"></script>
+<script src="../vendor/echarts/city/xianggang.js"></script>
+<script src="../vendor/echarts/customed_GM.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/evaluation/evaluation_product.js"></script>
+</body>
+</html>

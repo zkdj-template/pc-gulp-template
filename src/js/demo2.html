@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>地图选择的demo</title>
+    <style>
+        .map{
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<div class="map" id="map"></div>
+<div class="map" id="map2"></div>
+<script src="../vendor/echarts/echarts.min.js"></script>
+<script src="../vendor/echarts/customed_GM.js"></script>
+<script src="../vendor/echarts/provinces/china.js"></script>
+<script src="../vendor/echarts/provinces/guangdong.js"></script>
+<script src="../vendor/echarts/provinces/anhui.js"></script>
+<script src="../vendor/echarts/provinces/fujian.js"></script>
+<script src="../vendor/echarts/provinces/gansu.js"></script>
+<script src="../vendor/echarts/provinces/guangxi.js"></script>
+<script src="../vendor/echarts/provinces/guizhou.js"></script>
+<script src="../vendor/echarts/provinces/hainan.js"></script>
+<script src="../vendor/echarts/provinces/hebei.js"></script>
+<script src="../vendor/echarts/provinces/heilongjiang.js"></script>
+<script src="../vendor/echarts/provinces/henan.js"></script>
+<script src="../vendor/echarts/provinces/hubei.js"></script>
+<script src="../vendor/echarts/provinces/hunan.js"></script>
+<script src="../vendor/echarts/provinces/jiangsu.js"></script>
+<script src="../vendor/echarts/provinces/jiangxi.js"></script>
+<script src="../vendor/echarts/provinces/jilin.js"></script>
+<script src="../vendor/echarts/provinces/liaoning.js"></script>
+<script src="../vendor/echarts/provinces/neimenggu.js"></script>
+<script src="../vendor/echarts/provinces/ningxia.js"></script>
+<script src="../vendor/echarts/provinces/qinghai.js"></script>
+<script src="../vendor/echarts/provinces/shandong.js"></script>
+<script src="../vendor/echarts/provinces/shanxi.js"></script>
+<script src="../vendor/echarts/provinces/shanxi1.js"></script>
+<script src="../vendor/echarts/provinces/sichuan.js"></script>
+<script src="../vendor/echarts/provinces/taiwan.js"></script>
+<script src="../vendor/echarts/provinces/xinjiang.js"></script>
+<script src="../vendor/echarts/provinces/xizang.js"></script>
+<script src="../vendor/echarts/provinces/yunnan.js"></script>
+<script src="../vendor/echarts/provinces/zhejiang.js"></script>
+<script src="../vendor/echarts/city/chongqing.js"></script>
+<script src="../vendor/echarts/city/shanghai.js"></script>
+<script src="../vendor/echarts/city/beijing.js"></script>
+<script src="../vendor/echarts/city/tianjin.js"></script>
+<script src="../vendor/echarts/city/aomen.js"></script>
+<script src="../vendor/echarts/city/xianggang.js"></script>
+<script>
+    var mapChart = echarts.init(document.getElementById("map"),'customed');
+    var mapChart2 = echarts.init(document.getElementById("map2"),'customed');
+
+    //数据纯属虚构
+    function randomData() {
+        return Math.round(Math.random()*100);
+    }
+    var data = [
+
+        {
+            name: '齐齐哈尔'
+        }, {
+            name: '盐城'
+        }, {
+            name: '青岛'
+        }, {
+            name: '金昌'
+        }, {
+            name: '泉州'
+        }, {
+            name: '拉萨'
+        }, {
+            name: '攀枝花'
+        }, {
+            name: '威海'
+        }, {
+            name: '承德'
+        }, {
+            name: '汕尾'
+        }, {
+            name: '克拉玛依'
+        }, {
+            name: '重庆市'
+        }
+
+    ];
+
+    var geoCoordMap = {
+        '齐齐哈尔': [123.97, 47.33],
+        '盐城': [120.13, 33.38],
+        '青岛': [120.33, 36.07],
+        '金昌': [102.188043, 38.520089],
+        '泉州': [118.58, 24.93],
+        '拉萨': [91.11, 29.97],
+        '上海浦东': [121.48, 31.22],
+        '攀枝花': [101.718637, 26.582347],
+        '威海': [122.1, 37.5],
+        '承德': [117.93, 40.97],
+        '汕尾': [115.375279, 22.786211],
+        '克拉玛依': [84.77, 45.59],
+        '重庆市': [108.384366, 30.439702],
+
+    };
+    var convertData = function(data) {
+        var res = [];
+
+        for (var i = 0; i < data.length; i++) {
+            var geoCoord = geoCoordMap[data[i].name];
+
+            if (geoCoord) {
+                res.push({
+                    name: data[i].name,
+                    value: geoCoord.concat(data[i].value)
+                });
+            }
+        }
+
+        return res;
+    };
+    var MapOption = {
+        tooltip: {
+            trigger: 'item'
+
+        },
+        visualMap: {
+            min: 0,
+            max: 100,
+            left: 'left',
+            top: 'bottom',
+            text: ['高', '低'],
+        },
+        geo: {
+            map: 'china',
+            left: '20%',
+            zoom: 1.2,
+            roam: false,
+            itemStyle: {
+                normal: {
+                    areaColor: '#fbfbfb',
+                    borderColor: '#b9b4b7'
+
+                }
+            }
+        },
+        series: [{
+            name: '供需占比',
+            type: 'effectScatter',
+            coordinateSystem: 'geo',
+            data: convertData(data),
+            symbolSize: 10,
+            showEffectOn: 'render',
+            rippleEffect: {
+                brushType: 'stroke'
+            },
+            hoverAnimation: true,
+            label: {
+                normal: {
+                    formatter: '{b}',
+                    position: 'right',
+                    show: false
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#00fff6',
+                    shadowBlur: 10,
+                    shadowColor: '#333'
+                }
+            }
+        }, {
+            type: 'map',
+            mapType: 'china',
+            geoIndex: 0,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data: [{
+                name: '北京',
+                value: randomData()
+            }, {
+                name: '天津',
+                value: randomData()
+            }, {
+                name: '上海',
+                value: randomData()
+            }, {
+                name: '重庆',
+                value: randomData()
+            }, {
+                name: '河北',
+                value: randomData()
+            }, {
+                name: '河南',
+                value: randomData()
+            }, {
+                name: '云南',
+                value: randomData()
+            }, {
+                name: '辽宁',
+                value: randomData()
+            }, {
+                name: '黑龙江',
+                value: randomData()
+            }, {
+                name: '湖南',
+                value: randomData()
+            }, {
+                name: '安徽',
+                value: randomData()
+            }, {
+                name: '山东',
+                value: randomData()
+            }, {
+                name: '新疆',
+                value: randomData()
+            }, {
+                name: '江苏',
+                value: randomData()
+            }, {
+                name: '浙江',
+                value: randomData()
+            }, {
+                name: '江西',
+                value: randomData()
+            }, {
+                name: '湖北',
+                value: randomData()
+            }, {
+                name: '广西',
+                value: randomData()
+            }, {
+                name: '甘肃',
+                value: randomData()
+            }, {
+                name: '山西',
+                value: randomData()
+            }, {
+                name: '内蒙古',
+                value: randomData()
+            }, {
+                name: '陕西',
+                value: randomData()
+            }, {
+                name: '吉林',
+                value: randomData()
+            }, {
+                name: '福建',
+                value: randomData()
+            }, {
+                name: '贵州',
+                value: randomData()
+            }, {
+                name: '广东',
+                value: randomData()
+            }, {
+                name: '青海',
+                value: randomData()
+            }, {
+                name: '西藏',
+                value: randomData()
+            }, {
+                name: '四川',
+                value: randomData()
+            }, {
+                name: '宁夏',
+                value: randomData()
+            }, {
+                name: '海南',
+                value: randomData()
+            }, {
+                name: '台湾',
+                value: randomData()
+            }, {
+                name: '香港',
+                value: randomData()
+            }, {
+                name: '澳门',
+                value: randomData()
+            }, {
+                name: '南海诸岛',
+                value: randomData()
+            }]
+        }]
+    };
+    var MapOption2 = {
+        tooltip: {
+            trigger: 'item'
+
+        },
+        visualMap: {
+            show: false,
+            min: 0,
+            max: 100,
+            left: 'left',
+            top: 'bottom',
+            text: ['高', '低'],
+        },
+        geo: {
+            map: '广东',
+            left: '20%',
+            zoom: 1.2,
+            roam: false,
+            itemStyle: {
+                normal: {
+                    areaColor: '#fbfbfb',
+                    borderColor: '#b9b4b7'
+
+                }
+            }
+        },
+        series: [{
+            type: 'map',
+            geoIndex: 0,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data: [{
+                name: '广州市',
+                value: randomData()
+            }, {
+                name: '深圳市',
+                value: randomData()
+            }, {
+                name: '东莞市',
+                value: randomData()
+            }, {
+                name: '清远市',
+                value: randomData()
+            }, {
+                name: '肇庆市',
+                value: randomData()
+            }, {
+                name: '湛江市',
+                value: randomData()
+            }, {
+                name: '茂名市',
+                value: randomData()
+            }, {
+                name: '阳江市',
+                value: randomData()
+            }, {
+                name: '云浮市',
+                value: randomData()
+            }, {
+                name: '江门市',
+                value: randomData()
+            }, {
+                name: '佛山市',
+                value: randomData()
+            }, {
+                name: '中山市',
+                value: randomData()
+            }, {
+                name: '珠海市',
+                value: randomData()
+            }, {
+                name: '惠州市',
+                value: randomData()
+            }, {
+                name: '清远市',
+                value: randomData()
+            }, {
+                name: '汕尾市',
+                value: randomData()
+            }, {
+                name: '河源市',
+                value: randomData()
+            }, {
+                name: '梅州市',
+                value: randomData()
+            }, {
+                name: '揭阳市',
+                value: randomData()
+            }, {
+                name: '潮州市',
+                value: randomData()
+            }, {
+                name: '汕头市',
+                value: randomData()
+            }, {
+                name: '韶关市',
+                value: randomData()
+            }, {
+                name: '郑州市',
+                value: randomData()
+            },{
+                name: '商丘市',
+                value: randomData()
+            }, {
+                name: '合肥市',
+                value: randomData()
+            },{
+                name: '北京市',
+                value: randomData()
+            }, {
+                name: '石家庄市',
+                value: randomData()
+            },{
+                name: '西安市',
+                value: randomData()
+            }]
+        }]
+    };
+    mapChart.setOption(MapOption);
+    mapChart2.setOption(MapOption2);
+    mapChart.on("click",function (e) {
+        console.log(e);
+        var cityName = e.name,
+            strArr = cityName.split(''),
+            strArrLen = strArr.length;
+        if(strArr[strArrLen-1] === '市' || e.seriesType!='map')return
+        MapOption2.geo.map = cityName;
+        mapChart2.setOption(MapOption2);
+    });
+
+</script>
+</body>
+</html>

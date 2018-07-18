@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/**
+ * Created by zhangxin on 2018/5/18.
+ * 权限面板
+ */
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+/*主要字体颜色*/
+/**
+ * 混合器声明 start
+*/
+.jurisdiction-box:before, .jurisdiction-box:after {
+  content: ' ';
+  display: table;
+}
+
+.jurisdiction-box:after {
+  clear: both;
+}
+
+.jurisdiction-box .jurisdiction-item {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+}
+
+.jurisdiction-box .jurisdiction-item:first-child {
+  padding-left: 0;
+}
+
+.jurisdiction-box .jurisdiction-item:last-child {
+  padding-right: 0;
+}
+
+.jurisdiction-box .jurisdiction-item label {
+  margin-bottom: 0;
+  width: 100%;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.jurisdiction-box .jurisdiction-item .children-menu {
+  padding-left: 27px;
+}
+
+.jurisdiction-box .jurisdiction-item .panel {
+  border-color: #2a93ed;
+}
+
+.jurisdiction-box .jurisdiction-item .panel .panel-heading {
+  border-radius: 0;
+  background-color: #2a93ed;
+}
+
+.jurisdiction-box .jurisdiction-item .panel .panel-heading .panel-title {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.jurisdiction-box.jurisdiction-vertical .jurisdiction-item {
+  float: none;
+  width: 100%;
+  padding: 0;
+}
+
+.jurisdiction-box.jurisdiction-vertical label {
+  width: auto;
+  padding: 3px;
+  white-space: nowrap;
+}
+
+.jurisdiction-box.jurisdiction-vertical .panel .panel-heading .panel-title {
+  text-align: left;
+}
+
+.jurisdiction-box.jurisdiction-vertical .panel td {
+  vertical-align: middle;
+}

@@ -1,0 +1,143 @@
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+@import "common_var";
+.btn{
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  .iconfont{
+    font-size: inherit;
+  }
+}
+.btn-group .btn{
+  padding-left: 5px;
+}
+.btn-fill-blue{
+  color: $iconColor;
+  text-align: center;
+  border-color: $iconColor;
+  @include borderRadius(2px);
+  &:hover,
+  &:focus,
+  &:active{
+    color: $iconColor;
+  }
+  +.btn{
+    margin-left: 3px;
+  }
+}
+.btn-fill-green{
+  color: $green;
+  text-align: center;
+  border-color: $green;
+  background-color: transparent;
+  @include borderRadius(2px);
+  &:hover,
+  &:focus,
+  &:active{
+    color: $green;
+  }
+  +.btn{
+    margin-left: 3px;
+  }
+}
+.btn-link{
+  color: $fontColor;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active{
+    color: $color1;
+    text-decoration: none;
+  }
+  &.active{
+    font-weight: bold;
+  }
+  &.text-red,
+  &.text-red:hover,
+  &.text-red:focus,
+  &.text-red:active,
+  &.text-red.active{
+    color: #ff403b;
+  }
+  &.text-gray,
+  &.text-gray:hover,
+  &.text-gray:focus,
+  &.text-gray:active,
+  &.text-gray.active{
+    color: #a4abb1;
+  }
+}
+.btn-orange{
+  color: #ffffff !important;
+  background-color: #ff784e;
+}
+.btn-blue,
+.btn-blue:hover{
+  color: #ffffff !important;
+  background-color: $color1;
+  border-color: $color1;
+}
+.btn-sm{
+  padding: 1px 8px;
+  i.iconfont{
+    font-size: 12px;
+  }
+}
+.btn-box-bottom{
+  margin-bottom: 15px;
+}
+.btn-box {
+  .control-label {
+    padding-top: 5px;
+  }
+  .btn-link{
+    padding: 3px 0;
+    +.btn-link{
+      margin-left: 8px;
+    }
+  }
+  .tooltip {
+    .tooltip-inner{
+      background-color:  #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,.3);
+      .btn+.btn{
+        margin-left: 3px;
+      }
+    }
+    .tooltip-arrow{
+      border-top-color: #999;
+    }
+  }
+  label.btn-link {
+    position:  relative;
+    >input {
+      position:  absolute;
+      opacity: 0;
+    }
+  }
+}
+.inline-btn-box{
+  margin-left: 10px;
+}
+.toggle-btn-box{
+  text-align: center;
+  .btn-group{
+    margin-bottom: 30px;
+    .btn{
+      width: 118px;
+    }
+  }
+  >.btn{
+    padding-left:  30px;
+    padding-right:  30px;
+    display:  block;
+    margin: 0 auto 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

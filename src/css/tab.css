@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+/*主要字体颜色*/
+/**
+ * 混合器声明 start
+*/
+.tab-box {
+  background-color: #ffffff;
+}
+
+.tab-box .nav-tabs {
+  border: 1px solid #ebebec;
+}
+
+.tab-box .nav-tabs > li > a {
+  color: #3d464d;
+  border: 1px solid #ebebec;
+  border-top: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-right: 0;
+}
+
+.tab-box .nav-tabs > li > a,
+.tab-box .nav-tabs > li > a:focus,
+.tab-box .nav-tabs > li > a:hover {
+  margin-right: 0;
+  background-color: transparent;
+}
+
+.tab-box .nav-tabs > li.active {
+  margin-bottom: 0;
+  border-top: none;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+.tab-box .nav-tabs > li.active > a,
+.tab-box .nav-tabs > li.active > a:focus,
+.tab-box .nav-tabs > li.active > a:hover {
+  color: #3186fb;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.tab-box .nav-tabs > li:first-child > a {
+  border-left: 0;
+}
+
+.tab-box .nav-tabs > li + li > a {
+  border-left: 0;
+}
+
+.tab-content-box {
+  padding-top: 15px;
+}

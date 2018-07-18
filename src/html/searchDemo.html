@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>关于表单的一些快捷方法展示</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body{
+            background-color: #fff;
+        }
+        pre{
+            background-color: #f5f5f5;
+            white-space: pre-wrap; /*css-3*/
+            white-space: -moz-pre-wrap; /*Mozilla,since1999*/
+            white-space: -pre-wrap; /*Opera4-6*/
+            white-space: -o-pre-wrap; /*Opera7*/
+            word-wrap: break-word; /*InternetExplorer5.5+*/
+        }
+    </style>
+</head>
+<body>
+<div class="table-box">
+    <form class="form-horizontal btn-box" id="form">
+        <div class="form-group">
+            <label class="control-label col-md-2">投放项目：</label>
+            <div class="col-md-9">
+                <label class="btn btn-link active">
+                    <input type="radio" checked name="a" value="all">
+                    全部
+                </label>
+                <label class="btn btn-link">
+                    <input type="radio" name="a" value="month">
+                    本月新增
+                </label>
+                <label class="btn btn-link">
+                    <input type="radio" name="a" value="on">
+                    启用
+                </label>
+                <label class="btn btn-link">
+                    <input type="radio" name="a" value="off">
+                    已到期
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">车型：</label>
+            <div class="col-md-2">
+                <select name="b" class="form-control selectpicker" title="请选择车型" id="select">
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">代理商：</label>
+            <div class="col-md-9">
+                <label class="btn btn-link active">
+                    <input type="radio" checked name="c" value="all">
+                    全部
+                </label>
+                <label href="javascript:void(0);" class="btn btn-link">
+                    <input type="radio" name="c" value="1">
+                    华扬联众
+                </label>
+                <label href="javascript:void(0);" class="btn btn-link">
+                    <input type="radio" name="c" value="2">
+                    省广蓝门
+                </label>
+                <label href="javascript:void(0);" class="btn btn-link">
+                    <input type="radio" name="c" value="3">
+                    上海博派
+                </label>
+                <label href="javascript:void(0);" class="btn btn-link">
+                    <input type="radio" name="c" value="4">
+                    上思广告
+                </label>
+                <label href="javascript:void(0);" class="btn btn-link">
+                    <input type="radio" name="c" value="5">
+                    新意互动
+                </label>
+                <label href="javascript:void(0);" class="btn btn-link">
+                    <input type="radio" name="c" value="6">
+                    时空视点
+                </label>
+                <label href="javascript:void(0);" class="btn btn-link">
+                    <input type="radio" name="c" value="7">
+                    迪思公关
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">时间：</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control w220 datepicker" placeholder="请选择时间"/>
+                <input type="hidden" name="startDate">
+                <input type="hidden" name="endDate">
+            </div>
+        </div>
+    </form>
+
+
+
+    <div class="container">
+        <h3>给select插入option</h3>
+        <pre>
+            <code>
+    var optionData = [
+        {value:'1',text:'五菱宏光S3'},
+        {value:'2',text:'五菱宏光S2'},
+        {value:'3',text:'五菱宏光S1'},
+        {value:'4',text:'五菱宏光S'},
+        {value:'5',text:'五菱宏光SS'}
+    ];
+    $("#select").buildSelectOption(optionData);
+            </code>
+        </pre>
+        <h3>获取form表单内的参数</h3>
+        <button class="btn btn-blue" type="button" id="button1">获取form表单内的参数</button>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <pre>
+    <span class="text-green">
+    /*
+    * 获取form表单的参数代码
+    */
+    </span>
+                <code>
+    $("#form").buildFormData();
+
+    <span class="text-green">//封装的syncPost方法代替ajax的POST提交，使用方法：</span>
+    var option = new Object();
+    option.url = ''; <span class="text-green">//ajax请求地址</span>
+    option.data = data; <span class="text-green">//请求参数</span>
+    option.async = ''; <span class="text-green">//请求参数</span>
+    option.event = function(result){
+        <span class="text-green">//ajax请求成功的回调函数</span>
+        <span class="text-green">//result 请求成功后台的返回值</span>
+    };
+    option.errorFn = function(XMLHttpRequest,textStatus,errorThrown){
+        <span class="text-green">//ajax请求失败的回调函数</span>
+    };
+    option.errorMsg = '请求失败的提示语';
+
+    $.syncPost(option);
+                    </code>
+                </pre>
+            </div>
+            <div class="col-md-6">
+                <pre>
+    <span class="text-green">
+    /*
+    * form表单的内的参数值
+    */
+    </span>
+<code id="value1"></code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/i18n/defaults-zh_CN.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../js/jquery.util.js"></script>
+<script>
+    $(function () {
+        $(".btn-box").on("click",'.btn-link',function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+        /**
+         * 给select插入option
+         */
+        var optionData = [
+            {value:'1',text:'五菱宏光S3'},
+            {value:'2',text:'五菱宏光S2'},
+            {value:'3',text:'五菱宏光S1'},
+            {value:'4',text:'五菱宏光S'},
+            {value:'5',text:'五菱宏光SS'}
+        ];
+        $("#select").buildSelectOption(optionData);
+        /**
+         * 获取表单内的参数
+         */
+        $("#button1").on("click",function () {
+            var params = $("#form").buildFormData();
+            $("#value1").text(JSON.stringify(params));
+        });
+        $(".datepicker").daterangepicker({
+            maxDate : moment(), //最大时间
+            dateLimit : {
+                days : 180
+            },//起止时间的最大间隔
+            opens: 'right',
+            // autoApply:true,
+            format : 'YYYY-MM-DD', //控件中from和to 显示的日期格式
+            separator : ' 到 ',
+            autoUpdateInput: false,
+            buttonClasses: 'btn',
+            applyClass: 'btn-blue',
+            cancelClass: 'btn-default',
+            ranges : {
+                '昨日': [moment().subtract('days', 1).startOf('day'), moment().subtract('days', 1).endOf('day')],
+                '最近7日': [moment().subtract('days', 6), moment()],
+                '最近30日': [moment().subtract('days', 29), moment()]
+            },
+            locale: {
+                applyLabel : '确定',
+                cancelLabel : '取消',
+                fromLabel : '起始时间',
+                toLabel : '结束时间',
+                customRangeLabel : '自定义',
+                daysOfWeek : [ '日', '一', '二', '三', '四', '五', '六' ],
+                monthNames : [ '一月', '二月', '三月', '四月', '五月', '六月',
+                    '七月', '八月', '九月', '十月', '十一月', '十二月' ],
+                firstDay : 1
+            }
+        }).on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('YYYY-MM-DD') + ' 到 ' + picker.endDate.format('YYYY-MM-DD'));
+            $("input[name=startDate]").val(picker.startDate.format('YYYY-MM-DD'));
+            $("input[name=endDate]").val(picker.endDate.format('YYYY-MM-DD'));
+        }).on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
+    })
+</script>
+</body>
+</html>

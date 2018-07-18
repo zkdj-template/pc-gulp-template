@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>标签管理</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" >
+    <link href="../vendor/bootstrap-table/bootstrap-table.min.css" rel="stylesheet"/>
+    <link href="../vendor/jquery.loading/css/loading.min.css" rel="stylesheet">
+    <link href="../vendor/notification/css/notification.css" rel="stylesheet">
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <span>
+                    管理员
+                </span>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <ul class="nav">
+            <li>
+                <a href="index.html">
+                    <!--<i class="iconfont icon-guanggaoxianxing"></i>-->
+                    帐号管理
+                </a>
+            </li>
+            <li>
+                <a href="quanxianguanli.html">
+                    用户权限管理
+                </a>
+            </li>
+            <li>
+                <a href="meitiguanli.html">
+                    媒体库管理
+                </a>
+            </li>
+            <li>
+                <a href="meitipaiqiguanli.html">
+                    媒体排期管理
+                </a>
+            </li>
+            <li>
+                <a href="xiangmuguanli.html">
+                    投放项目管理
+                </a>
+            </li>
+            <li class="active">
+                <a href="biaoqianguanli.html">
+                    标签管理
+                </a>
+            </li>
+            <li>
+                <a href="systemManage.html">
+                    系统管理
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title clearfix">
+                                <span class="btn-right-title">投放项目管理</span>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tab-box">
+                                <ul id="myTab" class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#carModel" data-toggle="tab">车型库</a>
+                                    </li>
+                                    <li>
+                                        <a href="#agent" data-toggle="tab">代理商</a>
+                                    </li>
+                                    <li>
+                                        <a href="#advertisingTheme" data-toggle="tab">广告主题</a>
+                                    </li>
+                                    <li>
+                                        <a href="#capacityManage" data-toggle="tab">容量管理</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content-box">
+                                <div id="myTabContent" class="tab-content">
+                                    <div class="tab-pane fade in active" id="carModel">
+                                        <div class="table-box">
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-blue">
+                                                    <i class="iconfont icon-plus"></i>
+                                                    增加
+                                                </button>
+                                            </div>
+                                            <br>
+                                            <table id="table" class="table table-hover table-thead-blue"></table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="agent">
+                                        <div class="table-box">
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-blue">
+                                                    <i class="iconfont icon-plus"></i>
+                                                    增加
+                                                </button>
+                                            </div>
+                                            <br>
+                                            <table id="table2" class="table table-hover table-thead-blue"></table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="advertisingTheme">
+                                        <div class="table-box">
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-blue">
+                                                    <i class="iconfont icon-plus"></i>
+                                                    增加
+                                                </button>
+                                            </div>
+                                            <br>
+                                            <table id="table3" class="table table-hover table-thead-blue"></table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="capacityManage">
+                                        <div class="table-box">
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-blue">
+                                                    导入容量
+                                                </button>
+                                                <button type="button" class="btn btn-blue">
+                                                    <i class="iconfont icon-plus"></i>
+                                                    增加
+                                                </button>
+                                            </div>
+                                            <br>
+                                            <table id="table4" class="table table-hover table-thead-blue"></table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+            <p class="text-center">慧数汽车提供技术支持</p>
+        </footer>
+    </div>
+</div>
+<div class="modal fade" id="warningMsgModal" tabindex="-1" role="dialog" aria-labelledby="warningMsgModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="warningMsgModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                <p class="tishi">
+                    <i class="iconfont icon-jingshi"></i>
+                    温馨提示：确认是否要删除？
+                </p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-blue">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">修改车型</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">车型：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="请输入车型">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-blue">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel2">修改代理商</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">代理商名称：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="请输入代理商名称">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-blue">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel3">修改广告主题</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">主题名称：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="请输入主题名称">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-blue">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel4">修改容量</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">车型：</label>
+                        <div class="col-md-5">
+                            <select name="" class="form-control selectpicker" title="请选择车型">
+                                <option value="">五菱宏光s</option>
+                                <option value="">五菱宏光s1</option>
+                                <option value="">五菱宏光s2</option>
+                                <option value="">宝骏530</option>
+                                <option value="">宝骏E100</option>
+                                <option value="">宝骏730</option>
+                                <option value="">宝骏310</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">容量市场：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="请输入容量市场" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-blue">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/bootstrap-table/bootstrap-table.js"></script>
+<script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<!--loding 插件-->
+<script src="../vendor/jquery.loading/js/loading.min.js"></script>
+<!--提示插件-->
+<script src="../vendor/notification/js/notification.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/manager_copy/biaoqianguanli.js"></script>
+</body>
+</html>

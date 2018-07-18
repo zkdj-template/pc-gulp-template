@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/**
+ * Created by zhangxin on 2018/5/9.
+ * 左侧导航的样式
+ */
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+/*主要字体颜色*/
+/**
+ * 混合器声明 start
+*/
+.left-nav {
+  float: left;
+  width: 200px;
+  padding: 20px 0;
+  height: 100%;
+  background-color: #26303a;
+}
+
+.left-nav ul.nav {
+  margin-bottom: 0;
+  border: none;
+}
+
+.left-nav ul.nav > li {
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.left-nav ul.nav > li > a {
+  position: relative;
+  padding: 12px 15px;
+}
+
+.left-nav ul.nav > li > a:before {
+  display: none;
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #2a93ed;
+}
+
+.left-nav ul.nav > li > a:hover, .left-nav ul.nav > li > a:focus {
+  background-color: #36414b;
+  color: #ffffff;
+}
+
+.left-nav ul.nav > li > a:hover:before, .left-nav ul.nav > li > a:focus:before {
+  display: block;
+}
+
+.left-nav ul.nav > li > a,
+.left-nav ul.nav > li .iconfont {
+  color: #ffffff;
+}
+
+.left-nav ul.nav > li .iconfont {
+  font-size: 16px;
+}
+
+.left-nav ul.nav > li.active > .sub-nav {
+  display: block;
+}
+
+.left-nav ul.nav > li.active > a {
+  background-color: #36414b;
+  color: #ffffff;
+}
+
+.left-nav ul.nav > li.active > a:before {
+  display: block;
+}
+
+.left-nav ul.nav.sub-nav {
+  display: none;
+}
+
+.left-nav ul.nav.sub-nav > li > a {
+  padding-left: 55px;
+  font-size: 14px;
+  color: #8a93a9;
+}

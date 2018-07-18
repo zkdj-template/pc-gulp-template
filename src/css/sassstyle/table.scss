@@ -1,0 +1,153 @@
+/**
+ * Created by zhangxin on 2017/12/26.
+ * 
+ */
+/*
+ * 带表头form标点
+ */
+@import "common_var";
+.table-box {
+  .form-inline {
+    .bootstrap-select{
+      &.form-control:not([class*=col-]){
+        width: auto;
+      }
+    }
+    .form-control{
+      margin-right: 5px;
+    }
+  }
+  .table{
+    thead{
+      >tr{
+        >th{
+          background-color: #f5f5f5;
+        }
+      }
+    }
+    tbody{
+      a{
+        color: $iconColor;
+      }
+    }
+  }
+  .pagination{
+    >li{
+      >a,
+      >span {
+        color: #3d464d;
+      }
+    }
+    >.active{
+      >a,
+      >span{
+        color: #fff;
+        background-color: #2b93f5;
+        border-color: #2b93f5;
+        &:focus,
+        &:hover,
+        &:focus,
+        &:hover{
+          color: #fff;
+          background-color: #2b93f5;
+          border-color: #2b93f5;
+        }
+      }
+    }
+  }
+  .table-blue{
+    >thead>tr{
+      >th{
+        color: $color1;
+        font-weight: 400;
+        border-bottom-width: 1px;
+        border-color: #ddd;
+        border-top: 1px solid #ddd!important;
+        background-color: #fff;
+      }
+    }
+    >tbody>tr>td{
+      vertical-align: middle;
+    }
+  }
+  &.wp50{
+    float: left;
+    width: 50%;
+    thead>tr>th{
+      color: #4c4c4c;
+      font-size: 16px;
+      text-align: center;
+      font-weight: 400;
+      border-bottom-width: 1px;
+      border-color: #ddd;
+      border-top: 1px solid #ddd!important;
+      background-color: #fff;
+      white-space: nowrap;
+    }
+    tbody{
+      tr:first-child{
+        td{
+          text-align: center;
+          color: $color1;
+        }
+      }
+    }
+    td{
+      white-space: nowrap;
+    }
+    &+.wp50{
+      float: none;
+      margin-left: 50%;
+      overflow-y: auto;
+    }
+    .code-overflow{
+      padding-top: 0;
+      padding-bottom: 0;
+      display: block;
+      width: 200px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.table-border-even-blue{
+    tbody{
+      tr{
+        td{
+          border-color: #e3edf6;
+          &:nth-last-of-type(even){
+            width: 142px;
+            text-align: right;
+            color: #50585f;
+            background-color: #f2f8fc;
+          }
+        }
+      }
+    }
+  &.table-col-2{
+    tbody {
+      tr {
+        td {
+          &:nth-last-of-type(odd) {
+            width: 443px;
+          }
+        }
+      }
+    }
+  }
+}
+.panel-line-primary .panel-body .table{
+  margin-bottom: 0;
+}
+
+
+.bootstrap-table{
+  .table-thead-blue{
+    >thead>tr{
+      >th{
+        background-color: #f2f8fc;
+      }
+    }
+  }
+}

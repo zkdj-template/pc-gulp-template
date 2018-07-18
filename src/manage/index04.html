@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用户管理-查看权限</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/icheck/skins/square/_all.css" rel="stylesheet">
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <span>
+                    管理员
+                </span>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <ul class="nav">
+            <li class="active">
+                <a href="index.html">
+                    <!--<i class="iconfont icon-guanggaoxianxing"></i>-->
+                    帐号管理
+                </a>
+            </li>
+            <li>
+                <a href="quanxianguanli.html">
+                    用户权限管理
+                </a>
+            </li>
+            <li>
+                <a href="meitiguanli.html">
+                    媒体库管理
+                </a>
+            </li>
+            <li>
+                <a href="meitipaiqiguanli.html">
+                    媒体排期管理
+                </a>
+            </li>
+            <li>
+                <a href="xiangmuguanli.html">
+                    投放项目管理
+                </a>
+            </li>
+            <li>
+                <a href="biaoqianguanli.html">
+                    标签管理
+                </a>
+            </li>
+            <li>
+                <a href="systemManage.html">
+                    系统管理
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title clearfix">
+                                <span class="btn-right-title">查看权限</span>
+                                <a href="javascript:window.history.go(-1);" class="btn btn-link">
+                                    <i class="iconfont icon-return"></i>
+                                    返回
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-inline mb15">
+                                <div class="form-group">
+                                    <label class="">用户角色名称：</label>
+                                    <input type="text" class="form-control" placeholder="请输入用户角色" readonly value="经销商">
+                                </div>
+                            </div>
+                            <div class="jurisdiction-box jurisdiction-vertical">
+                                <div class="jurisdiction-item">
+                                    <div class="panel panel-line-primary">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title clearfix">
+                                                <label>
+                                                    <input type="checkbox" name="a" value="12">
+                                                    设置
+                                                </label>
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <label>
+                                                <input type="checkbox" name="a" value="12" disabled>
+                                                个人中心
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="a" value="12" disabled>
+                                                全局看板设置
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="a" value="12" disabled>
+                                                广告项目建设-内部
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="a" value="12" disabled>
+                                                广告项目建设-外部
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="a" value="12" disabled>
+                                                帐号管理
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="a" value="12" disabled>
+                                                用户权限管理
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="a" value="12" disabled>
+                                                媒体库管理
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="a" value="12" disabled>
+                                                媒体排期管理
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="a" value="122" disabled>
+                                                标签管理
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="a" value="12" disabled>
+                                                系统设置
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jurisdiction-item">
+                                    <div class="panel panel-line-primary">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title clearfix">
+                                                <label>
+                                                    <input type="checkbox" checked name="a" value="12">
+                                                    全局看板
+                                                </label>
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="table-box">
+                                                <table class="table table-bordered table-strip table-blue">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    按项目
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    全国广告投放热度
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    数据全景
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    媒体占比分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    广告投放效率走势分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    广告成本漏斗分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    广告投放数据走势分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    媒体排行TOP10
+                                                                </label>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    按产品
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    全国广告投放热度
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    数据全景
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    媒体占比分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    广告投放效率走势分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    广告成本漏斗分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    广告投放数据走势分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                                    媒体排行TOP10
+                                                                </label>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jurisdiction-item">
+                                    <div class="panel panel-line-primary">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title clearfix">
+                                                <label>
+                                                    <input type="checkbox" name="a" value="12">
+                                                    广告效果评估
+                                                </label>
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <h4>
+                                                <label>
+                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                    广告效果监测
+                                                </label>
+                                            </h4>
+                                            <table class="table table-bordered table-strip table-blue">
+                                                <tbody>
+                                                    <tr class="rowspan1">
+                                                        <td rowspan="4" style="vertical-align: middle">
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                按项目
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                项目热度分布
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                KPI评估
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                全国投放热度分布
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                媒体全景漏斗
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                媒体排行TOP10
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                广告投放效率走势分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                广告投放数据走势分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                费用成本走势
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="rowspan1">
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                排行分析
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                按广告位
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                按媒体
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="rowspan1">
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                落地页分析
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                落地页监测数据
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                访问路径分析
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="rowspan1">
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                终端设备分析
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                终端设备分布
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                浏览器占比
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="rowspan2">
+                                                        <td rowspan="4" style="vertical-align: middle">
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                按产品
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                项目热度分布
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                车型投放数据概况
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                产品投放全局分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                全国投放热度分布
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                媒体全景漏斗
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                媒体排行TOP10
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                广告投放效率走势分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                广告投放数据走势分析
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="rowspan2">
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                排行分析
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                按广告位
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                按媒体
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="rowspan2">
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                落地页分析
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                落地页监测数据
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                访问路径分析
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="rowspan2">
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                终端设备分析
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                终端设备分布
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                浏览器占比
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h4>
+                                                <label>
+                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                    线索质量评估
+                                                </label>
+                                            </h4>
+                                            <table class="table table-bordered table-strip table-blue">
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <label>
+                                                            <input type="checkbox" name="a" value="12" disabled>
+                                                            按项目
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            <input type="checkbox" name="a" value="12" disabled>
+                                                            项目线索质量评估
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="a" value="12" disabled>
+                                                            线索状态及占比
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>
+                                                            <input type="checkbox" name="a" value="12" disabled>
+                                                            按产品
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            <input type="checkbox" name="a" value="12" disabled>
+                                                            产品线索质量评估
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" name="a" value="12" disabled>
+                                                            线索状态及占比
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <h4>
+                                                <label>
+                                                    <input type="checkbox" name="a" value="12" disabled>
+                                                    广告投放策略
+                                                </label>
+                                            </h4>
+                                            <table class="table table-bordered table-strip table-blue">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                全国热度分布
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                投放策略分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                建议媒体排行
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                媒体产出排行
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                广告位产出排行
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" name="a" value="12" disabled>
+                                                                渠道效果走势分析
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+            <p class="text-center">慧数汽车提供技术支持</p>
+        </footer>
+    </div>
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/icheck/icheck.min.js"></script>
+<script src="../js/plugin.js"></script>
+<script>
+    $(function () {
+        $('.panel-body input[type=checkbox]').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            increaseArea: '20%'
+        });
+        $('.panel-heading input[type=checkbox]').iCheck({
+            checkboxClass: 'icheckbox_square-orange',
+            increaseArea: '20%'
+        }).on("ifChecked",function(){
+            $(this).parents(".jurisdiction-item .panel-line-primary").children(".panel-body").find("input[type=checkbox]").iCheck("enable")
+        }).on("ifUnchecked",function(){
+            $(this).parents(".jurisdiction-item .panel-line-primary").children(".panel-body").find("input[type=checkbox]").iCheck("uncheck").iCheck("disable");
+        });
+        $("h4 input[type=checkbox]").on("ifChecked",function () {
+            $(this).parents("h4").next('table').find("input[type=checkbox]").iCheck("enable").iCheck("check");
+        }).on("ifUnchecked",function () {
+            $(this).parents("h4").next('table').find("input[type=checkbox]").iCheck("uncheck").iCheck("disable");
+        });
+        $(".rowspan1 td[rowspan] input[type=checkbox]").on("ifChecked",function(){
+            $(".rowspan1 td:not([rowspan])").find("input[type=checkbox]").iCheck("enable").iCheck("check");
+        }).on("ifUnchecked",function(){
+            $(".rowspan1 td:not([rowspan])").find("input[type=checkbox]").iCheck("uncheck").iCheck("disable");
+        });
+        $(".rowspan2 td[rowspan] input[type=checkbox]").on("ifChecked",function(){
+            $(".rowspan2 td:not([rowspan])").find("input[type=checkbox]").iCheck("enable").iCheck("check");
+        }).on("ifUnchecked",function(){
+            $(".rowspan2 td:not([rowspan])").find("input[type=checkbox]").iCheck("uncheck").iCheck("disable");
+        });
+        $("table tr td:not([rowspan]) input[type=checkbox]").on("ifChecked",function () {
+            $(this).parents("td").next().find('input[type=checkbox]').iCheck("enable").iCheck("check");
+        }).on("ifUnchecked",function () {
+            $(this).parents("td").next().find('input[type=checkbox]').iCheck("uncheck").iCheck("disable");
+        });
+    });
+</script>
+</body>
+</html>

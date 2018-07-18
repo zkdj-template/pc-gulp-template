@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/**
+ * Created by zhangxin on 2017/12/26.
+ * 
+ */
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+/*主要字体颜色*/
+/**
+ * 混合器声明 start
+*/
+.panel-title .btn-right-title {
+  line-height: 34px;
+}
+
+.panel-line-primary {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid #ebebec;
+}
+
+.panel-line-primary .panel-heading {
+  border-bottom: none;
+}
+
+.panel-line-primary .panel-heading .panel-title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.panel-line-primary .panel-heading .panel-title.fs18 {
+  font-size: 18px;
+}
+
+.panel-line-primary .panel-heading .panel-title.big-text {
+  font-size: 34px;
+}
+
+.panel-line-primary .panel-heading .panel-title .btn-right-title {
+  position: relative;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.panel-line-primary .panel-heading .panel-title .btn-right-title:after {
+  /*content: ' ';
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 1px;
+          bottom: -11px;
+          background-color: #3385ff;*/
+  content: ' ';
+  position: absolute;
+  margin-top: -8px;
+  left: 0;
+  width: 4px;
+  height: 16px;
+  top: 50%;
+  background-color: #3385ff;
+}
+
+.panel-line-primary .panel-body {
+  border-top: none !important;
+}

@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/**
+ * Created by zhangxin on 2017/12/26.
+ * 
+ */
+/*
+ * 带表头form标点
+ */
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+/*主要字体颜色*/
+/**
+ * 混合器声明 start
+*/
+.table-box .form-inline .bootstrap-select.form-control:not([class*=col-]) {
+  width: auto;
+}
+
+.table-box .form-inline .form-control {
+  margin-right: 5px;
+}
+
+.table-box .table thead > tr > th {
+  background-color: #f5f5f5;
+}
+
+.table-box .table tbody a {
+  color: #3186fb;
+}
+
+.table-box .pagination > li > a,
+.table-box .pagination > li > span {
+  color: #3d464d;
+}
+
+.table-box .pagination > .active > a,
+.table-box .pagination > .active > span {
+  color: #fff;
+  background-color: #2b93f5;
+  border-color: #2b93f5;
+}
+
+.table-box .pagination > .active > a:focus, .table-box .pagination > .active > a:hover, .table-box .pagination > .active > a:focus, .table-box .pagination > .active > a:hover,
+.table-box .pagination > .active > span:focus,
+.table-box .pagination > .active > span:hover,
+.table-box .pagination > .active > span:focus,
+.table-box .pagination > .active > span:hover {
+  color: #fff;
+  background-color: #2b93f5;
+  border-color: #2b93f5;
+}
+
+.table-box .table-blue > thead > tr > th {
+  color: #2a93ed;
+  font-weight: 400;
+  border-bottom-width: 1px;
+  border-color: #ddd;
+  border-top: 1px solid #ddd !important;
+  background-color: #fff;
+}
+
+.table-box .table-blue > tbody > tr > td {
+  vertical-align: middle;
+}
+
+.table-box.wp50 {
+  float: left;
+  width: 50%;
+}
+
+.table-box.wp50 thead > tr > th {
+  color: #4c4c4c;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  border-bottom-width: 1px;
+  border-color: #ddd;
+  border-top: 1px solid #ddd !important;
+  background-color: #fff;
+  white-space: nowrap;
+}
+
+.table-box.wp50 tbody tr:first-child td {
+  text-align: center;
+  color: #2a93ed;
+}
+
+.table-box.wp50 td {
+  white-space: nowrap;
+}
+
+.table-box.wp50 + .wp50 {
+  float: none;
+  margin-left: 50%;
+  overflow-y: auto;
+}
+
+.table-box.wp50 .code-overflow {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.table-border-even-blue tbody tr td {
+  border-color: #e3edf6;
+}
+
+.table-border-even-blue tbody tr td:nth-last-of-type(even) {
+  width: 142px;
+  text-align: right;
+  color: #50585f;
+  background-color: #f2f8fc;
+}
+
+.table-border-even-blue.table-col-2 tbody tr td:nth-last-of-type(odd) {
+  width: 443px;
+}
+
+.panel-line-primary .panel-body .table {
+  margin-bottom: 0;
+}
+
+.bootstrap-table .table-thead-blue > thead > tr > th {
+  background-color: #f2f8fc;
+}

@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+/**
+ * Created by zhangxin on 2017/12/29.
+ * 
+ */
+/*主要字体颜色*/
+/**
+ * 混合器声明 start
+*/
+.btn {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.btn .iconfont {
+  font-size: inherit;
+}
+
+.btn-group .btn {
+  padding-left: 5px;
+}
+
+.btn-fill-blue {
+  color: #3186fb;
+  text-align: center;
+  border-color: #3186fb;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.btn-fill-blue:hover, .btn-fill-blue:focus, .btn-fill-blue:active {
+  color: #3186fb;
+}
+
+.btn-fill-blue + .btn {
+  margin-left: 3px;
+}
+
+.btn-fill-green {
+  color: #01e0a4;
+  text-align: center;
+  border-color: #01e0a4;
+  background-color: transparent;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.btn-fill-green:hover, .btn-fill-green:focus, .btn-fill-green:active {
+  color: #01e0a4;
+}
+
+.btn-fill-green + .btn {
+  margin-left: 3px;
+}
+
+.btn-link {
+  color: #3d464d;
+  text-decoration: none;
+}
+
+.btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.active {
+  color: #2a93ed;
+  text-decoration: none;
+}
+
+.btn-link.active {
+  font-weight: bold;
+}
+
+.btn-link.text-red, .btn-link.text-red:hover, .btn-link.text-red:focus, .btn-link.text-red:active, .btn-link.text-red.active {
+  color: #ff403b;
+}
+
+.btn-link.text-gray, .btn-link.text-gray:hover, .btn-link.text-gray:focus, .btn-link.text-gray:active, .btn-link.text-gray.active {
+  color: #a4abb1;
+}
+
+.btn-orange {
+  color: #ffffff !important;
+  background-color: #ff784e;
+}
+
+.btn-blue,
+.btn-blue:hover {
+  color: #ffffff !important;
+  background-color: #2a93ed;
+  border-color: #2a93ed;
+}
+
+.btn-sm {
+  padding: 1px 8px;
+}
+
+.btn-sm i.iconfont {
+  font-size: 12px;
+}
+
+.btn-box-bottom {
+  margin-bottom: 15px;
+}
+
+.btn-box .control-label {
+  padding-top: 5px;
+}
+
+.btn-box .btn-link {
+  padding: 3px 0;
+}
+
+.btn-box .btn-link + .btn-link {
+  margin-left: 8px;
+}
+
+.btn-box .tooltip .tooltip-inner {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-box .tooltip .tooltip-inner .btn + .btn {
+  margin-left: 3px;
+}
+
+.btn-box .tooltip .tooltip-arrow {
+  border-top-color: #999;
+}
+
+.btn-box label.btn-link {
+  position: relative;
+}
+
+.btn-box label.btn-link > input {
+  position: absolute;
+  opacity: 0;
+}
+
+.inline-btn-box {
+  margin-left: 10px;
+}
+
+.toggle-btn-box {
+  text-align: center;
+}
+
+.toggle-btn-box .btn-group {
+  margin-bottom: 30px;
+}
+
+.toggle-btn-box .btn-group .btn {
+  width: 118px;
+}
+
+.toggle-btn-box > .btn {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.toggle-btn-box > .btn:last-child {
+  margin-bottom: 0;
+}
