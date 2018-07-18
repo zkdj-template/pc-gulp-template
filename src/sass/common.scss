@@ -108,7 +108,7 @@ a:visited{
   @include clearfix;
   .right-content{
     @include fullScreen;
-    padding: 20px 20px 0;
+    padding: 15px 15px 0;
     overflow-y: auto;
   }
   .left-nav+.right-content{
@@ -164,10 +164,10 @@ a:visited{
   @include transition(1s);
   &.fixed-search{
     position: fixed;
-    top: 61px;
+    top: 60px;
     left: 0;
     right: 0;
-    z-index: 4;
+    z-index: 1001;
   }
   .search-tab,
   .search-tabContent{
@@ -395,6 +395,8 @@ td{
   display: none;
   white-space: nowrap;
   transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1), top 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px; 
   border-radius: 3px;
   color: white;
   font-style: normal;
