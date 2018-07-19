@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>车型声量监控</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../vendor/bootstrap-table/bootstrap-table.min.css">
+    <link href="../vendor/icheck/skins/square/_all.css" rel="stylesheet" />
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/public_relation.css">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav nav-menu">
+            <li>
+                <a href="./globalPanel.html">全局看板</a>
+            </li>
+            <li>
+                <a href="./evaluation.html">广告效果评估</a>
+            </li>
+            <li  class="active">
+                <a href="./public_relation.html">公关传播效果评估</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="buildProject.html">
+                    <i class="iconfont icon-tubiao112"></i>
+                    <span>设置</span>
+                </a>
+            </li>
+            <li>
+                <a href="personInfo.html">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <!--<ul class="nav">
+            <li class="li_one">
+                <a href="#">
+                    <img src="../images/mtzyk.png" alt="">
+                    媒体资源库
+                    <img class="up" src="../images/up.png" alt="">
+                </a>
+            </li>
+                <ul class="nav">
+                <li class="li_son">
+                    <a href="#">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        媒体资源库
+                    </a>
+                </li>
+                <li class="li_son">
+                    <a href="#">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        媒体VIP管理
+                    </a>
+                </li>
+            </ul>
+            <li class="li_one">
+                <a href="#">
+                    <img src="../images/jxsjc.png" alt="">
+                    经销商检测
+                    <img class="up" src="../images/up.png" alt="">
+                </a>
+
+            </li>
+                <ul class="nav">
+            <li class="li_son">
+                <a href="#">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    媒体资源库
+                </a>
+            </li>
+            <li class="li_son">
+                <a href="#">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    媒体VIP管理
+                </a>
+            </li>
+            </ul>
+            <li class="li_one">
+                <a href="#">
+                    <img src="../images/hdslpg.png" alt="">
+                    活动声量评估
+                </a>
+            </li>
+            <li class="li_one">
+                <a href="#">
+                    <img src="../images/cxslpg.png" alt="">
+                    车型声量评估
+                    <img class="up" src="../images/up.png" alt="">
+                </a>
+            </li>
+                <ul class="nav">
+                    <li class="active li_son">
+                    <a href="#">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        声量检测
+                    </a>
+                </li>
+                    <li class="li_son">
+                    <a href="#">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        舆情分析
+                    </a>
+                </li>
+                </ul>
+        </ul>-->
+        <dl class="list_dl">
+            <dt class="list_dt">
+                <span class="_after"></span>
+                <img src="../images/mtzyk.png" alt="">
+                <p>媒体资源库</p>
+                <i class="list_dt_icon"></i>
+            </dt>
+            <dd class="list_dd">
+                <ul>
+                    <li class="list_li">媒体库管理</li>
+                    <li class="list_li">媒体VIP管理</li>
+                    <li class="list_li">媒体VIP产品</li>
+                </ul>
+            </dd>
+            <dt class="list_dt">
+                <span class="_after"></span>
+                <img src="../images/jxsjc.png" alt="">
+                <p>经销商监控</p>
+                <i class="list_dt_icon"></i>
+            </dt>
+            <dd class="list_dd">
+                <ul>
+                    <li class="list_li">经销商管理</li>
+                    <li class="list_li">经销商声量</li>
+                    <li class="list_li">文章核查</li>
+                </ul>
+            </dd>
+            <dt class="list_dt">
+                <span class="_after"></span>
+                <img src="../images/hdslpg.png" alt="">
+                <p>
+                    <a href="#">
+                    活动声量评估
+                    </a>
+                </p>
+            </dt>
+            <dt class="list_dt" id="open">
+                <span class="_after"></span>
+                <img src="../images/cxslpg.png" alt="">
+                <p>车型声量评估</p>
+                <i class="list_dt_icon"></i>
+            </dt>
+            <dd class="list_dd" style="display: block">
+                <ul>
+                    <li class="list_li active_li">
+                        <a href="./public_relation.html">声量监控</a>
+                    </li>
+                    <li class="list_li">
+                        <a href="./public_opinion.html">舆情分析</a>
+                    </li>
+
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-line-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title clearfix">
+                                <span class="btn-right-title">声量监控</span>
+                                <div class="form-inline pull-right">
+                                    <div class="form-group">
+                                        <button class="btn btn-blue" type="button" data-toggle="modal" data-target="#myModal">
+                                            查询
+                                        </button>
+                                    </div>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-box">
+                                <div class="form-horizontal btn-box">
+                                    <div class="panel-body">
+                                        <div class="posr">
+                                            <form class="form-inline tab-form fade in active mr20">
+                                                <div class="form-group mr20">
+                                                    <label>内容类型:</label>
+                                                    <a href="javascript:;" class="s_a blue_text">互动类</a>
+                                                    <a href="javascript:;" class="s_a">新闻类</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="posr">
+                                            <form class="form-inline tab-form fade in active mr20">
+                                                <div class="form-group mr20">
+                                                    <label>选择车型/品牌：</label>
+                                                    <select class="selectpicker" title="选择本品类型">
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="posr">
+                                            <form class="form-inline tab-form fade in active mr20">
+                                                <div class="form-group mr20">
+                                                    <label>关联竞品:</label>
+                                                    <a href="javascript:;" class="s_a blue_text">哈佛H6</a>
+                                                    <a href="javascript:;" class="s_a">名爵</a>
+                                                    <a href="javascript:;" class="s_a">风尚</a>
+                                                    <a href="javascript:;" class="s_a">幻速</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="posr">
+                                            <form class="form-inline tab-form fade in active mr20">
+                                                <div class="form-group mr20">
+                                                    <label style="margin-right: 30px">媒&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;体：</label>
+                                                    <select class="selectpicker" title="选择媒体平台">
+                                                        <option value=""></option>
+                                                    </select>
+                                                    <select class="selectpicker" title="选择主媒体">
+                                                        <option value=""></option>
+                                                    </select>
+                                                    <select class="selectpicker" title="选择分媒体">
+                                                        <option value=""></option>
+                                                    </select>
+                                                    <select class="selectpicker" title="选择媒体名称">
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="posr">
+                                            <form class="form-inline tab-form fade in active mr20">
+                                                <div class="form-group mr20">
+                                                    <label>时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:</label>
+                                                    <a href="javascript:;" class="s_a blue_text">近7天</a>
+                                                    <a href="javascript:;" class="s_a">近30天</a>
+                                                    <input type="text" style="margin-left: 40px" class="form-control w220 datepicker" placeholder="自定义时间"/>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="posr">
+                                            <form class="form-inline tab-form fade in active mr20">
+                                                <div class="form-group mr20">
+                                                    <label>排水类型:</label>
+                                                    <a href="javascript:;" class="s_a blue_text">排水前</a>
+                                                    <a href="javascript:;" class="s_a">排水后</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-bottom-line">
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="active">
+                        <a href="#tab1" data-toggle="tab">声量趋势分析</a>
+                    </li>
+                    <li>
+                        <a href="#tab2" data-toggle="tab">媒体产出排行</a>
+                    </li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <!--项目热度分布 start-->
+                    <div class="tab-pane fade in active" id="tab1">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            车型声量走势
+                                            <div class="quyu-picker pull-right" data-toggle="regionCityPicker">
+                                                <select name="region" class="selectpicker" title="文章量">
+                                                </select>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="charts" id="car_type"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">车型声量统计</h3>
+                                        <!--<div class="quyu-picker pull-right" data-toggle="regionCityPicker">
+                                            <select name="region" class="selectpicker" title="文章量">
+                                            </select>
+                                        </div>-->
+                                    </div>
+                                    <div class="panel-body">
+
+                                        <div class="charts" id="car_num"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">媒体排行TOP10</h3>
+                                        <select class="selectpicker pull-right">
+                                            <option value="">曝光量</option>
+                                            <option value="">点击量</option>
+                                            <option value="">线索量</option>
+                                        </select>
+                                    </div>
+                                    <div class="panel-body">
+
+                                        <div class="charts" id="car_madel"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">媒体结构分布</h3>
+                                        <div class="quyu-picker pull-right" data-toggle="regionCityPicker">
+                                            <select name="region" class="selectpicker" title="文章量">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+
+                                        <div class="charts" id="car_madel2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">媒体排行</h3>
+                                        <select class="selectpicker pull-right">
+                                            <option value="">曝光量</option>
+                                            <option value="">点击量</option>
+                                            <option value="">线索量</option>
+                                        </select>
+                                    </div>
+                                    <div class="panel-body">
+
+                                        <div class="charts" id="car_top"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--项目热度分布 end-->
+                    <!--排行分析 start-->
+                    <div class="tab-pane fade" id="tab2">
+                        <div class="panel panel-line-primary" style="border-top:0;">
+                            <div class="panel-body">
+                                <h4 id="myTab2">
+                                    <a href="#tablePane" class="btn btn-fill-blue btn-blue" data-toggle="tab">文章列表</a>
+                                    <a href="#tablePane2" class="btn btn-fill-blue" data-toggle="tab">媒介推荐</a>
+                                    <a href="#tablePane3" class="btn btn-fill-blue" data-toggle="tab">作者推荐</a>
+                                    <div class="pull-right posr">
+                                        <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown">导出</button>
+                                        <ul class="dropdown-menu open inner stop-event">
+                                            <li class="text-center"><label>选择导出项</label></li>
+                                            <li>
+                                                <a href="javascript:void(0);">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        文章列表
+                                                    </label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        媒体推荐
+                                                    </label>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        作者推荐
+                                                    </label>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <button type="button" class="btn btn-blue btn-sm">
+                                                    确定
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </h4>
+                                <div id="myTab2Content" class="table-box tab-content">
+                                    <div class="tab-pane fade in active" id="tablePane">
+                                        <table class="table table-bordered table-blue table-hover" id="table"></table>
+                                    </div>
+                                    <div class="tab-pane fade" id="tablePane2">
+                                        <table class="table table-bordered table-blue table-hover" id="table2"></table>
+                                    </div>
+                                    <div class="tab-pane fade" id="tablePane3">
+                                        <table class="table table-bordered table-blue table-hover" id="table3"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--排行分析 end-->
+                </div>
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+            <p class="text-center">慧数汽车提供技术支持</p>
+        </footer>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">选择项目</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-box">
+                    <form class="form-horizontal btn-box">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">投放项目：</label>
+                            <div class="col-md-9">
+                                <label class="btn btn-link active">
+                                    <input type="radio" checked name="a" value="all">
+                                    全部
+                                </label>
+                                <label class="btn btn-link">
+                                    <input type="radio" name="a" value="month">
+                                    本月新增
+                                </label>
+                                <label class="btn btn-link">
+                                    <input type="radio" name="a" value="on">
+                                    启用
+                                </label>
+                                <label class="btn btn-link">
+                                    <input type="radio" name="a" value="off">
+                                    已到期
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">车型：</label>
+                            <div class="col-md-2">
+                                <select name="b" class="form-control selectpicker" title="请选择车型">
+                                    <option value="">五菱宏光s</option>
+                                    <option value="">宝骏E100</option>
+                                    <option value="">宝骏310</option>
+                                    <option value="">宝骏730</option>
+                                    <option value="">宝骏560</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">代理商：</label>
+                            <div class="col-md-9">
+                                <label class="btn btn-link active">
+                                    <input type="radio" checked name="c" value="all">
+                                    全部
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="1">
+                                    华扬联众
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="2">
+                                    省广蓝门
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="3">
+                                    上海博派
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="4">
+                                    上思广告
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="5">
+                                    新意互动
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="6">
+                                    时空视点
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="7">
+                                    迪思公关
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">时间：</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control w220 datepicker" placeholder="请选择时间"/>
+                                <input type="hidden" name="startDate">
+                                <input type="hidden" name="endDate">
+                            </div>
+                        </div>
+                    </form>
+                    <table id="table4" class="table table-bordered table-blue table-hover"></table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/i18n/defaults-zh_CN.min.js"></script>
+<script src="../vendor/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_city.data.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_picker.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/icheck/icheck.min.js"></script>
+<script src="../vendor/echarts/echarts.min.js"></script>
+<script src="../vendor/echarts/provinces/china.js"></script>
+<script src="../vendor/echarts/provinces/guangdong.js"></script>
+<script src="../vendor/echarts/provinces/anhui.js"></script>
+<script src="../vendor/echarts/provinces/fujian.js"></script>
+<script src="../vendor/echarts/provinces/gansu.js"></script>
+<script src="../vendor/echarts/provinces/guangxi.js"></script>
+<script src="../vendor/echarts/provinces/guizhou.js"></script>
+<script src="../vendor/echarts/provinces/hainan.js"></script>
+<script src="../vendor/echarts/provinces/hebei.js"></script>
+<script src="../vendor/echarts/provinces/heilongjiang.js"></script>
+<script src="../vendor/echarts/provinces/henan.js"></script>
+<script src="../vendor/echarts/provinces/hubei.js"></script>
+<script src="../vendor/echarts/provinces/hunan.js"></script>
+<script src="../vendor/echarts/provinces/jiangsu.js"></script>
+<script src="../vendor/echarts/provinces/jiangxi.js"></script>
+<script src="../vendor/echarts/provinces/jilin.js"></script>
+<script src="../vendor/echarts/provinces/liaoning.js"></script>
+<script src="../vendor/echarts/provinces/neimenggu.js"></script>
+<script src="../vendor/echarts/provinces/ningxia.js"></script>
+<script src="../vendor/echarts/provinces/qinghai.js"></script>
+<script src="../vendor/echarts/provinces/shandong.js"></script>
+<script src="../vendor/echarts/provinces/shanxi.js"></script>
+<script src="../vendor/echarts/provinces/shanxi1.js"></script>
+<script src="../vendor/echarts/provinces/sichuan.js"></script>
+<script src="../vendor/echarts/provinces/taiwan.js"></script>
+<script src="../vendor/echarts/provinces/xinjiang.js"></script>
+<script src="../vendor/echarts/provinces/xizang.js"></script>
+<script src="../vendor/echarts/provinces/yunnan.js"></script>
+<script src="../vendor/echarts/provinces/zhejiang.js"></script>
+<script src="../vendor/echarts/city/chongqing.js"></script>
+<script src="../vendor/echarts/city/shanghai.js"></script>
+<script src="../vendor/echarts/city/beijing.js"></script>
+<script src="../vendor/echarts/city/tianjin.js"></script>
+<script src="../vendor/echarts/city/aomen.js"></script>
+<script src="../vendor/echarts/city/xianggang.js"></script>
+<script src="../vendor/echarts/customed_GM.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/public_relation/public_relation.js"></script>
+</body>
+</html>
