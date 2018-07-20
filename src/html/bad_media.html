@@ -12,7 +12,6 @@
     <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
     <link href="../css/common.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/public_relation.css">
-    <link rel="stylesheet" href="../css/public_opinion.css">
     <!--[if lt IE 9]>
     <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
     <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
@@ -203,21 +202,35 @@
     <div class="right-content">
         <!--内容部分 start-->
         <div class="page-content">
+            <div class="panel-heading">
+                <h3 class="panel-title clearfix">
+                    <a href="./public_opinion.html" style="display: inline-block" class="btn-right-title">舆情分析</a>
+                    &gt;
+                    <a href="./bad_media.html" style="display: inline-block; color: #4285F4">负面媒体列表</a>
+                    <div class="pull-right posr">
+                        <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown">导出</button>
+                        <ul class="dropdown-menu open inner stop-event">
+                            <li class="text-center"><label>选择导出项</label></li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <label>
+                                        <input type="checkbox">
+                                        负面媒体列表
+                                    </label>
+                                </a>
+                            </li>
+                            <li class="text-center">
+                                <button type="button" class="btn btn-blue btn-sm">
+                                    确定
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </h3>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title clearfix">
-                                <span class="btn-right-title">舆情分析</span>
-                                <div class="form-inline pull-right">
-                                    <div class="form-group">
-                                        <button class="btn btn-blue" type="button" data-toggle="modal" data-target="#myModal">
-                                            查询
-                                        </button>
-                                    </div>
-                                </div>
-                            </h3>
-                        </div>
                         <div class="panel-body">
                             <div class="table-box">
                                 <div class="form-horizontal btn-box">
@@ -296,128 +309,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                车型声量走势
-                                <div class="quyu-picker pull-right" data-toggle="regionCityPicker">
-                                    <select name="region" class="selectpicker" title="综合">
-                                    </select>
-                                </div>
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts " style="width: 80%; margin: 0 auto;" id="car_type"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                关键词指标TOP10
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts">
-                                <div class="panel-body">
-                                    <h4 id="myTab2">
-                                        <a href="#tablePane" class="btn btn-fill-blue btn-blue" data-toggle="tab">全部</a>
-                                        <a href="#tablePane2" class="btn btn-fill-blue" style="border-right: none" data-toggle="tab">产品</a>
-                                        <a href="#tablePane3" class="btn btn-fill-blue"  data-toggle="tab">价格</a>
-                                        <a href="#tablePane4" class="btn btn-fill-blue" data-toggle="tab">服务</a>
-                                        <a href="#tablePane5" class="btn btn-fill-blue" data-toggle="tab">品牌</a>
-                                    </h4>
-                                    <div id="myTab2Content" class="table-box tab-content">
-                                        <div class="tab-pane fade in active" id="tablePane">
-                                            <table class="table table-bordered table-blue table-hover" id="table"></table>
-                                        </div>
-                                        <div class="tab-pane fade" id="tablePane2">
-                                            <table class="table table-bordered table-blue table-hover" id="table2"></table>
-                                        </div>
-                                        <div class="tab-pane fade" id="tablePane3">
-                                            <table class="table table-bordered table-blue table-hover" id="table3"></table>
-                                        </div>
-                                        <div class="tab-pane fade" id="tablePane4">
-                                            <table class="table table-bordered table-blue table-hover" id="table4_1"></table>
-                                        </div>
-                                        <div class="tab-pane fade" id="tablePane5">
-                                            <table class="table table-bordered table-blue table-hover" id="table5"></table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-7 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">正负面分布</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts" id="good_bad"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">声量负面占比</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts" id="car_bad"></div>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">负面情感走势分析</h3>
-                        </div>
                         <div class="panel-body">
-
-                            <div class="charts" id="bad_Feel"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">负面媒体结构</h3>
-                        </div>
-                        <div class="panel-body">
-
-                            <div class="charts" id="car_madel2"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                关联负面媒体
-                                <a href="./bad_media.html" class="more">更多</a>
-                            </h3>
-
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts" id="car_madel3"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                情感文章排行
-                                <a href="./emotion_article.html" class="more">更多</a>
-                            </h3>
-
-                        </div>
-                        <div class="panel-body">
-                            <table class="table table-blue table-hover" id="table6"></table>
+                            <table class="table table-blue table-hover" id="table_media"></table>
                         </div>
                     </div>
                 </div>
@@ -537,7 +432,6 @@
 <script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="../vendor/icheck/icheck.min.js"></script>
 <script src="../vendor/echarts/echarts.min.js"></script>
-<script src="../vendor/echarts/provinces/echarts-wordcloud.min.js"></script>
 <script src="../vendor/echarts/provinces/china.js"></script>
 <script src="../vendor/echarts/provinces/guangdong.js"></script>
 <script src="../vendor/echarts/provinces/anhui.js"></script>
@@ -575,8 +469,7 @@
 <script src="../vendor/echarts/city/xianggang.js"></script>
 <script src="../vendor/echarts/customed_GM.js"></script>
 <script src="../js/plugin.js"></script>
-<script src="../js/carWcloud/carWCloud.js"></script>
-<script src="../js/public_opinions/public_opinion.js"></script>
+<script src="../js/public_opinions/bad_madeia.js"></script>
 
 </body>
 </html>

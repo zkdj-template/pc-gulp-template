@@ -1,0 +1,19 @@
+#myTab2 .btn{
+    width: 20%;
+    margin-right: -8px;
+    border-radius: 0;
+    padding: 5px;
+    color: #999999;
+    border: 1px solid #999;
+}
+.fixed-table-container tbody td .th-inner, .fixed-table-container thead th .th-inner {
+    padding: 5px;
+}
+.bootstrap-table .table:not(.table-condensed)>tbody>tr>td{
+    padding: 5px;
+}
+.panel-title .more{
+    float: right;
+    color: #4285F4;
+    font-size: 14px;
+}

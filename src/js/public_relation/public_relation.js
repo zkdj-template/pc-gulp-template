@@ -168,6 +168,8 @@
         ]
     };
     car_type.setOption(car_typeOption);
+
+
     /*车型声量统计*/
     var car_num = echarts.init(document.getElementById('car_num'),'customed');
     var car_numLineOption  = {
@@ -524,6 +526,7 @@
         $(window).resize(function () {
             $table.bootstrapTable('resetView');
             $table2.bootstrapTable('resetView');
+            $table3.bootstrapTable('resetView');
         });
     }
     function initTable2() {

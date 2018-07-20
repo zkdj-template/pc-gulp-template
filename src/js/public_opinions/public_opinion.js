@@ -54,9 +54,429 @@
         $(this).val('');
     });
 
+
     /*车型声量走势*/
-    var car_type = echarts.init(document.getElementById('car_type'),'customed');
-    var car_typeOption = {
+    var arr = [
+        {
+            "name": "花鸟市场",
+            "value": 1446
+        },
+        {
+            "name": "汽车",
+            "value": 928
+        },
+        {
+            "name": "视频",
+            "value": 906
+        },
+        {
+            "name": "电视",
+            "value": 825
+        },
+        {
+            "name": "Lover Boy 88",
+            "value": 514
+        },
+        {
+            "name": "动漫",
+            "value": 486
+        },
+        {
+            "name": "音乐",
+            "value": 53
+        },
+        {
+            "name": "直播",
+            "value": 163
+        },
+        {
+            "name": "广播电台",
+            "value": 86
+        },
+        {
+            "name": "戏曲曲艺",
+            "value": 17
+        },
+        {
+            "name": "演出票务",
+            "value": 6
+        },
+        {
+            "name": "给陌生的你听",
+            "value": 1
+        },
+        {
+            "name": "资讯",
+            "value": 1437
+        },
+        {
+            "name": "商业财经",
+            "value": 422
+        },
+    ]
+    var dom = document.getElementById('car_type');
+    var imgSrc = "../../src/images/ciyun_bg_suv.png";
+    var myChart = new CarWCloud(dom, imgSrc);
+    myChart.draw(arr);
+
+    /*top10*/
+    $("#myTab2").on('click','.btn',function () {
+        $(this).addClass('btn-blue').siblings().removeClass('btn-blue');
+    })
+    var $table = $("#table"),
+        $table2 = $("#table2"),
+        $table3 = $("#table3"),
+        $table4 = $("#table4_1"),
+        $table5 = $("#table5");
+    function initTable() {
+        $table.bootstrapTable({
+            url: '../data/data.json',
+            method:'post',
+            dataType: 'json',
+            queryParams: function (params) {
+                return {
+                    pageSize: params.limit,
+                    pageNumber: params.offset/params.limit+1,
+                    sort:params.sort,
+                    sortOrder: params.order
+                }
+            },
+            sortable: true,
+            sortOrder: 'asc',
+            pagination: false,
+            sidePagination: 'server',
+            columns: [
+                {
+                    field: 'id',
+                    title: '关键词',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field2',
+                    title: '热度',
+                    align: 'center',
+                    valign: 'middle'
+                },
+            ]
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+            $table2.bootstrapTable('resetView');
+            $table3.bootstrapTable('resetView');
+            $table4.bootstrapTable('resetView');
+            $table5.bootstrapTable('resetView');
+        });
+    }
+    function initTable2() {
+        $table2.bootstrapTable({
+            url: '../data/data.json',
+            method:'post',
+            dataType: 'json',
+            queryParams: function (params) {
+                return {
+                    pageSize: params.limit,
+                    pageNumber: params.offset/params.limit+1,
+                    sort:params.sort,
+                    sortOrder: params.order
+                }
+            },
+            sortable: true,
+            sortOrder: 'asc',
+            pagination: false,
+            sidePagination: 'server',
+            pageList: "3",        //可供选择的每页的行数（*）
+            columns: [
+                {
+                    field: 'id',
+                    title: '关键词',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field2',
+                    title: '热度',
+                    align: 'center',
+                    valign: 'middle'
+                },
+            ]
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+            $table2.bootstrapTable('resetView');
+            $table3.bootstrapTable('resetView');
+            $table4.bootstrapTable('resetView');
+            $table5.bootstrapTable('resetView');
+        });
+    }
+    function initTable3() {
+        $table3.bootstrapTable({
+            url: '../data/data.json',
+            method:'post',
+            dataType: 'json',
+            queryParams: function (params) {
+                return {
+                    pageSize: params.limit,
+                    pageNumber: params.offset/params.limit+1,
+                    sort:params.sort,
+                    sortOrder: params.order
+                }
+            },
+            sortable: true,
+            sortOrder: 'asc',
+            pagination: false,
+            sidePagination: 'server',
+            columns: [
+                {
+                    field: 'id',
+                    title: '关键词',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field2',
+                    title: '热度',
+                    align: 'center',
+                    valign: 'middle'
+                },
+            ]
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+            $table2.bootstrapTable('resetView');
+            $table3.bootstrapTable('resetView');
+            $table4.bootstrapTable('resetView');
+            $table5.bootstrapTable('resetView');
+        });
+    }
+    function initTable4() {
+        $table4.bootstrapTable({
+            url: '../data/data.json',
+            method:'post',
+            dataType: 'json',
+            queryParams: function (params) {
+                return {
+                    pageSize: params.limit,
+                    pageNumber: params.offset/params.limit+1,
+                    sort:params.sort,
+                    sortOrder: params.order
+                }
+            },
+            sortable: true,
+            sortOrder: 'asc',
+            pagination: false,
+            sidePagination: 'server',
+            columns: [
+                {
+                    field: 'id',
+                    title: '关键词',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field2',
+                    title: '热度',
+                    align: 'center',
+                    valign: 'middle'
+                },
+            ]
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+            $table2.bootstrapTable('resetView');
+            $table3.bootstrapTable('resetView');
+            $table4.bootstrapTable('resetView');
+            $table5.bootstrapTable('resetView');
+        });
+    }
+    function initTable5() {
+        $table5.bootstrapTable({
+            url: '../data/data.json',
+            method:'post',
+            dataType: 'json',
+            queryParams: function (params) {
+                return {
+                    pageSize: params.limit,
+                    pageNumber: params.offset/params.limit+1,
+                    sort:params.sort,
+                    sortOrder: params.order
+                }
+            },
+            sortable: true,
+            sortOrder: 'asc',
+            pagination: false,
+            sidePagination: 'server',
+            columns: [
+                {
+                    field: 'id',
+                    title: '关键词',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field2',
+                    title: '热度',
+                    align: 'center',
+                    valign: 'middle'
+                },
+            ]
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+            $table2.bootstrapTable('resetView');
+            $table3.bootstrapTable('resetView');
+            $table4.bootstrapTable('resetView');
+            $table5.bootstrapTable('resetView');
+        });
+    }
+    initTable();
+    initTable2();
+    initTable3();
+    initTable4();
+    initTable5();
+
+
+    /*正负面分布*/
+    var good_bad = echarts.init(document.getElementById('good_bad'),'customed');
+    var hours = ['2018-04', '2018-05', '2018-06', '2018-07', '2018-08', '2018-09'];
+    var days = ['正面', '负面'];
+    var data =[
+        [0,0,5],[0,1,8],[0,2,10],[0,3,20],[0,4,20],[0,5,18],
+        [1,0,5],[1,1,8],[1,2,10],[1,3,20],[1,4,20],[1,5,18]
+    ]
+    data = data.map(function (item) {
+        console.log(item)
+        return {
+            name:'声量',
+            value:[item[1], item[0], item[2]],
+            itemStyle:{
+                normal: {
+                    color:item[0]==0?'#2a93ed':'#ff846b',
+                },
+
+            }
+        }
+    });
+    console.log(data)
+    var good_badLineOption = {
+        tooltip: {
+            position: 'top',
+            formatter: function (params) {
+                return ' 声量数 '+ params.value[2] ;
+            }
+        },
+        grid: {
+            left: 2,
+            bottom: 10,
+            right: 50,
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            data: hours,
+            boundaryGap: false,
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#999',
+                    type: 'dashed'
+                }
+            },
+            axisLine: {
+                show: false
+            }
+        },
+        yAxis: {
+            type: 'category',
+            data: days,
+            axisLine: {
+                show: false
+            }
+        },
+        series: [{
+            name: 'Punch Card',
+            type: 'scatter',
+            symbolSize: function (val) {
+                return val[2] * 2;
+            },
+            data: data,
+            animationDelay: function (idx) {
+                return idx * 5;
+            },
+        }]
+    };
+    good_bad.setOption(good_badLineOption);
+
+    /*声量正负面占比*/
+    var car_bad = echarts.init(document.getElementById('car_bad'),'customed');
+    var car_badLineOption =  {
+        color: ['#2a93ed','#ff846b'],
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            show: false,
+            x: 'left',
+            data: ['正面', '负面']
+        },
+        series: [
+            {
+                name: '声量',
+                type: 'pie',
+                radius: ['40%', '55%'],
+                labelLine: {
+                    normal: {
+                        length: 20,
+                        length2: 20,
+                        lineStyle: {
+                            color: '#333'
+                        }
+                    }
+
+                },
+                label: {
+                    normal: {
+                        formatter: '{b|{b}}',
+                        borderWidth: 0,
+                        borderRadius: 4,
+                        padding: [0, 0],
+                        rich: {
+                            a: {
+                                color: '#333',
+                                fontSize: 16,
+                                lineHeight: 20
+                            },
+                            hr: {
+                                borderColor: '#333',
+                                width: '100%',
+                                borderWidth: 0.5,
+                                height: 0
+                            },
+                            b: {
+                                fontSize: 16,
+                                lineHeight: 20,
+                                color: '#333'
+                            }
+                        }
+                    }
+                },
+                data: [{
+                    value: 1351,
+                    name: '正面'
+                }, {
+                    value: 148,
+                    name: '负面   '
+                }]
+            }
+        ]
+    };
+    car_bad.setOption(car_badLineOption);
+
+    /*负面情感走势分析*/
+    var bad_Feel = echarts.init(document.getElementById('bad_Feel'),'customed');
+    var bad_FeelOption = {
         tooltip: {
             trigger: 'axis'
         },
@@ -68,22 +488,6 @@
             data: [
                 {
                     name: '邮件销售',
-                    icon: 'circle'
-                },
-                {
-                    name: '联盟广告',
-                    icon: 'circle'
-                },
-                {
-                    name: '视频广告',
-                    icon: 'circle'
-                },
-                {
-                    name: '直接访问',
-                    icon: 'circle'
-                },
-                {
-                    name: '搜索引擎',
                     icon: 'circle'
                 }
             ]
@@ -118,173 +522,12 @@
                 stack: '总量',
                 data:[120, 132, 101, 134, 90, 230, 210]
             },
-            {
-                name:'联盟广告',
-                type:'line',
-                stack: '总量',
-                data:[220, 182, 191, 234, 290, 330, 310]
-            },
-            {
-                name:'视频广告',
-                type:'line',
-                stack: '总量',
-                data:[150, 232, 201, 154, 190, 330, 410]
-            },
-            {
-                name:'直接访问',
-                type:'line',
-                stack: '总量',
-                data:[320, 332, 301, 334, 390, 330, 320]
-            },
-            {
-                name:'搜索引擎',
-                type:'line',
-                stack: '总量',
-                data:[820, 932, 901, 934, 1290, 1330, 1320]
-            }
+
         ]
     };
-    car_type.setOption(car_typeOption);
+    bad_Feel.setOption(bad_FeelOption);
 
-    /*车型声量统计*/
-    var car_num = echarts.init(document.getElementById('car_num'),'customed');
-    var car_numLineOption  = {
-        color: ['#2a93ed','#ff846b'],
-        tooltip : {
-            trigger: 'axis',
-            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-            }
-        },
-        legend:{
-            type: 'plain',
-            show: true,
-            top: 'top',
-            left: 'right',
-            data: [
-                {
-                    name: '邮件销售',
-                    icon: 'circle'
-                },
-                {
-                    name: '联盟广告',
-                    icon: 'circle'
-                }
-            ]
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis : [
-            {
-                type : 'category',
-                data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-                axisTick: {
-                    alignWithLabel: true
-                }
-            }
-        ],
-        yAxis : [
-            {
-                type : 'value'
-            }
-        ],
-        series : [
-            {
-                name:'邮件销售',
-                type:'bar',
-                barWidth: '20%',
-                data:[10, 52, 200, 334, 390, 330, 220]
-            },
-            {
-                name:'联盟广告',
-                type:'bar',
-                barWidth: '20%',
-                data:[10, 52, 200, 334, 390, 330, 220]
-            }
-        ]
-    };
-    car_num.setOption(car_numLineOption);
-
-    /*媒体结构占比*/
-    var car_madel = echarts.init(document.getElementById('car_madel'),'customed');
-    var car_madelLineOption  = {
-        legend: {
-            type: 'plain',
-            show: true,
-            top: 'top',
-            left: 'right',
-            data: [
-                {
-                    name: '预算分配',
-                    icon: 'circle'
-                },
-                {
-                    name: '实际开销',
-                    icon: 'circle'
-                }
-            ]
-        },
-        radar: {
-            // shape: 'circle',
-            name: {
-                textStyle: {
-                    color: '#fff',
-                    backgroundColor: '#999',
-                    borderRadius: 3,
-                    padding: [3, 5]
-                }
-            },
-            indicator: [
-                { name: '销售', max: 6500},
-                { name: '管理', max: 16000},
-                { name: '信息技术', max: 30000},
-                { name: '客服', max: 38000},
-                { name: '研发', max: 52000},
-                { name: '市场', max: 25000}
-            ]
-        },
-        series: [{
-            name: '预算 vs 开销',
-            type: 'radar',
-            data : [
-                {
-                    value : [4300, 10000, 28000, 35000, 50000, 19000],
-                    name : '预算分配',
-                    lineStyle: {                // 单项线条样式。
-                        normal: {
-                            opacity: 0.5            // 图形透明度
-                        }
-                    },
-                    areaStyle: {                // 单项区域填充样式
-                        normal: {
-                            color: 'rgba(42,147,237,0.6)'       // 填充的颜色。[ default: "#000" ]
-                        }
-                    }
-                },
-                {
-                    value : [5000, 14000, 28000, 31000, 42000, 21000],
-                    name : '实际开销',
-                    lineStyle: {                // 单项线条样式。
-                        normal: {
-                            opacity: 0.5            // 图形透明度
-                        }
-                    },
-                    areaStyle: {                // 单项区域填充样式
-                        normal: {
-                            color: 'rgba(255,132,107,0.6)'       // 填充的颜色。[ default: "#000" ]
-                        }
-                    }
-                }
-            ]
-        }]
-    };
-    car_madel.setOption(car_madelLineOption);
-
-    /*媒体结构分布*/
+    /*负面媒体结构*/
     var car_madel2 = echarts.init(document.getElementById('car_madel2'),'customed');
     var car_madel2LineOption  = {
         color: ['#2a93ed','#ff846b'],
@@ -301,10 +544,6 @@
             left: 'right',
             data:[
                 {
-                    name: '2011年',
-                    icon: 'circle'
-                },
-                {
                     name: '2012年',
                     icon: 'circle'
                 }
@@ -326,22 +565,28 @@
         },
         series: [
             {
-                name: '2011年',
-                type: 'bar',
-                data: [18203, 23489, 29034, 104970, 131744, 630230]
-            },
-            {
                 name: '2012年',
                 type: 'bar',
+                barWidth:15,
+                itemStyle: {
+                    normal: {
+                        show: true,
+                        barBorderRadius: 50,
+                        borderWidth: 5,
+                        borderColor: '#333',
+                    }
+                },
+                barGap: '0%',
+                barCategoryGap: '50%',
                 data: [19325, 23438, 31000, 121594, 134141, 681807]
             }
         ]
     };
     car_madel2.setOption(car_madel2LineOption);
 
-    /*媒体排行*/
-    var car_top = echarts.init(document.getElementById('car_top'),'customed');
-    var car_topLineOption = {
+    /*关联负面媒体*/
+    var car_madel3 = echarts.init(document.getElementById('car_madel3'),'customed');
+    var car_madel3pLineOption = {
         color: ['#2a93ed','#ff846b'],
         tooltip: {
             trigger: 'axis',
@@ -356,13 +601,9 @@
             left: 'right',
             data: [
                 {
-                    name: '2011年',
-                    icon: 'circle'
-                },
-                {
                     name: '2012年',
                     icon: 'circle'
-                }
+                },
             ]
         },
         grid: {
@@ -381,17 +622,118 @@
         },
         series: [
             {
-                name: '2011年',
-                type: 'bar',
-                data: [18203, 23489, 29034, 104970, 131744, 630230]
-            },
-            {
                 name: '2012年',
                 type: 'bar',
+                barWidth:15,
+                itemStyle: {
+                    normal: {
+                        show: true,
+                        barBorderRadius: 50,
+                        borderWidth: 5,
+                        borderColor: '#333',
+                    }
+                },
+                barGap: '0%',
+                barCategoryGap: '50%',
                 data: [19325, 23438, 31000, 121594, 134141, 681807]
             }
         ]
     };
-    car_top.setOption(car_topLineOption);
+    car_madel3.setOption(car_madel3pLineOption);
+
+    var $table6 = $("#table6");
+    function initTable6() {
+        $table6.bootstrapTable({
+            url: '../data/data.json',
+            method:'post',
+            dataType: 'json',
+            queryParams: function (params) {
+                return {
+                    pageSize: params.limit,
+                    pageNumber: params.offset/params.limit+1,
+                    sort:params.sort,
+                    sortOrder: params.order
+                }
+            },
+            sortable: true,
+            sortOrder: 'asc',
+            pagination: false,
+            sidePagination: 'server',
+            pageNumber:1,//初始化加载第一页，默认第一页
+            pageSize: 10,//每页的记录行数（*）
+            // pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+            pageList: "",        //可供选择的每页的行数（*）
+            columns: [
+                {
+                    field: 'id',
+                    title: '序号',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field3',
+                    title: '关联媒体',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field3',
+                    title: '文章标题',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field8',
+                    title: '作者',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field9',
+                    title: '阅读量',
+                    sortable: true,
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field6',
+                    title: '评论量',
+                    sortable: true,
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field8',
+                    title: '评论回复量',
+                    sortable: true,
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field9',
+                    title: '负面评论',
+                    sortable: true,
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field6',
+                    title: '负面评论占比',
+                    sortable: true,
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field8',
+                    title: '发布日期',
+                    align: 'center',
+                    valign: 'middle'
+                }
+            ]
+        });
+    }
+    initTable6();
+
+
 
 })()
