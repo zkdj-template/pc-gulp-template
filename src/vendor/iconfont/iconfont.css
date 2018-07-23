@@ -579,7 +579,7 @@
 
 .icon-guanggaoxianxing:before { content: "\e6e6"; }
 
-.icon-up:before { content: "\e7eb"; }
+.icon-up:before { content: "\e7eb";font-size: 12px; }
 
-.icon-down:before { content: "\e7ec"; }
+.icon-down:before { content: "\e7ec"; font-size: 12px;}
 
