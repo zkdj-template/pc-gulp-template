@@ -1,24 +1,12 @@
 
 (function(){
-    $(".list_dt").on("click",function () {
-        $('.list_dd').stop();
-        $(this).siblings("dt").removeAttr("id");
-        if($(this).attr("id")=="open"){
-            $(this).removeAttr("id").siblings("dd").slideUp();
-        }else{
-            $(this).attr("id","open").next().slideDown().siblings("dd").slideUp();
-        }
-    });
-    $('.list_dd>ul>li').click(function(){
-        $(this).addClass('active_li')
-        $(this).siblings().removeClass('active_li')
-        $(this).parents('dd').siblings().find('li').removeClass('active_li')
-
+    $('.nav>.li_one>a').on('click',function(){
+        $(this).next('.ul_son').slideDown()
+        $(this).parents('li').siblings().find('ul').slideUp()
     })
+    $(".li_son").on('click',function(){
+        $(this).parents('li').siblings().find('.li_son').removeClass('active')
 
-    $('.s_a').click(function(){
-        $(this).addClass("blue_text")
-        $(this).siblings().removeClass('blue_text')
     })
     /**
      * 初始化日期插件
@@ -118,16 +106,11 @@
     var imgSrc = "../../src/images/ciyun_bg_suv.png";
     var myChart = new CarWCloud(dom, imgSrc);
     myChart.draw(arr);
-
     /*top10*/
-    $("#myTab2").on('click','.btn',function () {
+    $("#small_table").on('click','.btn',function () {
         $(this).addClass('btn-blue').siblings().removeClass('btn-blue');
     })
-    var $table = $("#table"),
-        $table2 = $("#table2"),
-        $table3 = $("#table3"),
-        $table4 = $("#table4_1"),
-        $table5 = $("#table5");
+    var $table = $("#table")
     function initTable() {
         $table.bootstrapTable({
             url: '../data/data.json',
@@ -162,178 +145,9 @@
         });
         $(window).resize(function () {
             $table.bootstrapTable('resetView');
-            $table2.bootstrapTable('resetView');
-            $table3.bootstrapTable('resetView');
-            $table4.bootstrapTable('resetView');
-            $table5.bootstrapTable('resetView');
-        });
-    }
-    function initTable2() {
-        $table2.bootstrapTable({
-            url: '../data/data.json',
-            method:'post',
-            dataType: 'json',
-            queryParams: function (params) {
-                return {
-                    pageSize: params.limit,
-                    pageNumber: params.offset/params.limit+1,
-                    sort:params.sort,
-                    sortOrder: params.order
-                }
-            },
-            sortable: true,
-            sortOrder: 'asc',
-            pagination: false,
-            sidePagination: 'server',
-            pageList: "3",        //可供选择的每页的行数（*）
-            columns: [
-                {
-                    field: 'id',
-                    title: '关键词',
-                    align: 'center',
-                    valign: 'middle'
-                },
-                {
-                    field: 'field2',
-                    title: '热度',
-                    align: 'center',
-                    valign: 'middle'
-                },
-            ]
-        });
-        $(window).resize(function () {
-            $table.bootstrapTable('resetView');
-            $table2.bootstrapTable('resetView');
-            $table3.bootstrapTable('resetView');
-            $table4.bootstrapTable('resetView');
-            $table5.bootstrapTable('resetView');
-        });
-    }
-    function initTable3() {
-        $table3.bootstrapTable({
-            url: '../data/data.json',
-            method:'post',
-            dataType: 'json',
-            queryParams: function (params) {
-                return {
-                    pageSize: params.limit,
-                    pageNumber: params.offset/params.limit+1,
-                    sort:params.sort,
-                    sortOrder: params.order
-                }
-            },
-            sortable: true,
-            sortOrder: 'asc',
-            pagination: false,
-            sidePagination: 'server',
-            columns: [
-                {
-                    field: 'id',
-                    title: '关键词',
-                    align: 'center',
-                    valign: 'middle'
-                },
-                {
-                    field: 'field2',
-                    title: '热度',
-                    align: 'center',
-                    valign: 'middle'
-                },
-            ]
-        });
-        $(window).resize(function () {
-            $table.bootstrapTable('resetView');
-            $table2.bootstrapTable('resetView');
-            $table3.bootstrapTable('resetView');
-            $table4.bootstrapTable('resetView');
-            $table5.bootstrapTable('resetView');
-        });
-    }
-    function initTable4() {
-        $table4.bootstrapTable({
-            url: '../data/data.json',
-            method:'post',
-            dataType: 'json',
-            queryParams: function (params) {
-                return {
-                    pageSize: params.limit,
-                    pageNumber: params.offset/params.limit+1,
-                    sort:params.sort,
-                    sortOrder: params.order
-                }
-            },
-            sortable: true,
-            sortOrder: 'asc',
-            pagination: false,
-            sidePagination: 'server',
-            columns: [
-                {
-                    field: 'id',
-                    title: '关键词',
-                    align: 'center',
-                    valign: 'middle'
-                },
-                {
-                    field: 'field2',
-                    title: '热度',
-                    align: 'center',
-                    valign: 'middle'
-                },
-            ]
-        });
-        $(window).resize(function () {
-            $table.bootstrapTable('resetView');
-            $table2.bootstrapTable('resetView');
-            $table3.bootstrapTable('resetView');
-            $table4.bootstrapTable('resetView');
-            $table5.bootstrapTable('resetView');
-        });
-    }
-    function initTable5() {
-        $table5.bootstrapTable({
-            url: '../data/data.json',
-            method:'post',
-            dataType: 'json',
-            queryParams: function (params) {
-                return {
-                    pageSize: params.limit,
-                    pageNumber: params.offset/params.limit+1,
-                    sort:params.sort,
-                    sortOrder: params.order
-                }
-            },
-            sortable: true,
-            sortOrder: 'asc',
-            pagination: false,
-            sidePagination: 'server',
-            columns: [
-                {
-                    field: 'id',
-                    title: '关键词',
-                    align: 'center',
-                    valign: 'middle'
-                },
-                {
-                    field: 'field2',
-                    title: '热度',
-                    align: 'center',
-                    valign: 'middle'
-                },
-            ]
-        });
-        $(window).resize(function () {
-            $table.bootstrapTable('resetView');
-            $table2.bootstrapTable('resetView');
-            $table3.bootstrapTable('resetView');
-            $table4.bootstrapTable('resetView');
-            $table5.bootstrapTable('resetView');
         });
     }
     initTable();
-    initTable2();
-    initTable3();
-    initTable4();
-    initTable5();
 
 
     /*正负面分布*/

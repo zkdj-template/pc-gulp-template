@@ -12,12 +12,19 @@
   ul.nav{
     margin-bottom: 0;
     border: none;
+    .active .icon-down:before{
+      content: "\e7eb";
+    }
     >li{
       -webkit-transition: all .5s ease-in-out;
       -moz-transition: all .5s ease-in-out;
       -ms-transition: all .5s ease-in-out;
       -o-transition: all .5s ease-in-out;
       transition: all .5s ease-in-out;
+
+      >.ul_son{
+        display: none;
+      }
       >a{
         position: relative;
         padding: 12px 15px;

@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="../vendor/bootstrap-table/bootstrap-table.min.css">
     <link href="../vendor/icheck/skins/square/_all.css" rel="stylesheet" />
     <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
-    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/common.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/public_relation.css">
-    <link rel="stylesheet" href="../css/public_opinion.css">
     <!--[if lt IE 9]>
     <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
     <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
@@ -72,132 +71,77 @@
 <div class="page-wrapper">
     <!-- 左侧导航 start -->
     <div class="left-nav">
-        <!--<ul class="nav">
+        <ul class="nav">
             <li class="li_one">
                 <a href="#">
-                    <img src="../images/mtzyk.png" alt="">
+                    <i class="iconfont icon-meitiwenjian"></i>
                     媒体资源库
-                    <img class="up" src="../images/up.png" alt="">
+                    <i class="iconfont icon-down pull-right"></i>
                 </a>
+                <ul class="nav ul_son">
+                    <li class="li_son">
+                        <a href="#">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            媒体资源库
+                        </a>
+                    </li>
+                    <li class="li_son">
+                        <a href="#">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            媒体VIP管理
+                        </a>
+                    </li>
+                </ul>
             </li>
-                <ul class="nav">
-                <li class="li_son">
-                    <a href="#">
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        媒体资源库
-                    </a>
-                </li>
-                <li class="li_son">
-                    <a href="#">
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        媒体VIP管理
-                    </a>
-                </li>
-            </ul>
             <li class="li_one">
                 <a href="#">
-                    <img src="../images/jxsjc.png" alt="">
+                    <i class="iconfont icon-zhibiaojianceqi"></i>
                     经销商检测
-                    <img class="up" src="../images/up.png" alt="">
+                    <i class="iconfont icon-down pull-right"></i>
                 </a>
-
+                <ul class="nav ul_son">
+                    <li class="li_son">
+                        <a href="#">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            媒体资源库
+                        </a>
+                    </li>
+                    <li class="li_son">
+                        <a href="#">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            媒体VIP管理
+                        </a>
+                    </li>
+                </ul>
             </li>
-                <ul class="nav">
-            <li class="li_son">
-                <a href="#">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    媒体资源库
-                </a>
-            </li>
-            <li class="li_son">
-                <a href="#">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    媒体VIP管理
-                </a>
-            </li>
-            </ul>
             <li class="li_one">
                 <a href="#">
-                    <img src="../images/hdslpg.png" alt="">
+                    <i class="iconfont icon-plus-activity"></i>
                     活动声量评估
                 </a>
             </li>
-            <li class="li_one">
+            <li class="li_one active">
                 <a href="#">
-                    <img src="../images/cxslpg.png" alt="">
+                    <i class="iconfont icon-cheliang"></i>
                     车型声量评估
-                    <img class="up" src="../images/up.png" alt="">
+                    <i class="iconfont icon-down pull-right"></i>
                 </a>
-            </li>
-                <ul class="nav">
-                    <li class="active li_son">
-                    <a href="#">
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        声量检测
-                    </a>
-                </li>
+                <ul class="nav ul_son" style="display: block">
                     <li class="li_son">
-                    <a href="#">
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        舆情分析
-                    </a>
-                </li>
-                </ul>
-        </ul>-->
-        <dl class="list_dl">
-            <dt class="list_dt">
-                <span class="_after"></span>
-                <img src="../images/mtzyk.png" alt="">
-                <p>媒体资源库</p>
-                <i class="list_dt_icon"></i>
-            </dt>
-            <dd class="list_dd">
-                <ul>
-                    <li class="list_li">媒体库管理</li>
-                    <li class="list_li">媒体VIP管理</li>
-                    <li class="list_li">媒体VIP产品</li>
-                </ul>
-            </dd>
-            <dt class="list_dt">
-                <span class="_after"></span>
-                <img src="../images/jxsjc.png" alt="">
-                <p>经销商监控</p>
-                <i class="list_dt_icon"></i>
-            </dt>
-            <dd class="list_dd">
-                <ul>
-                    <li class="list_li">经销商管理</li>
-                    <li class="list_li">经销商声量</li>
-                    <li class="list_li">文章核查</li>
-                </ul>
-            </dd>
-            <dt class="list_dt">
-                <span class="_after"></span>
-                <img src="../images/hdslpg.png" alt="">
-                <p>
-                    <a href="#">
-                        活动声量评估
-                    </a>
-                </p>
-            </dt>
-            <dt class="list_dt" id="open">
-                <span class="_after"></span>
-                <img src="../images/cxslpg.png" alt="">
-                <p>车型声量评估</p>
-                <i class="list_dt_icon"></i>
-            </dt>
-            <dd class="list_dd" style="display: block">
-                <ul>
-                    <li class="list_li">
-                        <a href="./public_relation.html">声量监控</a>
+                        <a href="./public_relation.html">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            声量检测
+                        </a>
                     </li>
-                    <li class="list_li active_li">
-                        <a href="./public_opinion.html">舆情分析</a>
+                    <li class="li_son active">
+                        <a href="./public_opinion.html">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            舆情分析
+                        </a>
                     </li>
-
                 </ul>
-            </dd>
-        </dl>
+            </li>
+        </ul>
     </div>
     <!-- 左侧导航 end -->
     <div class="right-content">
@@ -221,71 +165,55 @@
                         <div class="panel-body">
                             <div class="table-box">
                                 <div class="form-horizontal btn-box">
-                                    <div class="panel-body">
-                                        <div class="posr">
-                                            <form class="form-inline tab-form fade in active mr20">
-                                                <div class="form-group mr20">
-                                                    <label>内容类型:</label>
-                                                    <a href="javascript:;" class="s_a blue_text">互动类</a>
-                                                    <a href="javascript:;" class="s_a">新闻类</a>
-                                                </div>
-                                            </form>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">内容类型：</label>
+                                        <div class="col-md-10">
+                                            <a href="javascript:void(0);" class="btn btn-link active">互动类</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">新闻类</a>
                                         </div>
                                     </div>
-                                    <div class="panel-body">
-                                        <div class="posr">
-                                            <form class="form-inline tab-form fade in active mr20">
-                                                <div class="form-group mr20">
-                                                    <label>选择车型/品牌：</label>
-                                                    <select class="selectpicker" title="选择本品类型">
-                                                        <option value=""></option>
-                                                    </select>
-                                                </div>
-                                            </form>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">选择车型：</label>
+                                        <div class="col-md-2">
+                                            <select name="" class="form-control selectpicker" title="请选择车型">
+                                                <option value="">五菱宏光s</option>
+                                                <option value="">宝骏E100</option>
+                                                <option value="">宝骏310</option>
+                                                <option value="">宝骏730</option>
+                                                <option value="">宝骏560</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="panel-body">
-                                        <div class="posr">
-                                            <form class="form-inline tab-form fade in active mr20">
-                                                <div class="form-group mr20">
-                                                    <label style="margin-right: 30px">媒&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;体：</label>
-                                                    <select class="selectpicker" title="选择媒体平台">
-                                                        <option value=""></option>
-                                                    </select>
-                                                    <select class="selectpicker" title="选择主媒体">
-                                                        <option value=""></option>
-                                                    </select>
-                                                    <select class="selectpicker" title="选择分媒体">
-                                                        <option value=""></option>
-                                                    </select>
-                                                    <select class="selectpicker" title="选择媒体名称">
-                                                        <option value=""></option>
-                                                    </select>
-                                                </div>
-                                            </form>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">媒体：</label>
+                                        <div class="col-md-2">
+                                            <select name="" class="form-control selectpicker" title="选择媒体平台">
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <select name="" class="form-control selectpicker" title="选择主媒体">
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <select name="" class="form-control selectpicker" title="选择分媒体">
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <select name="" class="form-control selectpicker" title="选择媒体名称">
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="panel-body">
-                                        <div class="posr">
-                                            <form class="form-inline tab-form fade in active mr20">
-                                                <div class="form-group mr20">
-                                                    <label>时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:</label>
-                                                    <a href="javascript:;" class="s_a blue_text">近7天</a>
-                                                    <a href="javascript:;" class="s_a">近30天</a>
-                                                    <input type="text" style="margin-left: 40px" class="form-control w220 datepicker" placeholder="自定义时间"/>
-                                                </div>
-                                            </form>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">时间：</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control w220 datepicker" readonly placeholder="请选择时间"/>
                                         </div>
                                     </div>
-                                    <div class="panel-body">
-                                        <div class="posr">
-                                            <form class="form-inline tab-form fade in active mr20">
-                                                <div class="form-group mr20">
-                                                    <label>排水类型:</label>
-                                                    <a href="javascript:;" class="s_a blue_text">排水前</a>
-                                                    <a href="javascript:;" class="s_a">排水后</a>
-                                                </div>
-                                            </form>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">排水类型：</label>
+                                        <div class="col-md-10">
+                                            <a href="javascript:void(0);" class="btn btn-link active">排水前</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">排水后</a>
                                         </div>
                                     </div>
                                 </div>
@@ -322,30 +250,61 @@
                         <div class="panel-body">
                             <div class="charts">
                                 <div class="panel-body">
-                                    <h4 id="myTab2">
-                                        <a href="#tablePane" class="btn btn-fill-blue btn-blue" data-toggle="tab">全部</a>
-                                        <a href="#tablePane2" class="btn btn-fill-blue" style="border-right: none" data-toggle="tab">产品</a>
-                                        <a href="#tablePane3" class="btn btn-fill-blue"  data-toggle="tab">价格</a>
-                                        <a href="#tablePane4" class="btn btn-fill-blue" data-toggle="tab">服务</a>
-                                        <a href="#tablePane5" class="btn btn-fill-blue" data-toggle="tab">品牌</a>
+                                    <h4 id="small_table">
+                                        <a href="javascript:;" class="btn btn-blue">全部</a>
+                                        <a href='javascript:;' class="btn">产品</a>
+                                        <a href="javascript:;" class="btn" >价格</a>
+                                        <a href="javascript:;" class="btn">服务</a>
+                                        <a href="javascript:;" class="btn">品牌</a>
                                     </h4>
-                                    <div id="myTab2Content" class="table-box tab-content">
-                                        <div class="tab-pane fade in active" id="tablePane">
-                                            <table class="table table-bordered table-blue table-hover" id="table"></table>
-                                        </div>
-                                        <div class="tab-pane fade" id="tablePane2">
-                                            <table class="table table-bordered table-blue table-hover" id="table2"></table>
-                                        </div>
-                                        <div class="tab-pane fade" id="tablePane3">
-                                            <table class="table table-bordered table-blue table-hover" id="table3"></table>
-                                        </div>
-                                        <div class="tab-pane fade" id="tablePane4">
-                                            <table class="table table-bordered table-blue table-hover" id="table4_1"></table>
-                                        </div>
-                                        <div class="tab-pane fade" id="tablePane5">
-                                            <table class="table table-bordered table-blue table-hover" id="table5"></table>
-                                        </div>
-                                    </div>
+                                   <table id="top10_table" class="table table-bordered table-blue table-hover">
+                                       <tbody>
+                                       <tr>
+                                           <th>Month</th>
+                                           <th>Savings</th>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       <tr>
+                                           <td>January</td>
+                                           <td>$100</td>
+                                       </tr>
+                                       </tbody>
+                                   </table>
                                 </div>
                             </div>
                         </div>
@@ -398,7 +357,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 关联负面媒体
-                                <a href="./bad_media.html" class="more">更多</a>
+                                <a href="./bad_media.html" class="pull-right">更多</a>
                             </h3>
 
                         </div>
@@ -412,7 +371,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 情感文章排行
-                                <a href="./emotion_article.html" class="more">更多</a>
+                                <a href="./emotion_article.html" class="pull-right">更多</a>
                             </h3>
 
                         </div>

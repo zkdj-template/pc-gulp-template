@@ -140,8 +140,6 @@
 .panel-line-primary .panel-body .table{
   margin-bottom: 0;
 }
-
-
 .bootstrap-table{
   .table-thead-blue{
     >thead>tr{
@@ -150,4 +148,20 @@
       }
     }
   }
+}
+
+#top10_table{
+  >tbody{
+    >tr{
+      >th{
+        text-align: center;
+        color: #4285F4;
+      }
+      >td{
+        padding: 5px;
+        text-align: center;
+      }
+    }
+  }
+
 }

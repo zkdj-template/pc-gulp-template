@@ -1,47 +1,12 @@
-/*
-(function(){
-    var flag = true
-    $('.left-nav > ul > .li_one').click(function(){
-        if($(this).next()[0].className !== 'nav'){
-            return
-        }else{
-            flag = !flag
-            if(flag == true){
-                $(this).find('img.up').css('transform','rotate(180deg)')
-            }else{
-                $(this).find('img.up').css('transform','rotate(0deg)')
-            }
-            $(this).next().slideToggle()
-            $('.left-nav > ul > ul > .li_son').removeClass('active')
-
-        }
-    })
-    $('.left-nav > ul > ul > .li_son').click(function(){
-        $(this).parent().prev().removeClass('active')
-    })
-})()*/
-
 
 (function(){
-    $(".list_dt").on("click",function () {
-        $('.list_dd').stop();
-        $(this).siblings("dt").removeAttr("id");
-        if($(this).attr("id")=="open"){
-            $(this).removeAttr("id").siblings("dd").slideUp();
-        }else{
-            $(this).attr("id","open").next().slideDown().siblings("dd").slideUp();
-        }
-    });
-    $('.list_dd>ul>li').click(function(){
-        $(this).addClass('active_li')
-        $(this).siblings().removeClass('active_li')
-        $(this).parents('dd').siblings().find('li').removeClass('active_li')
-
+    $('.nav>.li_one>a').on('click',function(){
+        $(this).next('.ul_son').slideDown()
+        $(this).parents('li').siblings().find('ul').slideUp()
     })
+    $(".li_son").on('click',function(){
+        $(this).parents('li').siblings().find('.li_son').removeClass('active')
 
-    $('.s_a').click(function(){
-        $(this).addClass("blue_text")
-        $(this).siblings().removeClass('blue_text')
     })
     /**
      * 初始化日期插件
