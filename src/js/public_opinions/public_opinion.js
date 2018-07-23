@@ -345,7 +345,6 @@
         [1,0,5],[1,1,8],[1,2,10],[1,3,20],[1,4,20],[1,5,18]
     ]
     data = data.map(function (item) {
-        console.log(item)
         return {
             name:'声量',
             value:[item[1], item[0], item[2]],
@@ -357,7 +356,6 @@
             }
         }
     });
-    console.log(data)
     var good_badLineOption = {
         tooltip: {
             position: 'top',
