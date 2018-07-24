@@ -51,3 +51,12 @@
     border-top: none !important;
   }
 }
+.bottom_line{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.panel{
+  >.no_padding{
+    padding:0px;
+  }
+}

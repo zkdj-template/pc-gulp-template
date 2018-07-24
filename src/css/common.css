@@ -588,6 +588,11 @@ td .onOff {
   padding-left: 5px;
 }
 
+.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
 .panel {
   margin-bottom: 10px;
 }
@@ -958,6 +963,15 @@ td .onOff {
 
 .panel-line-primary .panel-body {
   border-top: none !important;
+}
+
+.bottom_line {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.panel > .no_padding {
+  padding: 0px;
 }
 
 /**

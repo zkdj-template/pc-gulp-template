@@ -394,10 +394,11 @@
     var $table = $("#table"),
         $table2 = $("#table2");
     var $table3 = $("#table3");
+    var $table_model = $("#table_model");
     function initTable() {
         $table.bootstrapTable({
             url: '../data/data.json',
-            method:'post',
+            method:'get',
             dataType: 'json',
             queryParams: function (params) {
                 return {
@@ -587,10 +588,18 @@
                     valign: 'middle'
                 },
                 {
-                    field: 'field2',
+                    field: 'field4',
                     title: '作者',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (value) {
+                        console.log(value)
+                        return '<a href="#tablePane_model" ' +
+                            'data-toggle="modal" ' +
+                            'data-target=".bs-example-modal-lg"' +
+                            'data-target=".bs-example-modal-lg"' +
+                            '>'+ value +'</a>'
+                    }
                 },
                 {
                     field: 'field3',
@@ -640,7 +649,80 @@
             ]
         });
     }
+    function initTable_model() {
+        $table_model.bootstrapTable({
+            url: '../data/data.json',
+            method:'get',
+            dataType: 'json',
+            queryParams: {},
+            pagination: true,
+            sidePagination: 'server',
+            pageNumber:1,//初始化加载第一页，默认第一页
+            pageSize: 10,//每页的记录行数（*）
+            // pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+            pageList: "",        //可供选择的每页的行数（*）
+            columns:  [
+                {
+                    field: 'id',
+                    title: '序号',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field4',
+                    title: '作者',
+                    align: 'center',
+                    valign: 'middle',
+                },
+                {
+                    field: 'field3',
+                    title: '发布文章量',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field4',
+                    title: '负面文章量',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field6',
+                    title: '阅读量',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field7',
+                    title: '评论量',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field8',
+                    title: '评论回复量',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field9',
+                    title: '负面评论',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field10',
+                    title: '负面评论占比',
+                    align: 'center',
+                    valign: 'middle'
+                }
+            ]
+        });
+    }
     initTable();
     initTable2();
     initTable3();
+    $('#myModel').on('shown.bs.modal', function (e) {
+        initTable_model()
+    })
 })()

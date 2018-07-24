@@ -150,14 +150,14 @@
                 <div class="col-md-12">
                     <div class="panel panel-line-primary">
                         <div class="panel-heading">
-                            <h3 class="panel-title clearfix">
+                            <h3 class="panel-title clearfix bottom_line">
                                 <span class="btn-right-title">声量监控</span>
                                 <button class="btn btn-blue pull-right" type="button" data-toggle="modal" data-target="#myModal">
                                     查询
                                 </button>
                             </h3>
                         </div>
-                        <div class="panel-body">
+                        <div class="panel-body no_padding">
                             <div class="table-box">
                                 <div class="form-horizontal btn-box">
                                     <div class="form-group">
@@ -237,7 +237,7 @@
                     </li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
-                    <!--项目热度分布 start-->
+                    <!--声量趋势分析 start-->
                     <div class="tab-pane fade in active" id="tab1">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -314,8 +314,8 @@
                             </div>
                         </div>
                     </div>
-                    <!--项目热度分布 end-->
-                    <!--排行分析 start-->
+                    <!--声量趋势分析 end-->
+                    <!--媒体产出排行 start-->
                     <div class="tab-pane fade" id="tab2">
                         <div class="panel panel-line-primary" style="border-top:0;">
                             <div class="panel-body">
@@ -370,10 +370,28 @@
                                         <table class="table table-bordered table-blue table-hover" id="table3"></table>
                                     </div>
                                 </div>
+                                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModel">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title">作者推荐</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pull-right mb5">
+                                                    <button class="btn btn-blue" type="button">导出</button>
+                                                </div>
+                                                <table class="table table-bordered table-blue table-hover" id="table_model"></table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!--排行分析 end-->
+                    <!--媒体产出排行 end-->
                 </div>
             </div>
         </div>
