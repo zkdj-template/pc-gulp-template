@@ -1137,11 +1137,11 @@ td .onOff {
   margin-bottom: 0;
 }
 
-#small_table {
+.a-sm {
   width: 100%;
 }
 
-#small_table .btn {
+.a-sm .btn {
   display: inline-block;
   width: 20%;
   margin-right: -6px;
@@ -1152,7 +1152,7 @@ td .onOff {
   border-right: none;
 }
 
-#small_table .btn:last-child {
+.a-sm .btn:last-child {
   border-right: 1px solid #999;
 }
 
