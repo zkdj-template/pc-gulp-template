@@ -888,12 +888,12 @@ td .onOff {
   background-color: #f2f8fc;
 }
 
-.panel-body .small_p > tbody > tr > th {
+.panel-body .small-p > tbody > tr > th {
   text-align: center;
   color: #4285F4;
 }
 
-.panel-body .small_p > tbody > tr > td {
+.panel-body .small-p > tbody > tr > td {
   padding: 5px;
   text-align: center;
 }
