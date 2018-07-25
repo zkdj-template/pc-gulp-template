@@ -157,7 +157,7 @@
                                 </button>
                             </h3>
                         </div>
-                        <div class="panel-body no_padding">
+                        <div class="panel-body no-padding">
                             <div class="table-box">
                                 <div class="form-horizontal btn-box">
                                     <div class="form-group">
@@ -243,13 +243,11 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="panel panel-line-primary">
                                     <div class="panel-body">
-                                        <h3 class="panel-title">
-                                            车型声量走势
-                                            <div class="quyu-picker pull-right" data-toggle="regionCityPicker">
-                                                <select name="region" class="selectpicker" title="文章量">
-                                                </select>
-                                            </div>
-                                        </h3>
+                                        <div class="pull-right">
+                                            <select class="selectpicker" title="文章量">
+                                            </select>
+                                        </div>
+                                        <h4>车型声量走势</h4>
                                         <div class="charts" id="car_type"></div>
                                     </div>
                                 </div>
@@ -260,7 +258,6 @@
                                         <h3 class="panel-title">车型声量统计</h3>
                                     </div>
                                     <div class="panel-body">
-
                                         <div class="charts" id="car_num"></div>
                                     </div>
                                 </div>
@@ -268,12 +265,11 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="panel panel-line-primary">
                                     <div class="panel-heading">
-                                        <h3 class="panel-title">媒体排行TOP10</h3>
-                                        <select class="selectpicker pull-right">
-                                            <option value="">曝光量</option>
-                                            <option value="">点击量</option>
-                                            <option value="">线索量</option>
-                                        </select>
+                                        <div class="pull-right">
+                                            <select class="selectpicker" title="文章量">
+                                            </select>
+                                        </div>
+                                        <h4 class="panel-title">媒体排行TOP10</h4>
                                     </div>
                                     <div class="panel-body">
 
@@ -284,11 +280,12 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="panel panel-line-primary">
                                     <div class="panel-heading">
-                                        <h3 class="panel-title">媒体结构分布</h3>
-                                        <div class="quyu-picker pull-right" data-toggle="regionCityPicker">
-                                            <select name="region" class="selectpicker" title="文章量">
+                                        <div class="pull-right">
+                                            <select class="selectpicker" title="文章量">
                                             </select>
                                         </div>
+                                        <h4 class="panel-title">媒体结构分布</h4>
+
                                     </div>
                                     <div class="panel-body">
 
@@ -299,12 +296,12 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="panel panel-line-primary">
                                     <div class="panel-heading">
-                                        <h3 class="panel-title">媒体排行</h3>
-                                        <select class="selectpicker pull-right">
-                                            <option value="">曝光量</option>
-                                            <option value="">点击量</option>
-                                            <option value="">线索量</option>
-                                        </select>
+                                        <div class="pull-right">
+                                            <select class="selectpicker" title="文章量">
+                                            </select>
+                                        </div>
+                                        <h4 class="panel-title">媒体排行</h4>
+
                                     </div>
                                     <div class="panel-body">
 
@@ -503,47 +500,10 @@
 <script src="../vendor/bootstrap-select-1.12.2/js/i18n/defaults-zh_CN.min.js"></script>
 <script src="../vendor/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
-<script src="../vendor/region_picker/js/jquery.region_city.data.js"></script>
-<script src="../vendor/region_picker/js/jquery.region_picker.js"></script>
 <script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
 <script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="../vendor/icheck/icheck.min.js"></script>
 <script src="../vendor/echarts/echarts.min.js"></script>
-<script src="../vendor/echarts/provinces/china.js"></script>
-<script src="../vendor/echarts/provinces/guangdong.js"></script>
-<script src="../vendor/echarts/provinces/anhui.js"></script>
-<script src="../vendor/echarts/provinces/fujian.js"></script>
-<script src="../vendor/echarts/provinces/gansu.js"></script>
-<script src="../vendor/echarts/provinces/guangxi.js"></script>
-<script src="../vendor/echarts/provinces/guizhou.js"></script>
-<script src="../vendor/echarts/provinces/hainan.js"></script>
-<script src="../vendor/echarts/provinces/hebei.js"></script>
-<script src="../vendor/echarts/provinces/heilongjiang.js"></script>
-<script src="../vendor/echarts/provinces/henan.js"></script>
-<script src="../vendor/echarts/provinces/hubei.js"></script>
-<script src="../vendor/echarts/provinces/hunan.js"></script>
-<script src="../vendor/echarts/provinces/jiangsu.js"></script>
-<script src="../vendor/echarts/provinces/jiangxi.js"></script>
-<script src="../vendor/echarts/provinces/jilin.js"></script>
-<script src="../vendor/echarts/provinces/liaoning.js"></script>
-<script src="../vendor/echarts/provinces/neimenggu.js"></script>
-<script src="../vendor/echarts/provinces/ningxia.js"></script>
-<script src="../vendor/echarts/provinces/qinghai.js"></script>
-<script src="../vendor/echarts/provinces/shandong.js"></script>
-<script src="../vendor/echarts/provinces/shanxi.js"></script>
-<script src="../vendor/echarts/provinces/shanxi1.js"></script>
-<script src="../vendor/echarts/provinces/sichuan.js"></script>
-<script src="../vendor/echarts/provinces/taiwan.js"></script>
-<script src="../vendor/echarts/provinces/xinjiang.js"></script>
-<script src="../vendor/echarts/provinces/xizang.js"></script>
-<script src="../vendor/echarts/provinces/yunnan.js"></script>
-<script src="../vendor/echarts/provinces/zhejiang.js"></script>
-<script src="../vendor/echarts/city/chongqing.js"></script>
-<script src="../vendor/echarts/city/shanghai.js"></script>
-<script src="../vendor/echarts/city/beijing.js"></script>
-<script src="../vendor/echarts/city/tianjin.js"></script>
-<script src="../vendor/echarts/city/aomen.js"></script>
-<script src="../vendor/echarts/city/xianggang.js"></script>
 <script src="../vendor/echarts/customed_GM.js"></script>
 <script src="../js/plugin.js"></script>
 <script src="../js/public_relation/public_relation.js"></script>

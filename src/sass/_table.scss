@@ -149,18 +149,20 @@
     }
   }
 }
-
-#top10_table{
-  >tbody{
-    >tr{
-      >th{
-        text-align: center;
-        color: #4285F4;
-      }
-      >td{
-        padding: 5px;
-        text-align: center;
+.panel-body{
+  .small_p{
+    >tbody{
+      >tr{
+        >th{
+          text-align: center;
+          color: #4285F4;
+        }
+        >td{
+          padding: 5px;
+          text-align: center;
+        }
       }
     }
   }
 }
+

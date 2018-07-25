@@ -552,8 +552,8 @@ fieldset[disabled] .form-control {
 
 td .onOff {
   display: inline-block;
-  margin-top: -10px;
-  margin-bottom: -10px;
+  margin-top: -9px;
+  margin-bottom: -9px;
 }
 
 .bootstrap-select.btn-group .dropdown-toggle.btn-fill-green .filter-option {
@@ -888,12 +888,12 @@ td .onOff {
   background-color: #f2f8fc;
 }
 
-#top10_table > tbody > tr > th {
+.panel-body .small_p > tbody > tr > th {
   text-align: center;
   color: #4285F4;
 }
 
-#top10_table > tbody > tr > td {
+.panel-body .small_p > tbody > tr > td {
   padding: 5px;
   text-align: center;
 }
@@ -970,7 +970,7 @@ td .onOff {
   padding-bottom: 10px;
 }
 
-.panel > .no_padding {
+.panel > .no-padding {
   padding: 0px;
 }
 

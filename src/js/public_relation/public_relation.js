@@ -725,4 +725,8 @@
     $('#myModel').on('shown.bs.modal', function (e) {
         initTable_model()
     })
+    $('.stop-event input[type=checkbox]').iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        increaseArea: '20%'
+    });
 })()

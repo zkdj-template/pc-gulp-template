@@ -457,7 +457,7 @@
     function initTable6() {
         $table6.bootstrapTable({
             url: '../data/data.json',
-            method:'post',
+            method:'get',
             dataType: 'json',
             queryParams: function (params) {
                 return {
