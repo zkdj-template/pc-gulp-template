@@ -21,13 +21,10 @@
       -ms-transition: all .5s ease-in-out;
       -o-transition: all .5s ease-in-out;
       transition: all .5s ease-in-out;
-
-      >.ul_son{
-        display: none;
-      }
       >a{
         position: relative;
         padding: 12px 15px;
+        transition: all 1s ease-in-out;
         &:before{
           display: none;
           content: ' ';
@@ -40,11 +37,11 @@
         }
         &:hover,
         &:focus{
-          background-color: #36414b;
-          color: $whiteColor;
           &:before{
-            display: block;
+            display: none;
           }
+          color: $whiteColor;
+          background-color: transparent;
         }
       }
       >a,
@@ -55,9 +52,6 @@
         font-size: 16px;
       }
       &.active{
-        >.sub-nav{
-          display: block;
-        }
         >a{
           background-color: #36414b;
           color: $whiteColor;
@@ -66,13 +60,17 @@
           }
         }
       }
+      &.current{
+        >.sub-nav{
+          display: block;
+        }
+      }
     }
     &.sub-nav{
       display: none;
       >li{
         >a{
-          padding-left: 55px;
-          font-size: 14px;
+          padding-left: 15px;
           color: #8a93a9;
         }
       }

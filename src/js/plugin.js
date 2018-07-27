@@ -393,8 +393,20 @@
          * 左侧菜单的点击事件
          */
         leftNavClick: function () {
-            $(".left-nav").on("click","li>a",function () {
-                $(this).parent().addClass("active").siblings().removeClass("active");
+            $(".left-nav>.nav>li>a").on("click",function () {
+                var $this = $(this),
+                    $thisParent = $this.parent(),
+                    $thisParentsNav = $this.parents(".left-nav");
+                $this.next()&&$this.next().toggle();
+                if(!$this.next().hasClass("sub-nav")){
+                    $thisParentsNav.find("li").removeClass("active");
+                    $thisParent.addClass("active").siblings().removeClass("active");
+                }
+            });
+            $(".left-nav .sub-nav>li>a").on("click",function () {
+                var $this = $(this);
+                $this.parents(".left-nav").find("li").removeClass("active");
+                $this.parent().addClass("active").siblings().removeClass("active");
             });
         },
         /**
