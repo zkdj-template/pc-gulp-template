@@ -397,16 +397,24 @@
                 var $this = $(this),
                     $thisParent = $this.parent(),
                     $thisParentsNav = $this.parents(".left-nav");
-                $this.next()&&$this.next().toggle();
+                $this.next()&&$this.next().toggle(0,function (e) {
+                    var isShow = $this.next().css("display");
+                    console.log(isShow);
+                    if(isShow == 'block'){
+                        $thisParent.addClass("current");
+                    }else{
+                        $thisParent.removeClass("current");
+                    }
+                });
                 if(!$this.next().hasClass("sub-nav")){
                     $thisParentsNav.find("li").removeClass("active");
-                    $thisParent.addClass("active").siblings().removeClass("active");
+                    $thisParent.addClass("active");
                 }
             });
             $(".left-nav .sub-nav>li>a").on("click",function () {
                 var $this = $(this);
                 $this.parents(".left-nav").find("li").removeClass("active");
-                $this.parent().addClass("active").siblings().removeClass("active");
+                $this.parent().addClass("active");
             });
         },
         /**
@@ -424,8 +432,43 @@
             });
             $(".right-content").scroll(function () {
                 $(this).scrollTop()>50 ? $(".left-nav").length>0 ? $top_fixed_search.addClass('fixed-search').next().css({paddingTop:'181px'}) : $top_fixed_search.addClass('fixed-search').next().css({paddingTop:'121px'}) : $(".left-nav").length>0 ? $top_fixed_search.removeClass('fixed-search').next().css({paddingTop:'0'}) : $top_fixed_search.removeClass('fixed-search').next().css({paddingTop:'0'});
-                $(this).scrollTop()>$top_fixed_search.height() ? $top_fixed_search.next().find('.nav-tabs').css({position: 'absolute'}).animate({left: '200px',right: '0',top: $top_fixed_search.height()+2,zIndex: 4}, 200, 'linear'): $top_fixed_search.next().find('.nav-tabs').css({position: 'static'}, 200, 'linear');
+                $(this).scrollTop()>$top_fixed_search.height() ? $top_fixed_search.next().find('.nav-tabs').css({position: 'absolute'}).animate({left: '200px',right: '0',top: $top_fixed_search.height()+2,zIndex: 999}, 200, 'linear'): $top_fixed_search.next().find('.nav-tabs').css({position: 'static'}, 200, 'linear');
             });
+        },
+        judgeNoData: function(id, dataMap){
+        	var hasData = false;
+        	if(dataMap.length == 0){
+        		return hasData;
+        	}
+        	for(var k in dataMap){
+        		var isContinue = true;
+        		var data = dataMap[k];
+        		
+        		for(var i = 0; i < data.length; i++){
+        			if(typeof data[i] == 'number'){
+        				if(data[i] != 0){
+        					hasData = true;
+        					isContinue = false;
+        					break;
+        				}
+        			}else{
+        				if(data[i].value != 0){
+        					hasData = true;
+        					isContinue = false;
+        					break
+        				}
+        			}
+        		}				
+        		
+        		if(!isContinue){
+        			break
+        		}
+        	}
+        	if(!hasData){
+        		$('#' + id).find(".noData-box").remove();
+        		$('#' + id).append('<div class="noData-box"><img class="noData-img" src="../../images/no_data.png"></div>');
+        	}
+        	return hasData;
         },
         init : function () {
             var _this = this;

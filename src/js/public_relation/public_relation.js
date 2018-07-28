@@ -1,13 +1,5 @@
 
 (function(){
-    $('.nav>.li_one>a').on('click',function(){
-        $(this).next('.ul_son').slideDown()
-        $(this).parents('li').siblings().find('ul').slideUp()
-    })
-    $(".li_son").on('click',function(){
-        $(this).parents('li').siblings().find('.li_son').removeClass('active')
-
-    })
     /**
      * 初始化日期插件
      */

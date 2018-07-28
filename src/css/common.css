@@ -341,6 +341,10 @@ a:visited {
 /*
  *  下划线tab标签页
  */
+.tab-bottom-line .panel-line-primary {
+  border-top: none;
+}
+
 .tab-bottom-line .nav-tabs {
   background-color: #fff;
   border-left: 1px solid #ebebec;
@@ -735,7 +739,7 @@ td .onOff {
   border: none;
 }
 
-.left-nav ul.nav .active .icon-down:before {
+.left-nav ul.nav .current .icon-down:before {
   content: "\e7eb";
 }
 
@@ -800,7 +804,7 @@ td .onOff {
 }
 
 .left-nav ul.nav.sub-nav > li > a {
-  padding-left: 15px;
+  padding-left: 36px;
   color: #8a93a9;
 }
 
@@ -1043,8 +1047,20 @@ td .onOff {
   font-size: 18px;
 }
 
+.panel-line-primary .panel-heading .panel-title a.fs18 {
+  color: #333;
+}
+
+.panel-line-primary .panel-heading .panel-title a.fs18:hover {
+  color: #3186fb;
+}
+
 .panel-line-primary .panel-heading .panel-title.big-text {
   font-size: 34px;
+}
+
+.panel-line-primary .panel-heading .panel-title .text-blue {
+  color: #2a93ed;
 }
 
 .panel-line-primary .panel-heading .panel-title .btn-right-title {
@@ -1083,6 +1099,21 @@ td .onOff {
 
 .panel > .no-padding {
   padding: 0px;
+}
+
+.panel .panel-heading-gray {
+  background-color: #f5f5f5;
+}
+
+.panel .panel-heading-gray .panel-title {
+  font-size: 14px;
+  color: #2a93ed;
+}
+
+.panel .panel-heading-gray .pull-right a,
+.panel .panel-heading-gray .pull-right a .iconfont {
+  font-size: 14px;
+  color: #2a93ed;
 }
 
 /**

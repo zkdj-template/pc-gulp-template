@@ -12,7 +12,7 @@
   ul.nav{
     margin-bottom: 0;
     border: none;
-    .active .icon-down:before{
+    .current .icon-down:before{
       content: "\e7eb";
     }
     >li{
@@ -70,7 +70,7 @@
       display: none;
       >li{
         >a{
-          padding-left: 15px;
+          padding-left: 36px;
           color: #8a93a9;
         }
       }

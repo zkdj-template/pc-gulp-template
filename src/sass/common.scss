@@ -208,45 +208,50 @@ a:visited{
 /*
  *  下划线tab标签页
  */
-.tab-bottom-line .nav-tabs {
-  background-color: #fff;
-  border-left: 1px solid #ebebec;
-  border-right: 1px solid #ebebec;
-  >li{
-    >a{
-      transition: all .5s ease-in-out;
-      color: #808080;
-      &:hover{
-        color: #2a93ed;
-      }
-    }
-    >a,
-    >a:hover,
-    >a:focus{
-      border: none;
-      background-color:  transparent;
-    }
-    &.active{
+.tab-bottom-line {
+  .panel-line-primary{
+    border-top: none;
+  }
+  .nav-tabs {
+    background-color: #fff;
+    border-left: 1px solid #ebebec;
+    border-right: 1px solid #ebebec;
+    >li{
       >a{
+        transition: all .5s ease-in-out;
+        color: #808080;
         &:hover{
-          font-weight: 400;
-        }
-        &:before{
-          position:absolute;
-          left: 15px;
-          right: 15px;
-          bottom: 1px;
-          display:block;
-          content: ' ';
-          height: 2px;
-          background-color:#3385ff;
+          color: #2a93ed;
         }
       }
       >a,
-      >a:focus,
-      >a:hover{
+      >a:hover,
+      >a:focus{
         border: none;
         background-color:  transparent;
+      }
+      &.active{
+        >a{
+          &:hover{
+            font-weight: 400;
+          }
+          &:before{
+            position:absolute;
+            left: 15px;
+            right: 15px;
+            bottom: 1px;
+            display:block;
+            content: ' ';
+            height: 2px;
+            background-color:#3385ff;
+          }
+        }
+        >a,
+        >a:focus,
+        >a:hover{
+          border: none;
+          background-color:  transparent;
+        }
       }
     }
   }
