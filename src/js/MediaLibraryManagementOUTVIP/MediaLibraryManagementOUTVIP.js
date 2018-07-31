@@ -83,12 +83,14 @@ $(function(){
                 {
                     field: 'field5',
                     title: '发布文章量',
+                    sortable: true,
                     align: 'center',
                     valign: 'middle'
                 },
                 {
                     field: 'field6',
                     title: '负面文章量',
+                    sortable: true,
                     align: 'center',
                     valign: 'middle',
 
@@ -96,12 +98,14 @@ $(function(){
                 {
                     field: 'field11',
                     title: '阅读量',
+                    sortable: true,
                     align: 'center',
                     valign: 'middle',
                 },
                 {
                     field: 'field5',
                     title: '评论量',
+                    sortable: true,
                     align: 'center',
                     valign: 'middle'
                 },
@@ -109,18 +113,21 @@ $(function(){
                     field: 'field6',
                     title: '评论回复量',
                     align: 'center',
+                    sortable: true,
                     valign: 'middle',
 
                 },
                 {
                     field: 'field11',
                     title: '负面评论',
+                    sortable: true,
                     align: 'center',
                     valign: 'middle',
                 },
                 {
                     field: 'field6',
                     title: '负面评论占比',
+                    sortable: true,
                     align: 'center',
                     valign: 'middle',
 
