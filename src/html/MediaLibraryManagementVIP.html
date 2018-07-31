@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>广告效果评估-广告效果监测</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../vendor/bootstrap-table/bootstrap-table.min.css">
+    <link href="../vendor/icheck/skins/square/_all.css" rel="stylesheet" />
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav nav-menu">
+            <li>
+                <a href="./globalPanel.html">全局看板</a>
+            </li>
+            <li>
+                <a href="./evaluation.html">广告效果评估</a>
+            </li>
+            <li  class="active">
+                <a href="./MediaLibraryManagement.html">公关传播效果评估</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="buildProject.html">
+                    <i class="iconfont icon-tubiao112"></i>
+                    <span>设置</span>
+                </a>
+            </li>
+            <li>
+                <a href="personInfo.html">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <ul class="nav">
+            <li class="current">
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-meitiwenjian"></i>
+                    媒体资源库
+                    <i class="iconfont icon-down pull-right"></i>
+                </a>
+                <ul class="nav sub-nav">
+                    <li>
+                        <a href="./MediaLibraryManagement.html">
+                            媒体库管理
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="./MediaLibraryManagementVIP.html">
+                            媒体VIP管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./MediaLibraryManagementOUTVIP.html">
+                            媒体VIP产出
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-zhibiaojianceqi"></i>
+                    经销商监测
+                    <i class="iconfont icon-down pull-right"></i>
+                </a>
+                <ul class="nav sub-nav">
+                    <li>
+                        <a href="./distributorManagement.html">
+                            经销商管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./distributorSoundQuantity.html">
+                            经销商声量
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./articleChecks.html">
+                            文章核查
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="./activitySoundQuantity.html">
+                    <i class="iconfont icon-plus-activity"></i>
+                    活动声量评估
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-cheliang"></i>
+                    车型声量评估
+                    <i class="iconfont icon-down pull-right"></i>
+                </a>
+                <ul class="nav sub-nav">
+                    <li>
+                        <a href="./public_relation.html">
+                            声量监测
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./public_opinion.html">
+                            舆情分析
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="page-content">
+            <div class="panel panel-line-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title clearfix bottom_line">
+                        <span class="btn-right-title">媒体库管理</span>
+                        <div class="pull-right">
+                            <button class="btn btn-blue" type="button">
+                                查询
+                            </button>
+                            <a href="MediaLibraryManagementVIP_add.html" class="btn btn-blue">
+                                添加媒体
+                            </a>
+                            <button class="btn btn-blue" type="button">
+                                下载模板
+                            </button>
+                            <button class="btn btn-blue" type="button">
+                                导入
+                            </button>
+                            <button class="btn btn-blue" type="button">
+                                导出
+                            </button>
+
+                        </div>
+                    </h3>
+
+                </div>
+                <div class="panel-body no-padding">
+                    <div class="table-box">
+                        <div class="form-horizontal btn-box">
+                            <div class="form-group">
+                                <label class="control-label col-md-1">媒体：</label>
+                                <div class="col-md-2">
+                                    <select name="" class="form-control selectpicker" title="选择媒体平台">
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select name="" class="form-control selectpicker" title="选择主媒体">
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select name="" class="form-control selectpicker" title="选择分媒体">
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select name="" class="form-control selectpicker" title="选择媒体名称">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-1">所属区域：</label>
+                                <div class="col-md-8">
+                                    <div class="quyu-picker" data-toggle="regionCityPicker">
+                                        <select name="region" class="selectpicker" title="请选择区域">
+                                        </select>
+                                        <select name="provinces" class="selectpicker" title="请选择省份">
+                                        </select>
+                                        <select name="city" class="selectpicker" title="请选择城市">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-1">生日选择：</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control w220 datepicker" readonly placeholder="请选择时间"/>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-line-blue">
+                <div class="panel-heading clearfix">
+                    <div class="form-inline">
+                        <div class="form-group pull-right">
+                            <div class="input-group">
+                                <input type="text" class="form-control w220" placeholder="输入媒体关键字">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-blue" type="button">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="text-blue mr20">加入生日提醒</a>
+                        <button class="btn btn-blue mr20" type="button" data-toggle="modal" data-target="#modal_day">生日提醒列表</button>
+                        <button class="btn btn-blue mr20" type="button" id="Email_to">发送邮件</button>
+                    </div>
+                </div>
+                <div class="panel-body table-box">
+                    <table class="table table-bordered table-blue table-hover" id="table"></table>
+                    <button type="button" id="Birthday"
+                            class="btn btn-blue pull-right "
+                            title="生日提醒"
+                            style="margin-right: 50px;"
+                            data-container="body"
+                            data-toggle="popover"
+                            data-placement="top"
+                            data-html= 'true'>
+                        生日提醒
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+        <!--内容部分 end-->
+        <footer class="footer">
+            <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+            <p class="text-center">慧数汽车提供技术支持</p>
+        </footer>
+    </div>
+</div>
+<!--没有选择的模态框-->
+<div class="modal fade" id="modal_no" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">发送邮件</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center"><img src="../images/Forma.png" alt=""></p>
+                <p class="text-center">请选择发送邮件的媒体&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-blue"  data-dismiss="modal">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!--选择了的模态框-->
+<div class="modal fade" id="modal_yes" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">发送邮件</h4>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <p>To:20个</p>
+                    <div class="To_20 mb15">
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.comasdasdasd</span>
+                            <span>
+                            <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.comasdasdasd</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.comasdasdasd</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                    </div>
+                    <p >邮件主题</p>
+                    <input type="text" class="form-control mb15" placeholder="输入媒体关键字">
+                    <p >邮件内容</p>
+                    <textarea rows="5" cols="85%"></textarea>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-blue" data-dismiss="modal">发送</button>
+                <button type="button" class="btn btn-fill-blue" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!--生日提醒列表-->
+<div class="modal fade" id="modal_day" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header mb15">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">生日提醒列表</h4>
+            </div>
+            <div class="panel-body table-box " style="padding-top: 0;">
+                <table  class="table table-bordered table-blue table-hover small-p">
+                    <tbody>
+                    <tr>
+                        <th>序号</th>
+                        <th>主编姓名</th>
+                        <th>地区</th>
+                        <th>出生年/月/日</th>
+                        <th>电话</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>张少</td>
+                        <td>广西</td>
+                        <td>1992/06/21</td>
+                        <td>1231654564</td>
+                        <td>
+                            <a href="javascript:;"><i class="iconfont icon-shanchu"></i>移除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>张少</td>
+                        <td>广西</td>
+                        <td>1992/06/21</td>
+                        <td>1231654564</td>
+                        <td>
+                            <a href="javascript:;"><i class="iconfont icon-shanchu"></i>移除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>张少</td>
+                        <td>广西</td>
+                        <td>1992/06/21</td>
+                        <td>1231654564</td>
+                        <td>
+                            <a href="javascript:;"><i class="iconfont icon-shanchu"></i>移除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>张少</td>
+                        <td>广西</td>
+                        <td>1992/06/21</td>
+                        <td>1231654564</td>
+                        <td>
+                            <a href="javascript:;"><i class="iconfont icon-shanchu"></i>移除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">选择项目</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-box">
+                    <form class="form-horizontal btn-box">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">投放项目：</label>
+                            <div class="col-md-9">
+                                <label class="btn btn-link active">
+                                    <input type="radio" checked name="a" value="all">
+                                    全部
+                                </label>
+                                <label class="btn btn-link">
+                                    <input type="radio" name="a" value="month">
+                                    本月新增
+                                </label>
+                                <label class="btn btn-link">
+                                    <input type="radio" name="a" value="on">
+                                    启用
+                                </label>
+                                <label class="btn btn-link">
+                                    <input type="radio" name="a" value="off">
+                                    已到期
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">车型：</label>
+                            <div class="col-md-2">
+                                <select name="b" class="form-control selectpicker" title="请选择车型">
+                                    <option value="">五菱宏光s</option>
+                                    <option value="">宝骏E100</option>
+                                    <option value="">宝骏310</option>
+                                    <option value="">宝骏730</option>
+                                    <option value="">宝骏560</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">代理商：</label>
+                            <div class="col-md-9">
+                                <label class="btn btn-link active">
+                                    <input type="radio" checked name="c" value="all">
+                                    全部
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="1">
+                                    华扬联众
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="2">
+                                    省广蓝门
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="3">
+                                    上海博派
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="4">
+                                    上思广告
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="5">
+                                    新意互动
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="6">
+                                    时空视点
+                                </label>
+                                <label href="javascript:void(0);" class="btn btn-link">
+                                    <input type="radio" name="c" value="7">
+                                    迪思公关
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">时间：</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control w220 datepicker" placeholder="请选择时间"/>
+                                <input type="hidden" name="startDate">
+                                <input type="hidden" name="endDate">
+                            </div>
+                        </div>
+                    </form>
+                    <table id="table4" class="table table-bordered table-blue table-hover"></table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/i18n/defaults-zh_CN.min.js"></script>
+<script src="../vendor/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_city.data.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_picker.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/icheck/icheck.min.js"></script>
+<script src="../vendor/echarts/echarts.min.js"></script>
+<script src="../vendor/echarts/customed_GM.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/MediaLibraryManagementVIP/MediaLibraryManagementVIP.js"></script>
+
+</body>
+</html>

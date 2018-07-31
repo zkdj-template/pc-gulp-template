@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../vendor/bootstrap-table/bootstrap-table.min.css">
     <link href="../vendor/icheck/skins/square/_all.css" rel="stylesheet" />
     <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
-    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/common.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
     <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
@@ -71,7 +71,7 @@
     <!-- 左侧导航 start -->
     <div class="left-nav">
         <ul class="nav">
-            <li>
+            <li  class="current">
                 <a href="javascript:void(0);">
                     <i class="iconfont icon-meitiwenjian"></i>
                     媒体资源库
@@ -79,17 +79,17 @@
                 </a>
                 <ul class="nav sub-nav">
                     <li>
-                        <a href="javascript:void(0);">
+                        <a href="./MediaLibraryManagement.html">
                             媒体库管理
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0);">
+                        <a href="./MediaLibraryManagementVIP.html">
                             媒体VIP管理
                         </a>
                     </li>
-                    <li>
-                        <a href="javascript:void(0);">
+                    <li class="active">
+                        <a href="./MediaLibraryManagementOUTVIP.html">
                             媒体VIP产出
                         </a>
                     </li>
@@ -125,7 +125,7 @@
                     活动声量评估
                 </a>
             </li>
-            <li class="current">
+            <li>
                 <a href="javascript:void(0);">
                     <i class="iconfont icon-cheliang"></i>
                     车型声量评估
@@ -137,7 +137,7 @@
                             声量监测
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="./public_opinion.html">
                             舆情分析
                         </a>
@@ -150,94 +150,58 @@
     <div class="right-content">
         <!--内容部分 start-->
         <div class="page-content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title clearfix bottom_line">
-                                <div class="btn-right-title">
-                                    <a class="fs18" href="./public_opinion.html">舆情分析</a>
-                                    <span>&gt;</span>
-                                    <span class="text-blue">负面舆情文章列表</span>
-                                </div>
-                                <div class="pull-right">
-                                    <button class="btn btn-blue" type="button">导出</button>
-                                </div>
-                            </h3>
-                        </div>
-                        <div class="panel-body no-padding">
-                            <div class="table-box">
-                                <div class="form-horizontal btn-box">
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">内容类型：</label>
-                                        <div class="col-md-10">
-                                            <a href="javascript:void(0);" class="btn btn-link active">互动类</a>
-                                            <a href="javascript:void(0);" class="btn btn-link">新闻类</a>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">选择车型：</label>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="请选择车型">
-                                                <option value="">五菱宏光s</option>
-                                                <option value="">宝骏E100</option>
-                                                <option value="">宝骏310</option>
-                                                <option value="">宝骏730</option>
-                                                <option value="">宝骏560</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">媒体：</label>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="选择媒体平台">
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="选择主媒体">
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="选择分媒体">
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="选择媒体名称">
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">时间：</label>
-                                        <div class="col-md-10">
-                                            <input type="text" class="form-control w220 datepicker" readonly placeholder="请选择时间"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">排水类型：</label>
-                                        <div class="col-md-10">
-                                            <a href="javascript:void(0);" class="btn btn-link active">排水前</a>
-                                            <a href="javascript:void(0);" class="btn btn-link">排水后</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                            </div>
-                        </div>
-                    </div>
+            <div class="panel panel-line-primary">
+                <div class="panel-heading">
+                    <input type="text" class="form-control w220 datepicker pull-right" readonly placeholder="请选择时间"/>
+                    <h3 class="panel-title clearfix bottom_line">
+                        <span class="btn-right-title">张三</span>
+                    </h3>
+                </div>
+                <div class="panel-body table-box" style="padding-top: 0;">
+                    <h4>作者动态</h4>
+                    <table  class="table table-bordered table-blue table-hover small-p">
+                        <tbody>
+                        <tr>
+                            <th>关联媒体</th>
+                            <th>发布文章量</th>
+                            <th>负面文章量</th>
+                            <th>阅读量</th>
+                            <th>评论量</th>
+                            <th>评论回复量</th>
+                            <th>负面评论</th>
+                            <th>负面评论占比</th>
+                        </tr>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                            <td>January</td>
+                            <td>$100</td>
+                            <td>January</td>
+                            <td>$100</td>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-body">
-                            <div class="table-box">
-                                <table class="table table-blue table-hover" id="table_article"></table>
-                            </div>
-                        </div>
-                    </div>
+            <div class="panel panel-line-primary">
+                <div class="panel-body table-box">
+                    <h4>作者声量走势</h4>
+                    <div class="charts" id="admin_trend"></div>
+                </div>
+            </div>
+            <div class="panel panel-line-primary">
+                <div class="panel-body table-box">
+                    <select class="selectpicker pull-right" title="综合">
+                    </select>
+                    <h4>文章列表</h4>
+                    <table class="table table-bordered table-blue table-hover" id="table_admin"></table>
                 </div>
             </div>
         </div>
+
+
         <!--内容部分 end-->
         <footer class="footer">
             <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
@@ -348,11 +312,10 @@
 <script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
 <script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
 <script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
-<script src="../vendor/icheck/icheck.min.js"></script>
 <script src="../vendor/echarts/echarts.min.js"></script>
 <script src="../vendor/echarts/customed_GM.js"></script>
 <script src="../js/plugin.js"></script>
-<script src="../js/public_opinions/bad_madeia.js"></script>
+<script src="../js/MediaLibraryManagementOUTVIP/MediaLibraryManagementOUTVIP.js"></script>
 
 </body>
 </html>

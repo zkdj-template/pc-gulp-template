@@ -127,6 +127,7 @@ li {
 
 textarea {
   resize: none;
+  overflow-x: hidden;
 }
 
 input:-webkit-autofill,
@@ -714,6 +715,26 @@ td .onOff {
   margin-bottom: 10px;
 }
 
+.noData-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.noData-img {
+  position: absolute;
+  width: 214px;
+  height: 190px;
+  top: 50%;
+  left: 50%;
+  margin-top: -95px;
+  margin-left: -107px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
 /**
  * Created by zhangxin on 2018/5/9.
  * 左侧导航的样式
@@ -1013,6 +1034,26 @@ td .onOff {
   text-align: center;
 }
 
+.popover-content {
+  font-size: 8px;
+  padding: 0;
+}
+
+.popover-content > table {
+  width: 100%;
+}
+
+.popover-content > table > tbody > tr > th {
+  text-align: center;
+  padding: 3px 0px;
+  color: #4285F4;
+}
+
+.popover-content > table > tbody > tr > td {
+  text-align: center;
+  padding: 3px 0px;
+}
+
 /**
  * Created by zhangxin on 2017/12/26.
  * 
@@ -1090,6 +1131,22 @@ td .onOff {
 
 .panel-line-primary .panel-body {
   border-top: none !important;
+  position: relative;
+  /*.input-group{
+        width: 100px;
+        height: 160px;
+        position: absolute;
+        right: 200px;
+        top: 0px;
+        img{
+          width: 100%;
+          height: 85%;
+        }
+        >button{
+          width: 100%;
+        }
+
+      }*/
 }
 
 .bottom_line {
@@ -1319,6 +1376,32 @@ td .onOff {
 .modal .modal-header .modal-title {
   font-size: 14px;
   color: #3186fb;
+}
+
+.modal .modal-body > form > .To_20 {
+  width: 100%;
+  border: 1px solid #c0c0c0;
+  height: 100px;
+  overflow: auto;
+}
+
+.modal .modal-body > form > .To_20 > p {
+  float: left;
+  width: 31%;
+  margin: 1% 1%;
+}
+
+.modal .modal-body > form > .To_20 > p > span {
+  display: inline-block;
+  margin-right: 1px;
+  vertical-align: middle;
+}
+
+.modal .modal-body > form > .To_20 > p > .span_url {
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .modal .modal-body .tishi {

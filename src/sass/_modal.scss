@@ -11,6 +11,32 @@
     }
   }
   .modal-body{
+    >form{
+      >.To_20{
+        width:100%;
+        border: 1px solid #c0c0c0;
+        height: 100px;
+        overflow: auto;
+        >p{
+          float: left;
+          width: 31%;
+          margin: 1% 1%;
+          >span{
+            display: inline-block;
+            margin-right: 1px;
+            vertical-align: middle;
+          }
+          >.span_url{
+            width:50%;
+            overflow:hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+          }
+        }
+
+      }
+    }
+
     .tishi{
       .iconfont{
         font-size: 16px;
@@ -28,5 +54,6 @@
       -moz-border-radius: 3px;
       border-radius: 3px;
     }
+
   }
 }

@@ -166,3 +166,25 @@
   }
 }
 
+
+.popover-content{
+  font-size: 8px;
+  padding: 0;
+  >table{
+    width: 100%;
+    >tbody{
+      >tr{
+        >th{
+          text-align: center;
+          padding: 3px 0px;
+          color: #4285F4;
+        }
+        >td{
+          text-align: center;
+          padding: 3px 0px;
+        }
+      }
+
+    }
+  }
+}

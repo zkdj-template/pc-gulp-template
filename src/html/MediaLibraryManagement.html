@@ -40,7 +40,7 @@
             <li>
                 <a href="./evaluation.html">广告效果评估</a>
             </li>
-            <li class="active">
+            <li  class="active">
                 <a href="./MediaLibraryManagement.html">公关传播效果评估</a>
             </li>
         </ul>
@@ -71,14 +71,14 @@
     <!-- 左侧导航 start -->
     <div class="left-nav">
         <ul class="nav">
-            <li>
+            <li class="current">
                 <a href="javascript:void(0);">
                     <i class="iconfont icon-meitiwenjian"></i>
                     媒体资源库
                     <i class="iconfont icon-down pull-right"></i>
                 </a>
                 <ul class="nav sub-nav">
-                    <li>
+                    <li class="active">
                         <a href="./MediaLibraryManagement.html">
                             媒体库管理
                         </a>
@@ -125,7 +125,7 @@
                     活动声量评估
                 </a>
             </li>
-            <li class="current">
+            <li>
                 <a href="javascript:void(0);">
                     <i class="iconfont icon-cheliang"></i>
                     车型声量评估
@@ -137,7 +137,7 @@
                             声量监测
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="./public_opinion.html">
                             舆情分析
                         </a>
@@ -150,233 +150,112 @@
     <div class="right-content">
         <!--内容部分 start-->
         <div class="page-content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title clearfix bottom_line">
-                                <span class="btn-right-title">舆情分析</span>
-                                <button class="btn btn-blue pull-right" type="button">
-                                    查询
-                                </button>
-                            </h3>
+            <div class="panel panel-line-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title clearfix bottom_line">
+                        <span class="btn-right-title">媒体库管理</span>
+                        <div class="pull-right">
+                            <a href="MediaLibraryManagement_add.html" class="btn btn-blue">
+                                添加媒体
+                            </a>
+                            <button class="btn btn-blue" type="button">
+                                下载模板
+                            </button>
+                            <button class="btn btn-blue" type="button">
+                                导入
+                            </button>
+                            <button class="btn btn-blue" type="button">
+                                导出
+                            </button>
+
                         </div>
-                        <div class="panel-body no-padding">
-                            <div class="table-box">
-                                <div class="form-horizontal btn-box">
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">内容类型：</label>
-                                        <div class="col-md-10">
-                                            <a href="javascript:void(0);" class="btn btn-link active">互动类</a>
-                                            <a href="javascript:void(0);" class="btn btn-link">新闻类</a>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">选择车型：</label>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="请选择车型">
-                                                <option value="">五菱宏光s</option>
-                                                <option value="">宝骏E100</option>
-                                                <option value="">宝骏310</option>
-                                                <option value="">宝骏730</option>
-                                                <option value="">宝骏560</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">媒体：</label>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="选择媒体平台">
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="选择主媒体">
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="选择分媒体">
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <select name="" class="form-control selectpicker" title="选择媒体名称">
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">时间：</label>
-                                        <div class="col-md-10">
-                                            <input type="text" class="form-control w220 datepicker" readonly placeholder="请选择时间"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-1">排水类型：</label>
-                                        <div class="col-md-10">
-                                            <a href="javascript:void(0);" class="btn btn-link active">排水前</a>
-                                            <a href="javascript:void(0);" class="btn btn-link">排水后</a>
-                                        </div>
+                    </h3>
+
+                </div>
+                <div class="panel-body no-padding">
+                    <div class="table-box">
+                        <div class="form-horizontal btn-box">
+                            <div class="form-group">
+                                <label class="control-label col-md-1">媒体：</label>
+                                <div class="col-md-2">
+                                    <select name="" class="form-control selectpicker" title="选择媒体平台">
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select name="" class="form-control selectpicker" title="选择主媒体">
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select name="" class="form-control selectpicker" title="选择分媒体">
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select name="" class="form-control selectpicker" title="选择媒体名称">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-1">媒体级别：</label>
+                                <div class="col-md-10">
+                                    <a href="javascript:void(0);" class="btn btn-link active">全部</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">未分类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">核心一类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">核心二类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">核心三类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">重点一类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">重点二类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">重点三类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">普通一类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">普通二类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">普通三类</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-1">影响范围：</label>
+                                <div class="col-md-10">
+                                    <a href="javascript:void(0);" class="btn btn-link active">全部</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">未分类</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">区域</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">省级</a>
+                                    <a href="javascript:void(0);" class="btn btn-link">市级</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-1">所属区域：</label>
+                                <div class="col-md-8">
+                                    <div class="quyu-picker" data-toggle="regionCityPicker">
+                                        <select name="region" class="selectpicker" title="请选择区域">
+                                        </select>
+                                        <select name="provinces" class="selectpicker" title="请选择省份">
+                                        </select>
+                                        <select name="city" class="selectpicker" title="请选择城市">
+                                        </select>
                                     </div>
                                 </div>
-                                <br />
                             </div>
                         </div>
+                        <br />
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                车型声量走势
-                                <select name="" class="selectpicker pull-right" title="综合">
-                                </select>
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts " style="width: 80%; margin: 0 auto;" id="car_type"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                关键词指标TOP10
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts" style="margin-bottom:-10px">
-                                <h4 id="small_table" class="a-sm">
-                                    <a href="javascript:;" class="btn btn-sm btn-blue">全部</a>
-                                    <a href='javascript:;' class="btn btn-sm">产品</a>
-                                    <a href="javascript:;" class="btn btn-sm" >价格</a>
-                                    <a href="javascript:;" class="btn btn-sm">服务</a>
-                                    <a href="javascript:;" class="btn btn-sm">品牌</a>
-                                </h4>
-                                <table  class="table table-bordered table-blue table-hover small-p">
-                                    <tbody>
-                                    <tr>
-                                        <th>关键词</th>
-                                        <th>热度</th>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+            <div class="panel panel-line-blue">
+                <div class="panel-heading clearfix">
+                    <div class="form-inline">
+                        <div class="form-group pull-right">
+                            <div class="input-group">
+                                <input type="text" class="form-control w220" placeholder="输入媒体关键字">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-blue" type="button">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
                             </div>
                         </div>
-
-
+                        <button class="btn btn-blue" type="button" id="Email_to">发送邮件</button>
                     </div>
                 </div>
-                <div class="col-md-7 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">正负面分布</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts" id="good_bad"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">声量负面占比</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts" id="car_bad"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">负面情感走势分析</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts" id="bad_Feel"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">负面媒体结构</h3>
-                        </div>
-                        <div class="panel-body">
-
-                            <div class="charts" id="car_madel2"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <a href="./bad_media.html" class="pull-right">更多</a>
-                            <h3 class="panel-title">
-                                关联负面媒体
-
-                            </h3>
-
-                        </div>
-                        <div class="panel-body">
-                            <div class="charts" id="car_madel3"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <a href="./emotion_article.html" class="pull-right">更多</a>
-                            <h3 class="panel-title">
-                                情感文章排行
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="table-box">
-                                <table class="table table-blue table-hover" id="table6"></table>
-                            </div>
-                        </div>
-                    </div>
+                <div class="panel-body table-box">
+                    <table class="table table-bordered table-blue table-hover" id="table"></table>
                 </div>
             </div>
         </div>
@@ -387,6 +266,114 @@
         </footer>
     </div>
 </div>
+<!--没有选择的模态框-->
+<div class="modal fade" id="modal_no" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">发送邮件</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center"><img src="../images/Forma.png" alt=""></p>
+                <p class="text-center">请选择发送邮件的媒体&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-blue"  data-dismiss="modal">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!--选择了的模态框-->
+<div class="modal fade" id="modal_yes" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">发送邮件</h4>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <p>To:20个</p>
+                    <div class="To_20 mb15">
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.comasdasdasd</span>
+                            <span>
+                            <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.comasdasdasd</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.comasdasdasd</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                        <p>
+                            <span>汽车之家</span>
+                            <span class="span_url">www.baidu.com</span>
+                            <span>
+                         <a href="javascript:;"><i class="iconfont icon-shanchu"></i></a>
+                       </span>
+                        </p>
+                    </div>
+                    <p >邮件主题</p>
+                    <input type="text" class="form-control mb15" placeholder="输入媒体关键字">
+                    <p >邮件内容</p>
+                    <textarea rows="5" cols="85%"></textarea>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-blue" data-dismiss="modal">发送</button>
+                <button type="button" class="btn btn-fill-blue" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -496,8 +483,7 @@
 <script src="../vendor/echarts/echarts.min.js"></script>
 <script src="../vendor/echarts/customed_GM.js"></script>
 <script src="../js/plugin.js"></script>
-<script src="../js/carWcloud/carWCloud.js"></script>
-<script src="../js/public_opinions/public_opinion.js"></script>
+<script src="../js/MediaLibraryManagement/MediaLibraryManagement.js"></script>
 
 </body>
 </html>
