@@ -152,9 +152,10 @@ $(function(){
                     valign: 'middle',
                     formatter: function () {
                         return '' +
+                            '<div class="no-break-warp">'+
                             '<a href="javascript:void(0);">编辑<i class="iconfont icon-bianji1"></i></a>  ' +
-                            '<br/>'+
-                            '<a href="javascript:void(0);">删除<i class="iconfont icon-shanchu"></i></a>'
+                            '<a href="javascript:void(0);">删除<i class="iconfont icon-shanchu"></i></a>'+
+                            '</div>'
                     }
                 }
             ]
@@ -164,12 +165,88 @@ $(function(){
         });
     }
     initTable();
+
+    /*生日提醒列表*/
+    var table_Birthday = $("#table_Birthday");
+    function table_Birthday_initTable() {
+        table_Birthday.bootstrapTable({
+            url: '../data/data.json',
+            method:'get',
+            dataType: 'json',
+            queryParams: function (params) {
+                return {
+                    pageSize: params.limit,
+                    pageNumber: params.offset/params.limit+1,
+                    sort:params.sort,
+                    sortOrder: params.order
+                }
+            },
+            sortable: true,
+            sortOrder: 'asc',
+            pagination: true,
+            sidePagination: 'server',
+            pageNumber:1,//初始化加载第一页，默认第一页
+            pageSize: 10,//每页的记录行数（*）
+            // pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+            pageList: "",        //可供选择的每页的行数（*）
+            columns: [
+                {
+                    field: 'id',
+                    title: '序号',
+                    align: 'center',
+                    valign: 'middle',
+                },
+                {
+                    field: 'field2',
+                    title: '主编姓名',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field3',
+                    title: '地区',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field4',
+                    title: '出生年/月/日',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field5',
+                    title: '电话',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    field: 'field5',
+                    title: '操作',
+                    align: 'center',
+                    valign: 'middle',
+                    formatter: function (value) {
+                        return '<a href="javascript:;"><i class="iconfont icon-shanchu"></i>移除</a>'
+                    }
+                }
+            ]
+        });
+        $(window).resize(function () {
+            table_Birthday.bootstrapTable('resetView');
+        });
+    }
+    /*点击按钮弹出上边的列表*/
+    $('#open_Birthday').click(function(){
+        $("#modal_day").modal('show').on('shown.bs.modal', function (e) {
+            table_Birthday_initTable();
+        })
+    });
+
     $('#Email_to').click(function(){
         var selectContent = $table.bootstrapTable('getSelections');
         /*判断有没有数据，显示对应模态框*/
         selectContent.length>0?$("#modal_yes").modal('show'):$("#modal_no").modal('show')
     });
-
     /*初始化生日提醒弹框*/
     $(function () {
         $('[data-toggle="popover"]').popover()

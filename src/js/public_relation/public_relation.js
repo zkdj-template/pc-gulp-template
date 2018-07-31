@@ -195,6 +195,7 @@
     /*媒体结构占比*/
     var car_madel = echarts.init(document.getElementById('car_madel'),'customed');
     var car_madelLineOption  = {
+        color: ['#2a93ed','#ff846b'],
         legend: {
             type: 'plain',
             show: true,
@@ -387,6 +388,7 @@
         $table2 = $("#table2");
     var $table3 = $("#table3");
     var $table_model = $("#table_model");
+
     function initTable() {
         $table.bootstrapTable({
             url: '../data/data.json',
@@ -585,13 +587,12 @@
                     align: 'center',
                     valign: 'middle',
                     formatter: function (value) {
-                        console.log(value)
                         return '<a href="#tablePane_model" ' +
                             'data-toggle="modal" ' +
                             'data-target=".bs-example-modal-lg"' +
-                            'data-target=".bs-example-modal-lg"' +
                             '>'+ value +'</a>'
-                    }
+                    },
+
                 },
                 {
                     field: 'field3',
@@ -710,6 +711,7 @@
                 }
             ]
         });
+
     }
     initTable();
     initTable2();
@@ -717,6 +719,9 @@
     $('#myModel').on('shown.bs.modal', function (e) {
         initTable_model()
     })
+    /*$table3.on("click-row.bs.table",function(e, row, $element) {
+       console.log(row.field4)
+    });*/
     $('.stop-event input[type=checkbox]').iCheck({
         checkboxClass: 'icheckbox_square-blue',
         increaseArea: '20%'

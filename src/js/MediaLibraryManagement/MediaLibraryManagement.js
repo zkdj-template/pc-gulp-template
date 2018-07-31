@@ -166,9 +166,10 @@ $(function(){
                     valign: 'middle',
                     formatter: function () {
                         return '' +
+                            '<div class="no-break-warp">'+
                             '<a href="javascript:void(0);">编辑<i class="iconfont icon-bianji1"></i></a>  ' +
-                            '<br/>'+
                             '<a href="javascript:void(0);">删除<i class="iconfont icon-shanchu"></i></a>'
+                        +'</div>'
                     }
                 }
             ]

@@ -234,24 +234,25 @@
                                 </span>
                             </div>
                         </div>
-                        <a href="javascript:;" class="text-blue mr20">加入生日提醒</a>
-                        <button class="btn btn-blue mr20" type="button" data-toggle="modal" data-target="#modal_day">生日提醒列表</button>
+                        <a href="javascript:;" class="btn btn-link btn-link-blue mr20">加入生日提醒</a>
+                        <a  id="open_Birthday" class="btn btn-blue mr20" data-toggle="modal" type="button" >生日提醒列表</a>
                         <button class="btn btn-blue mr20" type="button" id="Email_to">发送邮件</button>
                     </div>
                 </div>
                 <div class="panel-body table-box">
                     <table class="table table-bordered table-blue table-hover" id="table"></table>
-                    <button type="button" id="Birthday"
-                            class="btn btn-blue pull-right "
-                            title="生日提醒"
-                            style="margin-right: 50px;"
-                            data-container="body"
-                            data-toggle="popover"
-                            data-placement="top"
-                            data-html= 'true'>
+                    <a tabindex="0"
+                        type="button"
+                        id="Birthday"
+                        class="btn btn-blue pull-right "
+                        title="生日提醒"
+                        data-container="body"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        data-placement="top"
+                        data-html= 'true'>
                         生日提醒
-                    </button>
-
+                    </a>
                 </div>
 
             </div>
@@ -379,7 +380,8 @@
                 <h4 class="modal-title">生日提醒列表</h4>
             </div>
             <div class="panel-body table-box " style="padding-top: 0;">
-                <table  class="table table-bordered table-blue table-hover small-p">
+                <table class="table table-bordered table-blue table-hover" id="table_Birthday"></table>
+                <!--<table  class="table table-bordered table-blue table-hover small-p">
                     <tbody>
                     <tr>
                         <th>序号</th>
@@ -430,7 +432,7 @@
                         </td>
                     </tr>
                     </tbody>
-                </table>
+                </table>-->
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

@@ -1040,7 +1040,7 @@ td .onOff {
 }
 
 .popover-content > table {
-  width: 100%;
+  width: 400px;
 }
 
 .popover-content > table > tbody > tr > th {
@@ -1052,6 +1052,18 @@ td .onOff {
 .popover-content > table > tbody > tr > td {
   text-align: center;
   padding: 3px 0px;
+}
+
+.popover {
+  max-width: 410px !important;
+}
+
+.popover .top {
+  margin-top: -30px;
+}
+
+.no-break-warp {
+  white-space: nowrap;
 }
 
 /**
@@ -1359,6 +1371,10 @@ td .onOff {
 
 .a-sm .btn:last-child {
   border-right: 1px solid #999;
+}
+
+.btn-link-blue {
+  color: #106cbb;
 }
 
 /**
