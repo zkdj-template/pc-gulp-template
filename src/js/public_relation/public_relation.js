@@ -37,6 +37,7 @@
     /*车型声量走势*/
     var car_type = echarts.init(document.getElementById('car_type'),'customed');
     var car_typeOption = {
+        color: ['#71BFED','#FF9D89'],
         tooltip: {
             trigger: 'axis'
         },
@@ -47,23 +48,11 @@
             left: 'right',
             data: [
                 {
-                    name: '邮件销售',
+                    name: '邮件营销',
                     icon: 'circle'
                 },
                 {
                     name: '联盟广告',
-                    icon: 'circle'
-                },
-                {
-                    name: '视频广告',
-                    icon: 'circle'
-                },
-                {
-                    name: '直接访问',
-                    icon: 'circle'
-                },
-                {
-                    name: '搜索引擎',
                     icon: 'circle'
                 }
             ]
@@ -71,8 +60,8 @@
         dataZoom: [
             {
                 show: true,
-                start: 30,
-                end: 70
+                start: 0,
+                end: 90
             }
         ],
         axisPointer: {
@@ -95,6 +84,12 @@
             {
                 name:'邮件营销',
                 type:'line',
+                lineStyle:{
+                    normal:{
+                        width:3,
+                    }
+                },
+                symbolSize: 7,
                 stack: '总量',
                 data:[120, 132, 101, 134, 90, 230, 210]
             },
@@ -103,24 +98,6 @@
                 type:'line',
                 stack: '总量',
                 data:[220, 182, 191, 234, 290, 330, 310]
-            },
-            {
-                name:'视频广告',
-                type:'line',
-                stack: '总量',
-                data:[150, 232, 201, 154, 190, 330, 410]
-            },
-            {
-                name:'直接访问',
-                type:'line',
-                stack: '总量',
-                data:[320, 332, 301, 334, 390, 330, 320]
-            },
-            {
-                name:'搜索引擎',
-                type:'line',
-                stack: '总量',
-                data:[820, 932, 901, 934, 1290, 1330, 1320]
             }
         ]
     };
@@ -130,7 +107,7 @@
     /*车型声量统计*/
     var car_num = echarts.init(document.getElementById('car_num'),'customed');
     var car_numLineOption  = {
-        color: ['#2a93ed','#ff846b'],
+        color: ['#71BFED','#FF9D89'],
         tooltip : {
             trigger: 'axis',
             axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -188,8 +165,6 @@
             }
         ]
     };
-
-
     car_num.setOption(car_numLineOption);
 
     /*媒体结构占比*/
@@ -270,59 +245,62 @@
 
     /*媒体结构分布*/
     var car_madel2 = echarts.init(document.getElementById('car_madel2'),'customed');
-    var car_madel2LineOption  = {
-        color: ['#2a93ed','#ff846b'],
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-                type: 'shadow'
-            }
-        },
-        legend: {
-            type: 'plain',
-            show: true,
-            top: 'top',
-            left: 'right',
-            data:[
-                {
-                    name: '2011年',
-                    icon: 'circle'
-                },
+
+    function car_init(){
+        var car_madel2LineOption  = {
+            color: ['#2a93ed','#ff846b'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                type: 'plain',
+                show: true,
+                top: 'top',
+                left: 'right',
+                data:[
+                    {
+                        name: '2011年',
+                        icon: 'circle'
+                    },
                     {
                         name: '2012年',
                         icon: 'circle'
                     }
                 ]
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '5%',
-            containLabel: true
-        },
-        xAxis: {
-            type: 'value',
-            boundaryGap: [0, 0.01]
-        },
-        yAxis: {
-            type: 'category',
-            data: ['巴西','印尼','美国','印度','中国','世界人口(万)']
-        },
-        series: [
-            {
-                name: '2011年',
-                type: 'bar',
-                data: [18203, 23489, 29034, 104970, 131744, 630230]
             },
-            {
-                name: '2012年',
-                type: 'bar',
-                data: [19325, 23438, 31000, 121594, 134141, 681807]
-            }
-        ]
-    };
-
-    car_madel2.setOption(car_madel2LineOption);
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '5%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                boundaryGap: [0, 0.01]
+            },
+            yAxis: {
+                type: 'category',
+                data: ['巴西','印尼','美国','印度','中国','世界人口(万)']
+            },
+            series: [
+                {
+                    name: '2011年',
+                    type: 'bar',
+                    data: [18203*Math.random(), 23489*Math.random(), 29034*Math.random(), 104970*Math.random(), 131744*Math.random(), 630230*Math.random()]
+                },
+                {
+                    name: '2012年',
+                    type: 'bar',
+                    data: [19325*Math.random(), 23438*Math.random(), 31000*Math.random(), 121594*Math.random(), 134141*Math.random(), 681807*Math.random()]
+                }
+            ]
+        };
+        car_madel2.setOption(car_madel2LineOption,true);
+    }
+    car_init()
 
     /*媒体排行*/
     var car_top = echarts.init(document.getElementById('car_top'),'customed');
@@ -720,10 +698,16 @@
         initTable_model()
     })
     /*$table3.on("click-row.bs.table",function(e, row, $element) {
-       console.log(row.field4)
+       console.log(row.id)
+        $('.modal-add').find('.span-name').remove()
+        $('.modal-add').append('<span class="span-name">'+'('+row.id+')'+'</span>');
     });*/
     $('.stop-event input[type=checkbox]').iCheck({
         checkboxClass: 'icheckbox_square-blue',
         increaseArea: '20%'
     });
+
+    $('#test').on('changed.bs.select',function(){
+        car_init()
+    })
 })()

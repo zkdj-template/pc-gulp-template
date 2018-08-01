@@ -39,58 +39,72 @@
     var arr = [
         {
             "name": "花鸟市场",
+            "flag":'0',
             "value": 1446
         },
         {
             "name": "汽车",
+            "flag":'0',
             "value": 928
         },
         {
             "name": "视频",
+            "flag":'0',
             "value": 906
         },
         {
             "name": "电视",
+            "flag":'0',
             "value": 825
         },
         {
             "name": "Lover Boy 88",
+            "flag":'0',
             "value": 514
         },
         {
             "name": "动漫",
+            "flag":'0',
             "value": 486
         },
         {
             "name": "音乐",
+            "flag":'0',
             "value": 53
         },
         {
             "name": "直播",
+            "flag":'0',
             "value": 163
         },
         {
             "name": "广播电台",
+            "flag":'0',
             "value": 86
         },
         {
             "name": "戏曲曲艺",
+            "flag":'1',
             "value": 17
         },
         {
             "name": "演出票务",
+            "flag":'1',
             "value": 6
         },
         {
             "name": "给陌生的你听",
+            "flag":'1',
             "value": 1
         },
         {
             "name": "资讯",
+            "flag":'0',
             "value": 1437
         },
         {
             "name": "商业财经",
+            "flag":'1',
             "value": 422
         },
     ]
@@ -98,6 +112,8 @@
     var imgSrc = "../images/ciyun_bg_suv.png";
     var myChart = new CarWCloud(dom, imgSrc);
     myChart.draw(arr);
+
+
     /*top10*/
     $("#small_table").on('click','.btn',function () {
         $(this).addClass('btn-blue').siblings().removeClass('btn-blue');
@@ -180,12 +196,13 @@
             data: hours,
             boundaryGap: false,
             splitLine: {
-                show: true,
+                show:true,
                 lineStyle: {
-                    color: '#999',
+                    show:true,
                     type: 'dashed'
                 }
             },
+
             axisLine: {
                 show: false
             }
@@ -238,7 +255,6 @@
                             color: '#333'
                         }
                     }
-
                 },
                 label: {
                     normal: {
@@ -444,6 +460,7 @@
         ]
     };
     car_madel3.setOption(car_madel3pLineOption);
+
 
     var $table6 = $("#table6");
     function initTable6() {

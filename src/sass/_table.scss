@@ -85,10 +85,10 @@
       white-space: nowrap;
     }
     tbody{
-      tr:first-child{
+      tr{
         td{
           text-align: center;
-          color: $color1;
+          //color: $color1;
         }
       }
     }
@@ -109,6 +109,9 @@
       white-space: nowrap;
       text-overflow: ellipsis;
     }
+  }
+  .table-box thead tr:last-child th{
+    color: #2a93ed;
   }
 }
 .table-border-even-blue{

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>广告效果评估-广告效果监测</title>
+    <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../vendor/bootstrap-table/bootstrap-table.min.css">
+    <link href="../vendor/icheck/skins/square/_all.css" rel="stylesheet" />
+    <link href="../vendor/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!-- 顶部导航  start-->
+<div class="navbar navbar-linear-gradient">
+    <div class="navbar-header">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="../images/logo.png" width="158" height="38" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav nav-menu">
+            <li>
+                <a href="./globalPanel.html">全局看板</a>
+            </li>
+            <li>
+                <a href="./evaluation.html">广告效果评估</a>
+            </li>
+            <li>
+                <a href="./MediaLibraryManagement.html">公关传播效果评估</a>
+            </li>
+            <li class="active">
+                <a href="./hot_exponent.html">热度指数</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="buildProject.html">
+                    <i class="iconfont icon-tubiao112"></i>
+                    <span>设置</span>
+                </a>
+            </li>
+            <li>
+                <a href="personInfo.html">
+                    <i class="iconfont icon-yonghubianji"></i>
+                    <span>哒哒哒</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-tuichu5"></i>
+                    <span>退出</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 顶部导航  end-->
+<div class="page-wrapper">
+    <!-- 左侧导航 start -->
+    <div class="left-nav">
+        <ul class="nav">
+            <li class="active">
+                <a href="hot_exponent.html">
+                    <i class="iconfont icon-zhishu"></i>
+                    热度指数分析
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧导航 end -->
+    <div class="right-content">
+        <!--内容部分 start-->
+        <div class="right-content">
+            <!--内容部分 start-->
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-line-primary top-fixed-search">
+                            <div class="panel-heading">
+                                <h3 class="panel-title clearfix bottom_line">
+                                    <span class="btn-right-title">慧数</span>
+                                    <button class="btn btn-blue pull-right" type="button">
+                                        查询
+                                    </button>
+                                </h3>
+                            </div>
+                            <div class="panel-body no-padding">
+                                <div class="table-box">
+                                    <div class="form-horizontal btn-box">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-1">本品：</label>
+                                            <div class="col-md-2">
+                                                <select name="" class="form-control selectpicker" title="选择五菱车系">
+                                                    <option value="">五菱宏光s</option>
+                                                    <option value="">宝骏E100</option>
+                                                    <option value="">宝骏310</option>
+                                                    <option value="">宝骏730</option>
+                                                    <option value="">宝骏560</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-1">竞品：</label>
+                                            <div class="col-md-1">
+                                                <input class="form-control" type="text">
+                                            </div>
+                                            <div class="col-md-1">
+                                                <input class="form-control" type="text">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button class="btn btn-blue mr20" type="button" id="add_item">
+                                                    <i class="iconfont icon-plus"></i>
+                                                </button>
+                                                <span class="text-gray ">最多可添加5个竞品</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel panel-line-primary">
+                            <div class="panel-heading">
+                                <input type="text" class="pull-right form-control w220 datepicker" placeholder="请选择时间"/>
+                                <h3 class="panel-title">指数趋势</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="charts" id="exponent"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel panel-line-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    相关活动
+                                </h3>
+                                <div class="panel-body">
+                                    <select name="" class="selectpicker pull-left w220" title="请选择车型">
+                                        <option value="">五菱宏光s</option>
+                                        <option value="">宝骏E100</option>
+                                        <option value="">宝骏310</option>
+                                        <option value="">宝骏730</option>
+                                        <option value="">宝骏560</option>
+                                    </select>
+                                    <a class="btn btn-blue pull-right mr20">导入其他事件</a>
+                                    <a class="btn btn-blue pull-right mr20" data-toggle="modal" data-target="#modal_add">添加其他事件</a>
+                                </div>
+
+                            </div>
+                            <div class="panel-body">
+                                <div class="time-line">
+                                    <div class="left-btn"></div>
+                                    <div class="right-btn"></div>
+                                    <div class="time-box">
+                                        <ul>
+                                            <li class="active">
+                                                <div class="point"></div>
+                                                <h3>活动1</h3>
+                                                <p>时间：2017-01-01 - 2018-01-01</p>
+                                            </li>
+                                            <li>
+                                                <div class="point"></div>
+                                                <h3>活动1</h3>
+                                                <p>时间：2017-01-01 - 2018-01-01</p>
+                                            </li>
+                                            <li>
+                                                <div class="point"></div>
+                                                <h3>活动1</h3>
+                                                <p>时间：2017-01-01 - 2018-01-01</p>
+                                            </li>
+                                            <li>
+                                                <div class="point"></div>
+                                                <h3>活动1</h3>
+                                                <p>时间：2017-01-01 - 2018-01-01</p>
+                                            </li>
+                                            <li>
+                                                <div class="point"></div>
+                                                <h3>活动1</h3>
+                                                <p>时间：2017-01-01 - 2018-01-01</p>
+                                            </li>
+                                            <li>
+                                                <div class="point"></div>
+                                                <h3>活动1</h3>
+                                                <p>时间：2017-01-01 - 2018-01-01</p>
+                                            </li>
+                                            <li>
+                                                <div class="point"></div>
+                                                <h3>活动1</h3>
+                                                <p>时间：2017-01-01 - 2018-01-01</p>
+                                            </li>
+                                            <li>
+                                                <div class="point"></div>
+                                                <h3>活动1</h3>
+                                                <p>时间：2017-01-01 - 2018-01-01</p>
+                                            </li>
+                                            <li>
+                                                <div class="point"></div>
+                                                <h3>活动1</h3>
+                                                <p>时间：2017-01-01 - 2018-01-01</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--内容部分 end-->
+            <footer class="footer">
+                <p class="text-center">上海通用五菱汽车股份有限公司版权所有</p>
+                <p class="text-center">慧数汽车提供技术支持</p>
+            </footer>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal_add" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加其他事件</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">活动主题：</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">选择车型：</label>
+                        <div class="col-md-8">
+                            <select name="b" class="form-control selectpicker" title="请选择车型">
+                                <option value="">五菱宏光s</option>
+                                <option value="">宝骏E100</option>
+                                <option value="">宝骏310</option>
+                                <option value="">宝骏730</option>
+                                <option value="">宝骏560</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">活动时间：</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control  datepicker" placeholder="请选择时间"/>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-blue" data-dismiss="modal">发送</button>
+                <button type="button" class="btn btn-fill-blue" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">系数设置</h4>
+            </div>
+            <div class="modal-body">
+                <form id="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">曝光系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入曝光量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">点击量系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入点击量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">线索量系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入线索量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">潜客量系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入潜客量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">成交量系数：</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="" placeholder="请输入成交量系数">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="tishi">
+                                <i class="iconfont icon-jingshi"></i>
+                                <span>温馨提示：每项系数<=1,各项系数相加之和<=1</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-blue" id="save">&nbsp;&nbsp;保&nbsp;&nbsp;&nbsp;存&nbsp;&nbsp;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/bootstrap-select.min.js"></script>
+<script src="../vendor/bootstrap-select-1.12.2/js/i18n/defaults-zh_CN.min.js"></script>
+<script src="../vendor/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../vendor/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_city.data.js"></script>
+<script src="../vendor/region_picker/js/jquery.region_picker.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/moment.min.js"></script>
+<script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../vendor/icheck/icheck.min.js"></script>
+<script src="../vendor/echarts/echarts.min.js"></script>
+<script src="../vendor/echarts/customed_GM.js"></script>
+<script src="../js/plugin.js"></script>
+<script src="../js/hot_exponent/hot_exponent.js"></script>
+</body>
+</html>

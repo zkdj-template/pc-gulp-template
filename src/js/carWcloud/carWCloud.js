@@ -63,11 +63,11 @@ CarWCloud.prototype = {
             var y = (canvas.height - newHeigth) / 2;
             /*--图片居中显示--*/
             _this.ctx.drawImage(this, 0, y, canvas.width, newHeigth);
-            _this._drawText();
+            _this._drawText(data);
         }
     },
     /*--添加词--*/
-    _drawText: function() {
+    _drawText: function(flag) {
         //将原坐标移到中心点
         this.ctx.translate(this.canvas.width / 2, this.canvas.height / 2);
         var data = this._sort();
@@ -83,11 +83,20 @@ CarWCloud.prototype = {
         var i = 0,
             _this = this;
         var intervalId,
-            colors = ['#4e4b4e', '#ff6f40'];
+            colors = ['#18B0FF', '#ff6f40'];
+       /* for(let i=0;i<flag.length;i++){
+            console.log(flag[i].flag)
+            if(flag[i].flag==0){
+                _this.ctx.fillStyle=colors[0]
+            }else if(flag[i].flag==1){
+                _this.ctx.fillStyle=colors[1]
+            }
+
+        }*/
         intervalId = setInterval(function() {
             if (i < data.length) {
                 _this.ctx.save();
-                _this.ctx.fillStyle = i%2==0 ? colors[0] : colors[1];
+                _this.ctx.fillStyle = flag[i].flag==0 ? colors[0] : colors[1];
                 var size = (data[i][_this.valueName] / avg) * 10;
                 size = size > maxSize ? maxSize :
                     (size < minSize ? minSize : size);
