@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>媒体排期管理-项目名称</title>
+    <title>采集管理</title>
     <link href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../vendor/bootstrap-select-1.12.2/css/bootstrap-select.min.css" rel="stylesheet" />
     <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" >
@@ -76,7 +76,7 @@
                     媒体库管理
                 </a>
             </li>
-            <li class="active">
+            <li>
                 <a href="meitipaiqiguanli.html">
                     媒体排期管理
                 </a>
@@ -86,7 +86,7 @@
                     投放项目管理
                 </a>
             </li>
-            <li>
+            <li  class="active">
                 <a href="collection.html">
                     采集管理
                 </a>
@@ -112,15 +112,32 @@
                     <div class="panel panel-line-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title clearfix">
-                                <span class="btn-right-title">项目ID+项目名称+申请日期</span>
+                                <span class="btn-right-title">采集管理</span>
                                 <div class="pull-right">
-                                    <button class="btn btn-blue" type="button">导入</button>
-                                    <button class="btn btn-blue" type="button">导出</button>
+                                    <a href="collection.html" class="btn btn-blue">媒体VIP</a>
+                                    <a href="collection2.html" class="btn btn-default">传播媒介</a>
                                 </div>
                             </h3>
                         </div>
                         <div class="panel-body">
                             <div class="table-box">
+                                <div class="form-horizontal btn-box">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">监测状态：</label>
+                                        <div class="col-md-10">
+                                            <a href="javascript:void(0);" class="btn btn-link active">全部</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">监测中</a>
+                                            <a href="javascript:void(0);" class="btn btn-link">未监测</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-1">时间：</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control w220 datepicker" placeholder="请选择时间"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
                                 <table id="table" class="table table-hover table-thead-blue">
                                 </table>
                             </div>
@@ -148,6 +165,6 @@
 <!--提示插件-->
 <script src="../vendor/notification/js/notification.js"></script>
 <script src="../js/plugin.js"></script>
-<script src="../js/manager/meitipaiqiguanli02.js"></script>
+<script src="../js/manager/collection.js"></script>
 </body>
 </html>

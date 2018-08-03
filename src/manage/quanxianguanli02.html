@@ -83,6 +83,11 @@
                 </a>
             </li>
             <li>
+                <a href="collection.html">
+                    采集管理
+                </a>
+            </li>
+            <li>
                 <a href="biaoqianguanli.html">
                     标签管理
                 </a>
@@ -98,311 +103,598 @@
     <div class="right-content">
         <!--内容部分 start-->
         <div class="page-content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-line-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title clearfix">
-                                <span class="btn-right-title">查看权限</span>
-                                <a href="javascript:window.history.go(-1);" class="btn btn-link">
-                                    <i class="iconfont icon-return"></i>
-                                    返回
-                                </a>
-                                <button type="button" class="btn btn-blue pull-right">保存</button>
-                            </h3>
+            <div class="panel panel-line-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title clearfix">
+                        <span class="btn-right-title">用户权限设置</span>
+                        <a href="javascript:window.history.go(-1);" class="btn btn-link">
+                            <i class="iconfont icon-return"></i>
+                            返回
+                        </a>
+                        <button class="btn btn-blue pull-right">保存</button>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label class="">用户角色名称：</label>
+                            <input type="text" class="form-control" placeholder="请输入用户角色" readonly value="经销商">
                         </div>
-                        <div class="panel-body">
-                            <div class="form-inline mb15">
-                                <div class="form-group">
-                                    <label class="">用户角色名称：</label>
-                                    <input type="text" class="form-control" placeholder="请输入用户角色" readonly value="经销商">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-bottom-line">
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="active">
+                        <a href="#tab1" data-toggle="tab">广告效果评估</a>
+                    </li>
+                    <li>
+                        <a href="#tab2" data-toggle="tab">公关活动评估</a>
+                    </li>
+                    <li>
+                        <a href="#tab3" data-toggle="tab">热度指数</a>
+                    </li>
+                    <li>
+                        <a href="#tab4" data-toggle="tab">应用设置</a>
+                    </li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="tab1">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-body">
+                                        <div class="jurisdiction-box jurisdiction-vertical">
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            设置
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label>
+                                                            <input type="checkbox">
+                                                            全选
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" checked >
+                                                            全局看板设置
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            广告项目建设
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            全局看板
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <h4>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                按项目
+                                                            </label>
+                                                        </h4>
+                                                        <div class="children-menu">
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                全国广告投放热度
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" checked >
+                                                                数据全景
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                媒体占比分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                广告投放效率走势分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                广告成本漏斗分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                广告投放数据走势分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                媒体排行TOP10
+                                                            </label>
+                                                        </div>
+                                                        <h4>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                按产品
+                                                            </label>
+                                                        </h4>
+                                                        <div class="children-menu">
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                全国广告投放热度
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" checked >
+                                                                数据全景
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                媒体占比分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                广告投放效率走势分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                广告成本漏斗分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                广告投放数据走势分析
+                                                            </label>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                媒体排行TOP10
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            广告效果监测
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <h4>
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                广告效果监测
+                                                            </label>
+                                                        </h4>
+                                                        <div class="children-menu">
+                                                            <label>
+                                                                <input type="checkbox" >
+                                                                按项目
+                                                            </label>
+                                                            <div class="children-menu">
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    KPI评估
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    项目热度分布
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    车型投放数据概况-按产品
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    产品投放全局-按产品
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    全国投放热度分布
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    媒体全景漏斗
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    媒体排行TOP10
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    广告投放效率走势分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    广告投放数据走势分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    费用成本走势-按项目
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" >
+                                                                    排行分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" >
+                                                                    落地页分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" >
+                                                                    终端设备分析
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="children-menu">
+                                                            <h5>
+                                                                <label>
+                                                                    <input type="checkbox" >
+                                                                    按产品
+                                                                </label>
+                                                            </h5>
+                                                            <div class="children-menu">
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    项目热度分布
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    车型投放数据概况-按产品
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    产品投放全局-按产品
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    全国投放热度分布
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    媒体全景漏斗
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    媒体排行TOP10
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    广告投放效率走势分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    广告投放数据走势分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" checked >
+                                                                    费用成本走势-按项目
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" >
+                                                                    排行分析
+                                                                </label>
+                                                                <label>
+                                                                    <input type="checkbox" >
+                                                                    落地页分析
+                                                                </label>
+
+                                                                <label>
+                                                                    <input type="checkbox" >
+                                                                    终端设备分析
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            线索质量评估
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全选
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            按项目
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            按产品
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            项目线索质量评估
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            项目线索质量评估
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            产品线索质量评估
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            线索状态及占比
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            广告投放策略
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全选
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            按项目
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            按车型
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全国热度分布
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            投放策略分析
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            媒体产出排行
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            广告位产出排行
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            渠道效果走势分析
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="jurisdiction-box">
-                                <div class="jurisdiction-item">
-                                    <div class="panel panel-line-primary">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title clearfix">
-                                                设置
-                                            </h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <label>
-                                                <input type="checkbox">
-                                                全选
-                                            </label>
-                                            <label>
-                                                <input type="checkbox" checked>
-                                                全局看板设置
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                广告项目建设
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                排期管理
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="jurisdiction-item">
-                                    <div class="panel panel-line-primary">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title clearfix">
-                                                全局看板
-                                            </h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <label>
-                                                <input type="checkbox">
-                                                全选
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                按项目
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                按产品
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                全国广告投放热度
-                                            </label>
-                                            <label>
-                                                <input type="checkbox" checked>
-                                                数据全景
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                媒体占比分析
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                广告投放效率走势分析
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                广告成本漏斗分析
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                广告投放数据走势分析
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                媒体排行TOP10
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="jurisdiction-item">
-                                    <div class="panel panel-line-primary">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title clearfix">
-                                                广告效果监测
-                                            </h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <label>
-                                                <input type="checkbox">
-                                                全选
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                按项目
-                                            </label>
-                                            <div class="children-menu">
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    KPI评估
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    项目热度分布
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    全国投放热度分布
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    媒体全景漏斗
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    媒体排行TOP10
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    广告投放效率走势分析
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    广告投放数据走势分析
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox">
-                                                    费用成本走势
-                                                </label>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab2">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-body">
+                                        <div class="jurisdiction-box jurisdiction-vertical">
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            媒体资源库
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全选
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            媒体库管理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            媒体VIP管理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            媒体VIP产出
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <label>
-                                                <input type="checkbox" checked>
-                                                按产品
-                                            </label>
-                                            <div class="children-menu">
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    KPI评估
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    项目热度分布
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    车型投放数据概况
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    产品投放全局
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    全国投放热度分布
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    媒体全景漏斗
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    媒体排行TOP10
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    广告投放效率走势分析
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    广告投放数据走势分析
-                                                </label>
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            经销商监测
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全选
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            经销商管理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            经销商声量
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            文章核查
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <label>
-                                                <input type="checkbox">
-                                                排行分析
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                落地页分析
-                                            </label>
-                                            <div class="children-menu">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    落地页监测数据
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox">
-                                                    访问路径分析
-                                                </label>
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            活动声量评估
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全选
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            活动产出分析
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            媒体产出排行
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <label>
-                                                <input type="checkbox">
-                                                终端设备分析
-                                            </label>
-                                            <div class="children-menu">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    终端设备分布
-                                                </label>
-                                                <label>
-                                                    <input type="checkbox">
-                                                    浏览器占比
-                                                </label>
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            车型声量评估
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全选
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            声量监测
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            舆情分析
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="jurisdiction-item">
-                                    <div class="panel panel-line-primary">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title clearfix">
-                                                线索质量评估
-                                            </h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <label>
-                                                <input type="checkbox">
-                                                全选
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                按项目
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                按产品
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                项目线索质量评估
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                项目线索质量评估
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                产品线索质量评估
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                线索状态及占比
-                                            </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-body">
+                                        <div class="jurisdiction-box jurisdiction-vertical">
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            热度指数分析
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全选
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            添加竞品
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            导入其他事件
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            添加其他事件
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="jurisdiction-item">
-                                    <div class="panel panel-line-primary">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title clearfix">
-                                                广告投放策略
-                                            </h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <label>
-                                                <input type="checkbox">
-                                                全选
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                按项目
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                按车型
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                全国热度分布
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                投放策略分析
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                媒体产出排行
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                广告位产出排行
-                                            </label>
-                                            <label>
-                                                <input type="checkbox">
-                                                渠道效果走势分析
-                                            </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-line-primary">
+                                    <div class="panel-body">
+                                        <div class="jurisdiction-box jurisdiction-vertical">
+                                            <div class="jurisdiction-item">
+                                                <div class="panel panel-line-primary">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title clearfix">
+                                                            热度指数分析
+                                                        </h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全选
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            个人中心
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            全局看板设置
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            用户管理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            角色管理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            渠道管理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            广告项目查询
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            广告项目与排期管理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            搜索项目管理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            公关活动建设
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            排期与异常处理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            标签管理
+                                                        </label>
+                                                        <label>
+                                                            <input type="checkbox" >
+                                                            系统设置
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -429,7 +721,7 @@
             checkboxClass: 'icheckbox_square-blue',
             increaseArea: '20%'
         });
-    });
+    })
 </script>
 </body>
 </html>
