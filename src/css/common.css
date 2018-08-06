@@ -976,9 +976,8 @@ td .onOff {
   white-space: nowrap;
 }
 
-.table-box.wp50 tbody tr:first-child td {
+.table-box.wp50 tbody tr td {
   text-align: center;
-  color: #2a93ed;
 }
 
 .table-box.wp50 td {
@@ -999,6 +998,10 @@ td .onOff {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.table-box .table-box thead tr:last-child th {
+  color: #2a93ed;
 }
 
 .table-border-even-blue tbody tr td {
