@@ -37,7 +37,6 @@
     /*车型声量走势*/
     var car_type = echarts.init(document.getElementById('car_type'),'customed');
     var car_typeOption = {
-        color: ['#71BFED','#FF9D89'],
         tooltip: {
             trigger: 'axis'
         },
@@ -49,11 +48,11 @@
             data: [
                 {
                     name: '邮件营销',
-                    icon: 'circle'
+                    icon: 'circle',
                 },
                 {
                     name: '联盟广告',
-                    icon: 'circle'
+                    icon: 'circle',
                 }
             ]
         },
@@ -89,6 +88,11 @@
                         width:3,
                     }
                 },
+                itemStyle: {
+                    normal: {
+                        color: "#71BFED"
+                    },
+                },
                 symbolSize: 7,
                 stack: '总量',
                 data:[120, 132, 101, 134, 90, 230, 210]
@@ -96,6 +100,11 @@
             {
                 name:'联盟广告',
                 type:'line',
+                itemStyle: {
+                    normal: {
+                        color: "#FF9D89"
+                    },
+                },
                 stack: '总量',
                 data:[220, 182, 191, 234, 290, 330, 310]
             }
@@ -107,7 +116,6 @@
     /*车型声量统计*/
     var car_num = echarts.init(document.getElementById('car_num'),'customed');
     var car_numLineOption  = {
-        color: ['#71BFED','#FF9D89'],
         tooltip : {
             trigger: 'axis',
             axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -154,6 +162,11 @@
             {
                 name:'邮件销售',
                 type:'bar',
+                itemStyle: {
+                    normal: {
+                        color: "#71BFED"
+                    },
+                },
                 barWidth: '20%',
                 data:[10, 52, 200, 334, 390, 330, 220]
             },
@@ -161,6 +174,11 @@
                 name:'联盟广告',
                 type:'bar',
                 barWidth: '20%',
+                itemStyle: {
+                    normal: {
+                        color: "#FF9D89"
+                    },
+                },
                 data:[10, 52, 200, 334, 390, 330, 220]
             }
         ]
@@ -170,7 +188,6 @@
     /*媒体结构占比*/
     var car_madel = echarts.init(document.getElementById('car_madel'),'customed');
     var car_madelLineOption  = {
-        color: ['#2a93ed','#ff846b'],
         legend: {
             type: 'plain',
             show: true,
@@ -218,6 +235,11 @@
                             opacity: 0.5            // 图形透明度
                         }
                     },
+                    itemStyle: {
+                        normal: {
+                            color: "#71BFED"
+                        },
+                    },
                     areaStyle: {                // 单项区域填充样式
                         normal: {
                             color: 'rgba(42,147,237,0.6)'       // 填充的颜色。[ default: "#000" ]
@@ -231,6 +253,11 @@
                         normal: {
                             opacity: 0.5            // 图形透明度
                         }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: "#FF9D89"
+                        },
                     },
                     areaStyle: {                // 单项区域填充样式
                         normal: {
@@ -248,7 +275,6 @@
 
     function car_init(){
         var car_madel2LineOption  = {
-            color: ['#2a93ed','#ff846b'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {
@@ -289,11 +315,21 @@
                 {
                     name: '2011年',
                     type: 'bar',
+                    itemStyle: {
+                        normal: {
+                            color: "#71BFED"
+                        },
+                    },
                     data: [18203*Math.random(), 23489*Math.random(), 29034*Math.random(), 104970*Math.random(), 131744*Math.random(), 630230*Math.random()]
                 },
                 {
                     name: '2012年',
                     type: 'bar',
+                    itemStyle: {
+                        normal: {
+                            color: "#FF9D89"
+                        },
+                    },
                     data: [19325*Math.random(), 23438*Math.random(), 31000*Math.random(), 121594*Math.random(), 134141*Math.random(), 681807*Math.random()]
                 }
             ]
@@ -305,7 +341,6 @@
     /*媒体排行*/
     var car_top = echarts.init(document.getElementById('car_top'),'customed');
     var car_topLineOption = {
-        color: ['#2a93ed','#ff846b'],
         tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -346,11 +381,21 @@
             {
                 name: '2011年',
                 type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: "#71BFED"
+                    },
+                },
                 data: [18203, 23489, 29034, 104970, 131744, 630230]
             },
             {
                 name: '2012年',
                 type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: "#FF9D89"
+                    },
+                },
                 data: [19325, 23438, 31000, 121594, 134141, 681807]
             }
         ]
