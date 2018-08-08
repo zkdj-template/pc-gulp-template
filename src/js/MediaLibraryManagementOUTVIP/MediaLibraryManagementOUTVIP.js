@@ -69,8 +69,7 @@ $(function(){
                     align: 'center',
                     valign: 'middle',
                     formatter: function (value) {
-                        return '<a href="./MediaLibraryManagementOUTVIP_admin.html" ' +
-                            '>'+ value +'</a>'
+                        return '<a href="./public_Initiative_table_detail.html">'+ value +'</a>'
                     }
 
                 },
