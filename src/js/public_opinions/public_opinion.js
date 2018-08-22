@@ -109,7 +109,7 @@
         },
     ]
     var dom = document.getElementById('car_type');
-    var imgSrc = "../images/ciyun_bg_suv.png";
+    var imgSrc = "../images/ciyun_bg_suv1.png";
     var myChart = new CarWCloud(dom, imgSrc);
     myChart.draw(arr);
 

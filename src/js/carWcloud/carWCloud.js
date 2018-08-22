@@ -141,6 +141,9 @@ CarWCloud.prototype = {
                 clearInterval(intervalId);
             }
         }, 50);
+        setTimeout(function () {
+            clearInterval(intervalId);
+        },5000);
     },
     /*--获取随机正态分布坐标,n值越大越接近中心点--*/
     _normalInt: function(min, max, n) {
@@ -162,7 +165,8 @@ CarWCloud.prototype = {
         }
         var wdata = wordImageData.data;
         for (var wy = 0; wy < wdata.length; wy += 4) {
-            if (wdata[wy] != 213 || wdata[wy + 1] != 241 || wdata[wy + 2] != 255 || wdata[wy + 3] != 255)
+            // console.log(wdata[wy],wdata[wy + 1],wdata[wy + 2],wdata[wy + 3]);
+            if (wdata[wy] != 100 || wdata[wy + 1] != 175 || wdata[wy + 2] != 245 || wdata[wy + 3] != 51)
                 return true;
         };
         return false;
