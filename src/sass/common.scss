@@ -453,7 +453,37 @@ td{
 .pointer{
   cursor: pointer;
 }
-
+/**
+ * 导出
+ */
+.btn-export {
+  position: relative;
+  overflow: hidden;
+  input[type=file] {
+    position: absolute;
+    right: 1000px;
+    opacity: 0;
+  }
+}
+.file-upload-control {
+  position:  relative;
+  .placeholder {
+    display: block;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  input[type=file] {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    opacity: 0;
+  }
+}
+.title-padding{
+  padding: 3px 15px 10px 0;
+}
 @import "left_nav";
 @import "tab";
 @import "table";

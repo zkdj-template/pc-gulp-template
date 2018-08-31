@@ -736,6 +736,43 @@ td .onOff {
 }
 
 /**
+ * 导出
+ */
+.btn-export {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-export input[type=file] {
+  position: absolute;
+  right: 1000px;
+  opacity: 0;
+}
+
+.file-upload-control {
+  position: relative;
+}
+
+.file-upload-control .placeholder {
+  display: block;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-upload-control input[type=file] {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  opacity: 0;
+}
+
+.title-padding {
+  padding: 3px 15px 10px 0;
+}
+
+/**
  * Created by zhangxin on 2018/5/9.
  * 左侧导航的样式
  */
