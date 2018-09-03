@@ -1434,32 +1434,6 @@ td .onOff {
   color: #3186fb;
 }
 
-.modal .modal-body > form > .To_20 {
-  width: 100%;
-  border: 1px solid #c0c0c0;
-  height: 100px;
-  overflow: auto;
-}
-
-.modal .modal-body > form > .To_20 > p {
-  float: left;
-  width: 31%;
-  margin: 1% 1%;
-}
-
-.modal .modal-body > form > .To_20 > p > span {
-  display: inline-block;
-  margin-right: 1px;
-  vertical-align: middle;
-}
-
-.modal .modal-body > form > .To_20 > p > .span_url {
-  width: 50%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .modal .modal-body .tishi {
   padding: 6px 10px;
   background-color: #fffeeb;
@@ -1476,6 +1450,46 @@ td .onOff {
 .modal .modal-body .tishi span {
   display: inline-block;
   vertical-align: middle;
+}
+
+.form-horizontal .control-label-333 {
+  color: #333;
+}
+
+.form-horizontal .form-group-col-2 {
+  width: 50%;
+  display: inline-block;
+}
+
+.To_20 {
+  width: 100%;
+  border: 1px solid #c0c0c0;
+  height: 100px;
+  overflow: auto;
+}
+
+.To_20 > p {
+  float: left;
+  width: 31%;
+  margin: 1% 1%;
+}
+
+.To_20 > p > span {
+  display: inline-block;
+  margin-right: 1px;
+  vertical-align: middle;
+}
+
+.To_20 > p > .span_url {
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.group-padding {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /**
@@ -1756,8 +1770,7 @@ td .onOff {
   position: absolute;
   left: 50%;
   margin-left: -7px;
-  bottom: 0;
-  bottom: -48px;
+  bottom: -44px;
   z-index: 1;
 }
 
@@ -1772,7 +1785,7 @@ td .onOff {
 
 .time-line .time-box li:nth-child(2n):after {
   bottom: auto;
-  top: -46px;
+  top: -44px;
 }
 
 .time-line .time-box li:hover, .time-line .time-box li.active {
