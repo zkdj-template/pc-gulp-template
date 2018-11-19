@@ -83,15 +83,15 @@ function dev() {
     gulp.task('dev', ['sass:dev'], function () {
         browserSync.init({
             server: {
-                baseDir: 'src',
-                directory: true  // 是否打开文件目录
-                // index: "/html/globalPanel.html"
+                baseDir: './src',
+                directory: false // 是否打开文件目录
+                //, index: "/html/globalPanel.html" //运行试试
             },
             port: 9090,
             notify: false
         });
 
-        gulp.watch(Config.js.src, ['sass:dev']).on('change', browserSync.reload);
+        gulp.watch(Config.src + '**', ['sass:dev']).on('change', browserSync.reload());
     });
 
     /*
