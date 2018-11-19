@@ -55,16 +55,38 @@ function dev() {
         del([path]);
     });
 
-    gulp.task('dev', ['jshint:dev'], function () {
+    gulp.task('sass:dev', function () {
+        return gulp.src(Config.sass.src)
+            .pipe(sass({outputStyle: 'expanded'}))
+            .pipe(postcss([ autoprefixer({
+                browsers: [
+                    "Android 2.3",
+                    "Android >= 4",
+                    "Chrome >= 20",
+                    "Firefox >= 24",
+                    "Explorer >= 8",
+                    "iOS >= 6",
+                    "Opera >= 12",
+                    "Safari >= 6"
+                ],
+                cascade: true //  是否美化属性值
+            }) ]))
+            .pipe(gulp.dest(Config.sass.dev))
+            .pipe(minifyCss())
+            .pipe(rename({suffix: '.min'}))
+            .pipe(gulp.dest(Config.sass.dev))
+    });
+
+    gulp.task('dev', ['sass:dev'], function () {
         browserSync.init({
             server: {
                 baseDir: Config.src,
-                index: "html/login.html"
+                index: "html/armyUsCivilians.html"
             },
             notify: false
         });
 
-        gulp.watch(Config.js.src, ['jshint:dev']).on('change', browserSync.reload);
+        gulp.watch(Config.js.src, ['sass:dev']).on('change', browserSync.reload);
     });
 
     /*

@@ -34,14 +34,6 @@ var Config={
     img: {
         src: SRC_DIR + 'images/**/*',
         dist: DIST_DIR + 'images'
-    },
-    manifest:{
-        src: SRC_DIR + 'data/**/**',
-        dist: DIST_DIR + 'data'
-    },
-    login:{
-        src: SRC_DIR + 'login/**/**',
-        dist: DIST_DIR + 'login'
     }
 };
 
