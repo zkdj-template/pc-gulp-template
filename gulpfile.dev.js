@@ -5,8 +5,10 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
+    webserver = require('gulp-webserver'),
     browserSync = require('browser-sync').create(),
     sass = require('gulp-sass'),
+    minifyCss = require('gulp-minify-css'),
     minify = require('gulp-minify'),
     del = require('del'),
     uglify = require('gulp-uglify'),
@@ -14,6 +16,7 @@ var gulp = require('gulp'),
     stylish = require('jshint-stylish'),
     rename = require("gulp-rename"),
     htmlmin = require('gulp-htmlmin'),
+    postcss = require('gulp-postcss'),
     sourcemaps   = require('gulp-sourcemaps'),
     autoprefixer = require('autoprefixer'),
     Config = require('./gulpfile.config');
@@ -80,9 +83,11 @@ function dev() {
     gulp.task('dev', ['sass:dev'], function () {
         browserSync.init({
             server: {
-                baseDir: Config.src,
-                index: "html/armyUsCivilians.html"
+                baseDir: 'src',
+                directory: true  // 是否打开文件目录
+                // index: "/html/globalPanel.html"
             },
+            port: 9090,
             notify: false
         });
 
@@ -96,8 +101,8 @@ function dev() {
      * */
     gulp.task('connect',function(){
         connect.server({
-            root:'src',
-            port:9090,
+            // root:'src',
+            // port:9090,
             livereload:true
         });
     });

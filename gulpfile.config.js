@@ -24,7 +24,8 @@ var Config={
     },
     sass:{
         src: SRC_DIR + 'sass/**/*.scss',
-        dist: DIST_DIR + 'css'
+        dist: DIST_DIR + 'css',
+        dev: SRC_DIR + 'css'
     },
     js:{
         src: SRC_DIR + 'js/**/*.js',
