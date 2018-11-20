@@ -5,7 +5,6 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
-    webserver = require('gulp-webserver'),
     browserSync = require('browser-sync').create(),
     sass = require('gulp-sass'),
     minifyCss = require('gulp-minify-css'),
